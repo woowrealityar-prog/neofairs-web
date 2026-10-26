@@ -49,6 +49,7 @@ type Section12Props = {
     subtitleSlot?: React.ReactNode;
     imageSlot?: React.ReactNode;
     showFooter?: boolean;
+    maxFeatures?: number;
 };
 
 export default function Section12({
@@ -58,6 +59,7 @@ export default function Section12({
     subtitleSlot,
     imageSlot,
     showFooter = true,
+    maxFeatures,
 }: Section12Props) {
     return (
         <div className="container-2200">
@@ -86,6 +88,7 @@ export default function Section12({
 
                         <div className="col-3xl-9 col-xxl-10 col-lg-10 col-md-12">
                             <Section12Pricing
+                                maxFeatures={maxFeatures}
                                 titleSlot={
                                     <>
                                         {titleSlot ? (

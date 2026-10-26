@@ -110,7 +110,7 @@ export default function Home2Page() {
                 <Section4 />
                 <SectionBrandScroll />
                 <SectionShowroomIndustries />
-                <Section12 />
+                <Section12 maxFeatures={2} />
                 <SectionVideoTestimonials />
                 <SectionTestimonials />
                 <SectionImageStrips />

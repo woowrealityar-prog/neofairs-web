@@ -78,9 +78,10 @@ const PLANS = [
 type Section12PricingProps = {
     titleSlot?: ReactNode;
     footerSlot?: ReactNode;
+    maxFeatures?: number;
 };
 
-export default function Section12Pricing({ titleSlot, footerSlot }: Section12PricingProps) {
+export default function Section12Pricing({ titleSlot, footerSlot, maxFeatures }: Section12PricingProps) {
     return (
         <>
             <div className="row align-items-end mb-60 g-4">
@@ -88,56 +89,59 @@ export default function Section12Pricing({ titleSlot, footerSlot }: Section12Pri
             </div>
 
             <div className="row justify-content-center g-4">
-                {PLANS.map((plan) => (
-                    <div key={plan.key} className="col-lg-4">
-                        <div
-                            className={`home-2-pricing-card ${plan.popular ? "home-2-pricing-card--popular" : ""}`.trim()}
-                        >
-                            {plan.popular && (
-                                <span className="home-2-pricing-card__badge">Most popular</span>
-                            )}
-                            <div className="home-2-pricing-card__body">
-                                <h4 className="home-2-pricing-card__title">{plan.title}</h4>
-                                <div className="home-2-pricing-card__price">
-                                    <span
-                                        className={`home-2-pricing-card__price-value ${plan.priceClass}`}
-                                    >
-                                        {plan.price}
-                                    </span>
-                                    {plan.pricePeriod && (
-                                        <span className="home-2-pricing-card__price-period">
-                                            {" "}{plan.pricePeriod}
-                                        </span>
-                                    )}
-                                </div>
-                                <p className="home-2-pricing-card__desc">{plan.desc}</p>
-                                <Link className="at-btn pricing-plan-btn px-4" to={plan.btnLink}>
-                                    <span>
-                                        <span className="text-1 text-capitalize">{plan.btnText}</span>
-                                        <span className="text-2 text-capitalize">{plan.btnText}</span>
-                                    </span>
-                                    <i>
-                                        {ARROW_SVG}
-                                        {ARROW_SVG}
-                                    </i>
-                                </Link>
-                            </div>
-                            <ul className="home-2-pricing-card__features">
-                                {plan.features.map((feature, i) => (
-                                    <li key={i}>
+                {PLANS.map((plan) => {
+                    const displayedFeatures = typeof maxFeatures === "number" ? plan.features.slice(0, maxFeatures) : plan.features;
+                    return (
+                        <div key={plan.key} className="col-lg-4">
+                            <div
+                                className={`home-2-pricing-card ${plan.popular ? "home-2-pricing-card--popular" : ""}`.trim()}
+                            >
+                                {plan.popular && (
+                                    <span className="home-2-pricing-card__badge">Most popular</span>
+                                )}
+                                <div className="home-2-pricing-card__body">
+                                    <h4 className="home-2-pricing-card__title">{plan.title}</h4>
+                                    <div className="home-2-pricing-card__price">
                                         <span
-                                            className="home-2-pricing-card__feature-icon"
-                                            style={{ color: "#ace227" }}
+                                            className={`home-2-pricing-card__price-value ${plan.priceClass}`}
                                         >
-                                            {FEATURE_ICON_SVG}
+                                            {plan.price}
                                         </span>
-                                        {feature}
-                                    </li>
-                                ))}
-                            </ul>
+                                        {plan.pricePeriod && (
+                                            <span className="home-2-pricing-card__price-period">
+                                                {" "}{plan.pricePeriod}
+                                            </span>
+                                        )}
+                                    </div>
+                                    <p className="home-2-pricing-card__desc">{plan.desc}</p>
+                                    <Link className="at-btn pricing-plan-btn px-4" to={plan.btnLink}>
+                                        <span>
+                                            <span className="text-1 text-capitalize">{plan.btnText}</span>
+                                            <span className="text-2 text-capitalize">{plan.btnText}</span>
+                                        </span>
+                                        <i>
+                                            {ARROW_SVG}
+                                            {ARROW_SVG}
+                                        </i>
+                                    </Link>
+                                </div>
+                                <ul className="home-2-pricing-card__features">
+                                    {displayedFeatures.map((feature, i) => (
+                                        <li key={i}>
+                                            <span
+                                                className="home-2-pricing-card__feature-icon"
+                                                style={{ color: "#ace227" }}
+                                            >
+                                                {FEATURE_ICON_SVG}
+                                            </span>
+                                            {feature}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    );
+                })}
                 {footerSlot}
             </div>
         </>
