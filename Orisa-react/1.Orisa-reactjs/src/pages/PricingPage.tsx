@@ -1,7 +1,6 @@
 import PageMeta from "@/seo/PageMeta";
 import RevealText from "@/shared/effects/RevealText";
 import Section1 from "@/shared/sections/index-2/Section12";
-import SectionPricingFairs from "@/shared/sections/pricing-2/SectionPricingFairs";
 import Section2 from "@/shared/sections/services-details/Section4";
 import Section3 from "@/shared/sections/about-3/Section7";
 
@@ -67,10 +66,10 @@ export default function PricingPage() {
           showFooter={false}
           titleSlot={
             <h1 className="alt-section-title lh-1 mb-20 reveal-text">
-              <RevealText>Every feature. One fee. No commission.</RevealText>
+              <RevealText>Virtual Trade Fairs</RevealText>
             </h1>
           }
-          subtitleSlot="Three products. Buy one, or let each one build on the last."
+          subtitleSlot="Priced per fair. Each fair is priced by industry, region and scale. Domestic fairs cost less; international fairs more."
           imageSlot={
             <div
               className="svc5-hero__media at_fade_anim rounded-4 overflow-hidden"
@@ -92,7 +91,6 @@ export default function PricingPage() {
               </div>
             </div>
           }
-          contentSlot={<SectionPricingFairs />}
         />
         <Section2 />
         <Section3 />
