@@ -312,7 +312,48 @@ export default function PricingPage() {
             },
           ]}
         />
-        <Section3 />
+        <Section3
+          title="Questions about pricing."
+          eyebrow="FAQ"
+          accordionId="accordionPricing"
+          items={[
+            {
+              id: "pricingFaq1",
+              num: "1",
+              question: "Are prices inclusive of GST?",
+              answer: "Prices are exclusive of GST. [Confirm.]",
+              open: true,
+            },
+            {
+              id: "pricingFaq2",
+              num: "2",
+              question: "Can I upgrade later?",
+              answer: "Often, yes. If the next tier builds on your current showroom, you pay the difference. If it needs a rebuild, we quote it.",
+              open: false,
+            },
+            {
+              id: "pricingFaq3",
+              num: "3",
+              question: "What does the annual fee cover?",
+              answer: "Hosting, platform updates, NORA and support.",
+              open: false,
+            },
+            {
+              id: "pricingFaq4",
+              num: "4",
+              question: "Do you take commission on sales?",
+              answer: "No. You keep 100%.",
+              open: false,
+            },
+            {
+              id: "pricingFaq5",
+              num: "5",
+              question: "What are the payment terms?",
+              answer: "e.g. 50% to start, 50% at go-live.",
+              open: false,
+            },
+          ]}
+        />
       </div>
     </>
   );

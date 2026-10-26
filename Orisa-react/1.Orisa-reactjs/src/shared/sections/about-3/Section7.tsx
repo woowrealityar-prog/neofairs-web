@@ -49,7 +49,29 @@ const FAQ_ITEMS = [
     },
 ];
 
-export default function Section7({ classList = "" }: { classList?: string }) {
+export type FaqItem = {
+    id: string;
+    num: string;
+    question: string;
+    answer: string;
+    open?: boolean;
+};
+
+interface Section7Props {
+    classList?: string;
+    title?: string;
+    eyebrow?: string;
+    accordionId?: string;
+    items?: FaqItem[];
+}
+
+export default function Section7({
+    classList = "",
+    title = "Questions we hear most.",
+    eyebrow = "FAQ",
+    accordionId = "accordionExample",
+    items = FAQ_ITEMS,
+}: Section7Props) {
     return (
         <section className={`sec-7-about py-5 overflow-hidden ${classList ?? ""}`.trim()}>
             <div className="container py-5">
@@ -57,8 +79,8 @@ export default function Section7({ classList = "" }: { classList?: string }) {
                     <div className="col-lg-4">
                         <span className="at-btn common-black text-uppercase bg-transparent mb-10 rounded-0 p-0">
                             <span className="text-uppercase">
-                                <span className="text-1">FAQ</span>
-                                <span className="text-2">FAQ</span>
+                                <span className="text-1">{eyebrow}</span>
+                                <span className="text-2">{eyebrow}</span>
                             </span>
                             <i>
                                 {ARROW_SVG}
@@ -67,13 +89,13 @@ export default function Section7({ classList = "" }: { classList?: string }) {
                         </span>
                         <h2 className="alt-section-title lh-1 mb-30 reveal-text">
                             <RevealText>
-                                Questions we hear most.
+                                {title}
                             </RevealText>
                         </h2>
                     </div>
                     <div className="col-lg-7 ms-lg-auto">
-                        <div className="accordion pt-80" id="accordionExample">
-                            {FAQ_ITEMS.map((item) => (
+                        <div className="accordion pt-80" id={accordionId}>
+                            {items.map((item) => (
                                 <div
                                     key={item.id}
                                     className="at-faq-item bg-neutral-0 border-100 scroll-move-up rounded-4"
@@ -96,7 +118,7 @@ export default function Section7({ classList = "" }: { classList?: string }) {
                                     <div
                                         id={item.id}
                                         className={`at-faq-collapse collapse${item.open ? " show" : ""}`}
-                                        data-bs-parent="#accordionExample"
+                                        data-bs-parent={`#${accordionId}`}
                                     >
                                         <div className="at-faq-body">
                                             <p>{item.answer}</p>
