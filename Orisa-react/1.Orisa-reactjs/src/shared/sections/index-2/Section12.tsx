@@ -45,9 +45,20 @@ const INFO_ICON_SVG = (
 type Section12Props = {
     className?: string;
     showNoise?: boolean;
+    titleSlot?: React.ReactNode;
+    subtitleSlot?: React.ReactNode;
+    imageSlot?: React.ReactNode;
+    showFooter?: boolean;
 };
 
-export default function Section12({ className = "", showNoise = true }: Section12Props) {
+export default function Section12({
+    className = "",
+    showNoise = true,
+    titleSlot,
+    subtitleSlot,
+    imageSlot,
+    showFooter = true,
+}: Section12Props) {
     return (
         <div className="container-2200">
             <section
@@ -76,27 +87,45 @@ export default function Section12({ className = "", showNoise = true }: Section1
                         <div className="col-3xl-9 col-xxl-10 col-lg-10 col-md-12">
                             <Section12Pricing
                                 titleSlot={
-                                    <h2 className="alt-section-title lh-1 mb-30 reveal-text">
-                                        <RevealText>
-                                            Simple pricing. No commission.
-                                        </RevealText>
-                                    </h2>
+                                    <>
+                                        {titleSlot ? (
+                                            titleSlot
+                                        ) : (
+                                            <h2 className="alt-section-title lh-1 mb-30 reveal-text">
+                                                <RevealText>
+                                                    Simple pricing. No commission.
+                                                </RevealText>
+                                            </h2>
+                                        )}
+                                        {subtitleSlot && (
+                                            <p className="fz-font-lg neutral-500 mb-30" style={{ lineHeight: "1.7", maxWidth: "780px" }}>
+                                                {subtitleSlot}
+                                            </p>
+                                        )}
+                                        {imageSlot && (
+                                            <div className="mb-50">
+                                                {imageSlot}
+                                            </div>
+                                        )}
+                                    </>
                                 }
                                 footerSlot={
-                                    <>
-                                        <div className="col-12 mt-50 text-center">
-                                            <Link className="at-btn px-5" to="/pricing-1">
-                                                <span>
-                                                    <span className="text-1">See Full Pricing</span>
-                                                    <span className="text-2">See Full Pricing</span>
-                                                </span>
-                                                <i>
-                                                    {ARROW_SVG}
-                                                    {ARROW_SVG}
-                                                </i>
-                                            </Link>
-                                        </div>
-                                    </>
+                                    showFooter ? (
+                                        <>
+                                            <div className="col-12 mt-50 text-center">
+                                                <Link className="at-btn px-5" to="/pricing-1">
+                                                    <span>
+                                                        <span className="text-1">See Full Pricing</span>
+                                                        <span className="text-2">See Full Pricing</span>
+                                                    </span>
+                                                    <i>
+                                                        {ARROW_SVG}
+                                                        {ARROW_SVG}
+                                                    </i>
+                                                </Link>
+                                            </div>
+                                        </>
+                                    ) : null
                                 }
                             />
                         </div>

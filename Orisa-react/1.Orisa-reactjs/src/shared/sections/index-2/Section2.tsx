@@ -121,7 +121,7 @@ export default function Section2() {
                                     </div>
                                     <Link
                                         to="#upcoming-fairs"
-                                        className="at-btn common-white border-bottom-white text-uppercase bg-transparent rounded-0 p-0 pb-2 text-decoration-none"
+                                        className="at-btn common-white border-bottom-white text-uppercase bg-transparent rounded-0 p-0 pb-2 text-decoration-none at_fade_anim"
                                         style={{ borderBottom: "1px solid #ffffff" }}
                                     >
                                         <span className="text-uppercase">
