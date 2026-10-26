@@ -79,20 +79,24 @@ type Section12PricingProps = {
     titleSlot?: ReactNode;
     footerSlot?: ReactNode;
     maxFeatures?: number;
+    contentSlot?: ReactNode;
 };
 
-export default function Section12Pricing({ titleSlot, footerSlot, maxFeatures }: Section12PricingProps) {
+export default function Section12Pricing({ titleSlot, footerSlot, maxFeatures, contentSlot }: Section12PricingProps) {
     return (
         <>
             <div className="row align-items-end mb-60 g-4">
                 <div className="col-12">{titleSlot}</div>
             </div>
 
-            <div className="row justify-content-center g-4">
-                {PLANS.map((plan) => {
-                    const displayedFeatures = typeof maxFeatures === "number" ? plan.features.slice(0, maxFeatures) : plan.features;
-                    return (
-                        <div key={plan.key} className="col-lg-4">
+            {contentSlot ? (
+                contentSlot
+            ) : (
+                <div className="row justify-content-center g-4">
+                    {PLANS.map((plan) => {
+                        const displayedFeatures = typeof maxFeatures === "number" ? plan.features.slice(0, maxFeatures) : plan.features;
+                        return (
+                            <div key={plan.key} className="col-lg-4">
                             <div
                                 className={`home-2-pricing-card ${plan.popular ? "home-2-pricing-card--popular" : ""}`.trim()}
                             >
@@ -144,6 +148,7 @@ export default function Section12Pricing({ titleSlot, footerSlot, maxFeatures }:
                 })}
                 {footerSlot}
             </div>
+            )}
         </>
     );
 }

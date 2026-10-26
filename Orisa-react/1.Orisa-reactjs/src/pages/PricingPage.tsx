@@ -1,6 +1,7 @@
 import PageMeta from "@/seo/PageMeta";
 import RevealText from "@/shared/effects/RevealText";
 import Section1 from "@/shared/sections/index-2/Section12";
+import SectionPricingFairs from "@/shared/sections/pricing-2/SectionPricingFairs";
 import Section2 from "@/shared/sections/services-details/Section4";
 import Section3 from "@/shared/sections/about-3/Section7";
 
@@ -91,6 +92,7 @@ export default function PricingPage() {
               </div>
             </div>
           }
+          contentSlot={<SectionPricingFairs />}
         />
         <Section2 />
         <Section3 />
