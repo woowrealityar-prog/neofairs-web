@@ -277,7 +277,41 @@ export default function PricingPage() {
         />
         <SectionPricingPlans />
         <SectionIntroductoryPricing />
-        <Section2 />
+        <Section2
+          eyebrow="INCLUDED FEATURES"
+          title="Included at every level."
+          subtitle="Everything you need to showcase, sell, and manage your buyers online."
+          steps={[
+            {
+              num: "01",
+              title: "Built for you",
+              description: "We do the build. You review.",
+              img: "/assets/imgs/pages/img-161.webp",
+              cardClass: "at-service-card hover-up card-1 no-before rounded-2 overflow-hidden p-relative bg-neutral-0 z-index-3",
+            },
+            {
+              num: "02",
+              title: "Your dashboard",
+              description: "Products, prices, visitors, RFQs",
+              img: "/assets/imgs/pages/img-162.webp",
+              cardClass: "at-service-card hover-up card-2 rounded-2 overflow-hidden p-relative bg-neutral-0",
+            },
+            {
+              num: "03",
+              title: "Support",
+              description: "Real people, [response time placeholder]",
+              img: "/assets/imgs/pages/img-163.webp",
+              cardClass: "at-service-card hover-up card-3 rounded-2 overflow-hidden p-relative bg-neutral-0",
+            },
+            {
+              num: "04",
+              title: "Your data",
+              description: "Buyer data stays yours",
+              img: "/assets/imgs/pages/img-164.webp",
+              cardClass: "at-service-card hover-up card-2 rounded-2 overflow-hidden p-relative bg-neutral-0",
+            },
+          ]}
+        />
         <Section3 />
       </div>
     </>

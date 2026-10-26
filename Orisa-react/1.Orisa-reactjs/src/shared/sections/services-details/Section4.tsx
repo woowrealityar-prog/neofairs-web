@@ -54,7 +54,27 @@ const STEPS = [
     },
 ];
 
-export default function Section4() {
+export type ApproachStep = {
+    num: string;
+    title: string;
+    description: string;
+    img: string;
+    cardClass?: string;
+};
+
+type Section4Props = {
+    eyebrow?: string;
+    title?: string;
+    subtitle?: string;
+    steps?: ApproachStep[];
+};
+
+export default function Section4({
+    eyebrow = "OUR APPROACH",
+    title = "How we approach strategy",
+    subtitle = "We combine research, analysis, and strategic thinking into a clear, decision-making framework.",
+    steps = STEPS,
+}: Section4Props) {
     return (
         <section className="sec-4-services-details pb-120 pt-120 bg-neutral-50">
             <div className="container">
@@ -62,8 +82,8 @@ export default function Section4() {
                     <div className="col-lg-6">
                         <span className="at-btn common-black bg-transparent mb-10 rounded-0 p-0">
                             <span className="text-uppercase">
-                                <span className="text-1">OUR APPROACH</span>
-                                <span className="text-2">OUR APPROACH</span>
+                                <span className="text-1">{eyebrow}</span>
+                                <span className="text-2">{eyebrow}</span>
                             </span>
                             <i>
                                 {ARROW_SVG}
@@ -71,11 +91,13 @@ export default function Section4() {
                             </i>
                         </span>
                         <h3 className="reveal-text mb-20">
-                            <RevealText>How we approach strategy </RevealText>
+                            <RevealText>{title}</RevealText>
                         </h3>
-                        <h6 className="fw-500 mb-0">
-                            We combine research, analysis, and strategic thinking into a clear, decision-making framework.
-                        </h6>
+                        {subtitle && (
+                            <h6 className="fw-500 mb-0">
+                                {subtitle}
+                            </h6>
+                        )}
                     </div>
                     <div className="col-lg-4 col-md-8 ms-auto text-end">
                         <div className="scroll-rotate d-md-inline-block d-none">
@@ -84,9 +106,9 @@ export default function Section4() {
                     </div>
                 </div>
                 <div className="row g-3 pt-100">
-                    {STEPS.map((step, i) => (
+                    {steps.map((step, i) => (
                         <div key={i} className="col-xxl-3 col-md-6">
-                            <div className={step.cardClass}>
+                            <div className={step.cardClass || "at-service-card hover-up card-2 rounded-2 overflow-hidden p-relative bg-neutral-0"}>
                                 <Link to="#" className="p-absolute top-0 left-0 w-100 h-100" />
                                 <div className="at-service-card-content m-lg-5 m-4">
                                     <div className="at-service-card-number">
