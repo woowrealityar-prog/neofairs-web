@@ -93,7 +93,7 @@ export default function Section2() {
                                 <p className="text-white mb-40">
                                     NeoFairs runs virtual trade fairs by industry, builds showrooms that work all year, and keeps you in front of buyers — for a fraction of what one physical stall costs.
                                 </p>
-                                <div className="d-flex flex-wrap gap-3 align-items-center">
+                                <div className="pt-30 d-flex flex-wrap align-items-center gap-4">
                                     <Link
                                         to="#book-demo"
                                         className="at-btn text-white rounded-0"
