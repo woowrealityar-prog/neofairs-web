@@ -59,7 +59,7 @@ export default function Section9() {
                                 <Link
                                     to="/contact-1"
                                     className="at-btn common-black border-bottom-900 text-uppercase bg-transparent rounded-0 p-0 pb-2 text-decoration-none"
-                                    style={{ color: "#ffffff", borderColor: "#ffffff" }}
+                                    style={{ color: "#ffffff", borderBottom: "1px solid #ffffff" }}
                                 >
                                     <span className="text-uppercase" style={{ color: "#ffffff" }}>
                                         <span className="text-1" style={{ color: "#ffffff" }}>Join the Marketplace</span>

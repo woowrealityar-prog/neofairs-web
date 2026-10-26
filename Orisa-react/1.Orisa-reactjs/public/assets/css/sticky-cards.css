@@ -103,3 +103,19 @@
     border-color: #9cd318 !important;
 }
 
+/* ============================================================
+   Underline links (secondary buttons):
+   Ensure bottom border displays clearly on dark backgrounds
+   ============================================================ */
+.border-bottom-white,
+.at-btn.common-white,
+.border-bottom-900 {
+    border-bottom: 1px solid currentColor !important;
+}
+
+.border-bottom-white,
+.at-btn.border-bottom-white {
+    border-bottom: 1px solid #ffffff !important;
+}
+
+
