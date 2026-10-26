@@ -61,7 +61,7 @@ const FAIRS_PLANS = [
 
 export default function SectionPricingFairs() {
     return (
-        <div aria-label="Virtual Trade Fairs pricing">
+        <div>
             <div className="row g-4 align-items-end mb-40">
                 <div className="col-lg-7">
                     <span className="at-btn common-black bg-transparent rounded-0 p-0 mb-15">
