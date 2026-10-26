@@ -52,6 +52,9 @@ type Section12Props = {
     maxFeatures?: number;
     contentSlot?: React.ReactNode;
     showCards?: boolean;
+    eyebrowText?: string;
+    plans?: any[];
+    colClass?: string;
 };
 
 export default function Section12({
@@ -64,6 +67,9 @@ export default function Section12({
     maxFeatures,
     contentSlot,
     showCards = true,
+    eyebrowText = "Pricing",
+    plans,
+    colClass,
 }: Section12Props) {
     return (
         <div className="container-2200">
@@ -79,8 +85,8 @@ export default function Section12({
                         <div className="col-lg-2 p-relative d-flex flex-column justify-content-between align-items-start">
                             <span className="at-btn common-black bg-transparent rounded-0 p-0">
                                 <span className="text-uppercase text-nowrap">
-                                    <span className="text-1">Pricing</span>
-                                    <span className="text-2">Pricing</span>
+                                    <span className="text-1">{eyebrowText}</span>
+                                    <span className="text-2">{eyebrowText}</span>
                                 </span>
                                 <i>
                                     {ARROW_SVG}
@@ -95,6 +101,8 @@ export default function Section12({
                                 maxFeatures={maxFeatures}
                                 contentSlot={contentSlot}
                                 showCards={showCards}
+                                plans={plans}
+                                colClass={colClass}
                                 titleSlot={
                                     <>
                                         {titleSlot ? (

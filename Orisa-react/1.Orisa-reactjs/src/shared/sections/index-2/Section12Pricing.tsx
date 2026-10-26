@@ -75,15 +75,38 @@ const PLANS = [
     },
 ];
 
+type PlanItem = {
+    key: string;
+    title: string;
+    price: string;
+    pricePeriod: string;
+    priceClass: string;
+    desc: string;
+    btnText: string;
+    btnLink: string;
+    features: string[];
+    popular: boolean;
+};
+
 type Section12PricingProps = {
     titleSlot?: ReactNode;
     footerSlot?: ReactNode;
     maxFeatures?: number;
     contentSlot?: ReactNode;
     showCards?: boolean;
+    plans?: PlanItem[];
+    colClass?: string;
 };
 
-export default function Section12Pricing({ titleSlot, footerSlot, maxFeatures, contentSlot, showCards = true }: Section12PricingProps) {
+export default function Section12Pricing({
+    titleSlot,
+    footerSlot,
+    maxFeatures,
+    contentSlot,
+    showCards = true,
+    plans = PLANS,
+    colClass,
+}: Section12PricingProps) {
     return (
         <>
             <div className="row align-items-end mb-60 g-4">
@@ -94,10 +117,11 @@ export default function Section12Pricing({ titleSlot, footerSlot, maxFeatures, c
                 contentSlot
             ) : showCards ? (
                 <div className="row justify-content-center g-4">
-                    {PLANS.map((plan) => {
+                    {plans.map((plan) => {
                         const displayedFeatures = typeof maxFeatures === "number" ? plan.features.slice(0, maxFeatures) : plan.features;
+                        const columnClass = colClass ? colClass : (plans.length === 2 ? "col-lg-6" : "col-lg-4");
                         return (
-                            <div key={plan.key} className="col-lg-4">
+                            <div key={plan.key} className={columnClass}>
                             <div
                                 className={`home-2-pricing-card ${plan.popular ? "home-2-pricing-card--popular" : ""}`.trim()}
                             >
