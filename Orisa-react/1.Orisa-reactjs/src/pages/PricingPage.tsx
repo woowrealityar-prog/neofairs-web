@@ -5,6 +5,7 @@ import SectionPricingPlans from "@/shared/sections/about-3/SectionPricingPlans";
 import SectionIntroductoryPricing from "@/shared/sections/about-2/SectionIntroductoryPricing";
 import Section2 from "@/shared/sections/services-details/Section4";
 import Section3 from "@/shared/sections/about-3/Section7";
+import SectionGetListedEarly from "@/shared/sections/about-2/SectionGetListedEarly";
 
 export default function PricingPage() {
   return (
@@ -353,6 +354,13 @@ export default function PricingPage() {
               open: false,
             },
           ]}
+        />
+        <SectionGetListedEarly
+          badge="Marketplace"
+          title="Not sure which tier?"
+          subtitle="Tell us what you make and who buys it. We’ll recommend one. No pitch."
+          submitText="Book My Free Demo"
+          includeProductsField={false}
         />
       </div>
     </>

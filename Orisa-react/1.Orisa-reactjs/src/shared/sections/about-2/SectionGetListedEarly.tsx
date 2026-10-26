@@ -20,7 +20,23 @@ const SUBMIT_ARROW_SVG = (
     </>
 );
 
-export default function SectionGetListedEarly() {
+interface SectionGetListedEarlyProps {
+    badge?: string;
+    title?: string;
+    subtitle?: string;
+    submitText?: string;
+    includeProductsField?: boolean;
+    successMessage?: string;
+}
+
+export default function SectionGetListedEarly({
+    badge = "Marketplace",
+    title = "Get listed early.",
+    subtitle = "Tell us your industry. We’ll tell you when your category opens and what it costs.",
+    submitText = "Join the Marketplace",
+    includeProductsField = true,
+    successMessage = "Our onboarding team will contact you shortly.",
+}: SectionGetListedEarlyProps) {
     const [captchaChecked, setCaptchaChecked] = useState(false);
     const [submitted, setSubmitted] = useState(false);
 
@@ -35,7 +51,7 @@ export default function SectionGetListedEarly() {
 
     return (
         <div className="container-2200">
-            <section className="rounded-5 mx-lg-3 mx-2 pt-120 pb-120 bg-neutral-0" aria-label="Get listed early">
+            <section className="rounded-5 mx-lg-3 mx-2 pt-120 pb-120 bg-neutral-0" aria-label={title}>
                 <div className="container">
                     <div className="row align-items-start justify-content-between g-4 g-lg-5">
                         {/* Left Column: Heading & Description */}
@@ -43,8 +59,8 @@ export default function SectionGetListedEarly() {
                             <div className="mb-40">
                                 <span className="at-btn common-black bg-transparent mb-10 rounded-0 p-0">
                                     <span className="text-uppercase">
-                                        <span className="text-1">Marketplace</span>
-                                        <span className="text-2">Marketplace</span>
+                                        <span className="text-1">{badge}</span>
+                                        <span className="text-2">{badge}</span>
                                     </span>
                                     <i>
                                         {ARROW_SVG}
@@ -52,10 +68,10 @@ export default function SectionGetListedEarly() {
                                     </i>
                                 </span>
                                 <h2 className="alt-section-title lh-1 mb-30 reveal-text">
-                                    <RevealText>Get listed early.</RevealText>
+                                    <RevealText>{title}</RevealText>
                                 </h2>
                                 <p className="fz-font-lg neutral-600 mb-0" style={{ lineHeight: "1.7" }}>
-                                    Tell us your industry. We’ll tell you when your category opens and what it costs.
+                                    {subtitle}
                                 </p>
                             </div>
                         </div>
@@ -125,16 +141,18 @@ export default function SectionGetListedEarly() {
                                     </div>
 
                                     {/* Products you make field */}
-                                    <div className="sec-4-about-form__field at_fade_anim">
-                                        <input
-                                            type="text"
-                                            className="sec-4-about-form__input"
-                                            name="products"
-                                            placeholder="Products you make *"
-                                            required
-                                            aria-label="Products you make"
-                                        />
-                                    </div>
+                                    {includeProductsField && (
+                                        <div className="sec-4-about-form__field at_fade_anim">
+                                            <input
+                                                type="text"
+                                                className="sec-4-about-form__input"
+                                                name="products"
+                                                placeholder="Products you make *"
+                                                required
+                                                aria-label="Products you make"
+                                            />
+                                        </div>
+                                    )}
 
                                     {/* Captcha verification box */}
                                     <div className="sec-4-about-form__field at_fade_anim pt-2 pb-2">
@@ -159,8 +177,8 @@ export default function SectionGetListedEarly() {
                                     <div className="sec-4-about-form__actions at_fade_anim pt-2">
                                         <button type="submit" className="sec-4-about-form__btn at-btn at_fade_anim">
                                             <span>
-                                                <span className="text-1 text-capitalize">Join the Marketplace</span>
-                                                <span className="text-2 text-capitalize">Join the Marketplace</span>
+                                                 <span className="text-1 text-capitalize">{submitText}</span>
+                                                 <span className="text-2 text-capitalize">{submitText}</span>
                                             </span>
                                             <i>
                                                 {SUBMIT_ARROW_SVG}
