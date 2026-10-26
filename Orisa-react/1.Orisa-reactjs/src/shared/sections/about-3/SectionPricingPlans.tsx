@@ -10,6 +10,15 @@ const ARROW_SVG = (
     </svg>
 );
 
+const ARROW_CIRCLE_SVG = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+        <path
+            d="M0.0001297 8.99993L0 3.00407e-05L2 0L2.0001 6.99993L12.1719 7.00003L8.22224 3.05027L9.63644 1.63606L16.0003 8.00003L9.63644 14.364L8.22224 12.9497L12.1719 9.00003L0.0001297 8.99993Z"
+            fill="currentColor"
+        />
+    </svg>
+);
+
 const INFO_ICON_SVG = (
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
         <path
@@ -149,16 +158,22 @@ export default function SectionPricingPlans() {
                                 ))}
                             </ul>
                             <div className="pricing-2-row__action">
-                                <Link className="at-btn pricing-plan-btn px-4" to="/contact-1">
-                                    <span>
-                                        <span className="text-1 text-capitalize">{plan.btnText}</span>
-                                        <span className="text-2 text-capitalize">{plan.btnText}</span>
-                                    </span>
-                                    <i>
-                                        {ARROW_SVG}
-                                        {ARROW_SVG}
-                                    </i>
-                                </Link>
+                                <div
+                                    className="at-btn-group btn-brand-1 at_fade_anim"
+                                    data-delay=".4"
+                                    data-fade-from="bottom"
+                                    data-ease="bounce"
+                                >
+                                    <Link className="at-btn-circle" to="/contact-1" style={{ color: "#000" }}>
+                                        {ARROW_CIRCLE_SVG}
+                                    </Link>
+                                    <Link className="at-btn z-index-1" to="/contact-1" style={{ color: "#000" }}>
+                                        {plan.btnText}
+                                    </Link>
+                                    <Link className="at-btn-circle" to="/contact-1" style={{ color: "#000" }}>
+                                        {ARROW_CIRCLE_SVG}
+                                    </Link>
+                                </div>
                             </div>
                         </article>
                     ))}
@@ -179,16 +194,22 @@ export default function SectionPricingPlans() {
                             All plans include full platform access, setup support, and zero commissions on your sales.
                         </p>
                     </div>
-                    <Link className="at-btn pricing-plan-btn px-4" to="/pricing-2">
-                        <span>
-                            <span className="text-1">See Full Pricing</span>
-                            <span className="text-2">See Full Pricing</span>
-                        </span>
-                        <i>
-                            {ARROW_SVG}
-                            {ARROW_SVG}
-                        </i>
-                    </Link>
+                    <div
+                        className="at-btn-group btn-brand-1 at_fade_anim"
+                        data-delay=".4"
+                        data-fade-from="bottom"
+                        data-ease="bounce"
+                    >
+                        <Link className="at-btn-circle" to="/pricing-2" style={{ color: "#000" }}>
+                            {ARROW_CIRCLE_SVG}
+                        </Link>
+                        <Link className="at-btn z-index-1" to="/pricing-2" style={{ color: "#000" }}>
+                            See Full Pricing
+                        </Link>
+                        <Link className="at-btn-circle" to="/pricing-2" style={{ color: "#000" }}>
+                            {ARROW_CIRCLE_SVG}
+                        </Link>
+                    </div>
                 </div>
             </div>
         </section>
