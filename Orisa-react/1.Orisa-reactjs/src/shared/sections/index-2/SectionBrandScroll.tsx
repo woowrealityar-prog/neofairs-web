@@ -157,7 +157,7 @@ export default function SectionBrandScroll() {
                                             </div>
                                         ))}
                                         <div className="flex-grow-1 text-center d-flex flex-column justify-content-center ml-100 py-5">
-                                            <div className="d-flex mb-2">
+                                            <div className="d-flex mb-2" style={{ color: "#ace227" }}>
                                                 {[true, true, true, true, true].map((filled, i) => (
                                                     <span key={i} className={filled ? "star" : ""}>
                                                         {STAR_SVG}

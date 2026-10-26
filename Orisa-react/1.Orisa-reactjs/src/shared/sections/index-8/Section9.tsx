@@ -30,7 +30,7 @@ export default function Section9() {
                             <p className="sec-9-home-8__lead at_fade_anim reveal-text mb-3">
                                 <RevealText>Each fair is priced by industry, region and scale. Domestic fairs cost less; international fairs more.</RevealText>
                             </p>
-                            <div className="at-service-btn pt-30 at_fade_anim d-flex flex-wrap align-items-center gap-4">
+                            <div className="pt-30 d-flex flex-wrap align-items-center gap-4">
                                 <Link className="at-btn text-dark bg-white rounded-0 px-4 py-3" to="/contact-1">
                                     <span>
                                         <span className="text-1" style={{ color: "#111", fontWeight: 600 }}>See the current fair</span>

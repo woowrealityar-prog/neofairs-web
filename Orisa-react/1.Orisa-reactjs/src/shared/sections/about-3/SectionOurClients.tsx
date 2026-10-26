@@ -111,7 +111,7 @@ export default function SectionOurClients() {
                                         </div>
                                     ))}
                                     <div className="flex-grow-1 text-center d-flex flex-column justify-content-center ml-100 py-5">
-                                        <div className="d-flex mb-2">
+                                        <div className="d-flex mb-2" style={{ color: "#ace227" }}>
                                             <span className="star"><StarIcon /></span>
                                             <span className="star"><StarIcon /></span>
                                             <span className="star"><StarIcon /></span>
