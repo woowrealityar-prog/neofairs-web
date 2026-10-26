@@ -55,6 +55,7 @@ type Section12Props = {
     eyebrowText?: string;
     plans?: any[];
     colClass?: string;
+    showContact?: boolean;
 };
 
 export default function Section12({
@@ -70,6 +71,7 @@ export default function Section12({
     eyebrowText = "Pricing",
     plans,
     colClass,
+    showContact = true,
 }: Section12Props) {
     return (
         <div className="container-2200">
@@ -96,7 +98,7 @@ export default function Section12({
 
                         </div>
 
-                        <div className="col-3xl-9 col-xxl-10 col-lg-10 col-md-12">
+                        <div className={showContact ? "col-3xl-9 col-xxl-10 col-lg-10 col-md-12" : "col-lg-10 col-md-12"}>
                             <Section12Pricing
                                 maxFeatures={maxFeatures}
                                 contentSlot={contentSlot}
@@ -147,17 +149,19 @@ export default function Section12({
                             />
                         </div>
 
-                        <div className="col-xxl-2 text-end d-flex flex-column gap-2">
-                            <Link to="/contact-1" className="text-decoration-underline">
-                                Contact Us
-                            </Link>
-                            <h6 className="fw-600">
-                                <a href="mailto:enquiry@neofairs.com">enquiry@neofairs.com</a>
-                            </h6>
-                            <h6 className="fw-600">
-                                <a href="tel:+917010130684">+91-70101 30684</a>
-                            </h6>
-                        </div>
+                        {showContact && (
+                            <div className="col-xxl-2 text-end d-flex flex-column gap-2">
+                                <Link to="/contact-1" className="text-decoration-underline">
+                                    Contact Us
+                                </Link>
+                                <h6 className="fw-600">
+                                    <a href="mailto:enquiry@neofairs.com">enquiry@neofairs.com</a>
+                                </h6>
+                                <h6 className="fw-600">
+                                    <a href="tel:+917010130684">+91-70101 30684</a>
+                                </h6>
+                            </div>
+                        )}
                     </div>
                 </div>
             </section>

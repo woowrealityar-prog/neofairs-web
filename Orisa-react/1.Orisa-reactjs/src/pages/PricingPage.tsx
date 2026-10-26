@@ -68,6 +68,7 @@ export default function PricingPage() {
           showNoise={false}
           showFooter={false}
           showCards={false}
+          showContact={false}
           titleSlot={
             <h1 className="alt-section-title lh-1 mb-20 reveal-text">
               <RevealText>Every feature. One fee. No commission.</RevealText>
@@ -102,6 +103,7 @@ export default function PricingPage() {
           className="pt-80 pb-80"
           showNoise={false}
           showFooter={false}
+          showContact={false}
           eyebrowText="Virtual Trade Fairs"
           titleSlot={
             <h2 className="alt-section-title lh-1 mb-20 reveal-text">
