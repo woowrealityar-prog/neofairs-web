@@ -80,9 +80,10 @@ type Section12PricingProps = {
     footerSlot?: ReactNode;
     maxFeatures?: number;
     contentSlot?: ReactNode;
+    showCards?: boolean;
 };
 
-export default function Section12Pricing({ titleSlot, footerSlot, maxFeatures, contentSlot }: Section12PricingProps) {
+export default function Section12Pricing({ titleSlot, footerSlot, maxFeatures, contentSlot, showCards = true }: Section12PricingProps) {
     return (
         <>
             <div className="row align-items-end mb-60 g-4">
@@ -91,7 +92,7 @@ export default function Section12Pricing({ titleSlot, footerSlot, maxFeatures, c
 
             {contentSlot ? (
                 contentSlot
-            ) : (
+            ) : showCards ? (
                 <div className="row justify-content-center g-4">
                     {PLANS.map((plan) => {
                         const displayedFeatures = typeof maxFeatures === "number" ? plan.features.slice(0, maxFeatures) : plan.features;
@@ -148,7 +149,7 @@ export default function Section12Pricing({ titleSlot, footerSlot, maxFeatures, c
                 })}
                 {footerSlot}
             </div>
-            )}
+            ) : null}
         </>
     );
 }

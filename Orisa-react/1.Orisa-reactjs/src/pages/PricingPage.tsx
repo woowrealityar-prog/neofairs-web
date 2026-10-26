@@ -64,12 +64,13 @@ export default function PricingPage() {
           className="pt-100"
           showNoise={false}
           showFooter={false}
+          showCards={false}
           titleSlot={
             <h1 className="alt-section-title lh-1 mb-20 reveal-text">
-              <RevealText>Virtual Trade Fairs</RevealText>
+              <RevealText>Every feature. One fee. No commission.</RevealText>
             </h1>
           }
-          subtitleSlot="Priced per fair. Each fair is priced by industry, region and scale. Domestic fairs cost less; international fairs more."
+          subtitleSlot="Three products. Buy one, or let each one build on the last."
           imageSlot={
             <div
               className="svc5-hero__media at_fade_anim rounded-4 overflow-hidden"
