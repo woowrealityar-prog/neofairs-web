@@ -109,6 +109,7 @@ export default function App() {
         <Route path="/living-showroom" element={<About3Page />} />
         <Route path="/about-2" element={<About2Page />} />
         <Route path="/marketplace" element={<About2Page />} />
+        <Route path="/pricing" element={<PricingPage />} />
       </Route>
       <Route element={<MainLayout headerStyle={2} footerStyle={2} />}>
         <Route path="/404" element={<NotFoundPage />} />
@@ -139,7 +140,6 @@ export default function App() {
         <Route path="/portfolio-details-3" element={<PortfolioDetails3Page />} />
         <Route path="/portfolio-details-4" element={<PortfolioDetails4Page />} />
         <Route path="/portfolio-details-6" element={<PortfolioDetails6Page />} />
-        <Route path="/pricing" element={<PricingPage />} />
         <Route path="/pricing-2" element={<Pricing2Page />} />
         <Route path="/pricing-3" element={<Pricing3Page />} />
         <Route path="/pricing-4" element={<Pricing4Page />} />

@@ -356,8 +356,8 @@ export default function PricingPage() {
           ]}
         />
         <SectionGetListedEarly
-          badge="Marketplace"
-          title="Not sure which tier?"
+          badge="Demo"
+          title="Not sure which tier ?"
           subtitle="Tell us what you make and who buys it. We’ll recommend one. No pitch."
           submitText="Book My Free Demo"
           includeProductsField={false}
