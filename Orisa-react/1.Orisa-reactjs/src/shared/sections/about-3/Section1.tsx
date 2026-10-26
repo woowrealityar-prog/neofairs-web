@@ -77,18 +77,18 @@ export default function Section1() {
                     <div className="col-lg-5 ms-auto">
                         <div className="d-flex flex-wrap justify-content-lg-end align-items-center gap-4">
                             <div
-                                className="at-btn-group at_fade_anim"
+                                className="at-btn-group btn-brand-1 at_fade_anim"
                                 data-delay=".4"
                                 data-fade-from="bottom"
                                 data-ease="bounce"
                             >
-                                <Link className="at-btn-circle" to="/contact-1">
+                                <Link className="at-btn-circle" to="/contact-1" style={{ color: "#000" }}>
                                     {ARROW_CIRCLE_SVG}
                                 </Link>
-                                <Link className="at-btn z-index-1" to="/contact-1">
+                                <Link className="at-btn z-index-1" to="/contact-1" style={{ color: "#000" }}>
                                     Free Demo
                                 </Link>
-                                <Link className="at-btn-circle" to="/contact-1">
+                                <Link className="at-btn-circle" to="/contact-1" style={{ color: "#000" }}>
                                     {ARROW_CIRCLE_SVG}
                                 </Link>
                             </div>

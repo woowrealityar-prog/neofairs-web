@@ -72,3 +72,34 @@
         aspect-ratio: 4 / 5;
     }
 }
+
+/* ============================================================
+   Global form action button styling matching homepage:
+   Brand green #ace227 background, black text and arrow
+   ============================================================ */
+.sec-4-about-form__actions .sec-4-about-form__btn,
+.sec-4-about-form__btn {
+    background-color: #ace227 !important;
+    color: #000000 !important;
+    border-color: #ace227 !important;
+}
+
+.sec-4-about-form__actions .sec-4-about-form__btn span,
+.sec-4-about-form__actions .sec-4-about-form__btn span span,
+.sec-4-about-form__actions .sec-4-about-form__btn i,
+.sec-4-about-form__actions .sec-4-about-form__btn i svg,
+.sec-4-about-form__btn span,
+.sec-4-about-form__btn span span,
+.sec-4-about-form__btn i,
+.sec-4-about-form__btn i svg {
+    color: #000000 !important;
+    fill: #000000 !important;
+}
+
+.sec-4-about-form__actions .sec-4-about-form__btn:hover,
+.sec-4-about-form__btn:hover {
+    color: #000000 !important;
+    background-color: #9cd318 !important;
+    border-color: #9cd318 !important;
+}
+
