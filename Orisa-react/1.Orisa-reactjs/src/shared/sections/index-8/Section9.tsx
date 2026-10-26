@@ -58,13 +58,14 @@ export default function Section9() {
                                 </div>
                                 <Link
                                     to="/contact-1"
-                                    className="at-btn common-white border-bottom-white text-uppercase bg-transparent rounded-0 p-0 pb-2 text-decoration-none"
+                                    className="at-btn common-black border-bottom-900 text-uppercase bg-transparent rounded-0 p-0 pb-2 text-decoration-none"
+                                    style={{ color: "#ffffff", borderColor: "#ffffff" }}
                                 >
-                                    <span className="text-uppercase">
-                                        <span className="text-1">Join the Marketplace</span>
-                                        <span className="text-2">Join the Marketplace</span>
+                                    <span className="text-uppercase" style={{ color: "#ffffff" }}>
+                                        <span className="text-1" style={{ color: "#ffffff" }}>Join the Marketplace</span>
+                                        <span className="text-2" style={{ color: "#ffffff" }}>Join the Marketplace</span>
                                     </span>
-                                    <i>
+                                    <i style={{ color: "#ffffff" }}>
                                         {ARROW_SVG}
                                         {ARROW_SVG}
                                     </i>
