@@ -61,10 +61,16 @@ export default function PricingPage() {
           visibility: visible !important;
           transform: translate(13px, -13px) !important;
         }
+        .pricing-page .home-2-section-12.mt-0 {
+          margin-top: 0 !important;
+        }
+        .pricing-page .home-2-section-12.pt-0 {
+          padding-top: 30px !important;
+        }
       `}</style>
       <div className="pricing-page">
         <Section1
-          className="pt-100"
+          className="mt-0 pt-0"
           showNoise={false}
           showFooter={false}
           showCards={false}
@@ -100,7 +106,7 @@ export default function PricingPage() {
 
         {/* Section: Virtual Trade Fairs (Using the homepage Pricing layout) */}
         <Section1
-          className="pt-80 pb-80"
+          className="mt-0 pt-0 pb-80"
           showNoise={false}
           showFooter={false}
           showContact={false}
