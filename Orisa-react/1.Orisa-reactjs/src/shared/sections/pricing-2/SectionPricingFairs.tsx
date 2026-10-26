@@ -134,25 +134,6 @@ export default function SectionPricingFairs() {
                     </article>
                 ))}
             </div>
-
-            <div
-                className="pricing-2-custom mt-40 at_fade_anim"
-                data-fade-from="bottom"
-                data-delay=".1"
-            >
-                <div className="pricing-2-custom__icon" aria-hidden="true" style={{ color: "#ace227" }}>
-                    {INFO_ICON_SVG}
-                </div>
-                <div className="pricing-2-custom__text">
-                    <h3 className="h6 fw-600 mb-10">Marketplace Member Benefit</h3>
-                    <p className="neutral-500 mb-0 fz-font-md">
-                        Marketplace members get discount on every fair.
-                    </p>
-                </div>
-                <Link className="pricing-2-custom__link text-decoration-underline ms-auto" to="/marketplace">
-                    Explore Marketplace
-                </Link>
-            </div>
         </div>
     );
 }
