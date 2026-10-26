@@ -118,7 +118,7 @@ export default function PricingPage() {
           className="pricing-fairs-section pb-80"
           showNoise={false}
           showFooter={false}
-          showContact={false}
+          showContact={true}
           eyebrowText="Virtual Trade Fairs"
           titleSlot={
             <h2 className="alt-section-title lh-1 mb-20 reveal-text">
