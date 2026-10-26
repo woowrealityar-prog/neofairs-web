@@ -2,6 +2,7 @@ import PageMeta from "@/seo/PageMeta";
 import RevealText from "@/shared/effects/RevealText";
 import Section1 from "@/shared/sections/index-2/Section12";
 import SectionPricingPlans from "@/shared/sections/about-3/SectionPricingPlans";
+import SectionIntroductoryPricing from "@/shared/sections/about-2/SectionIntroductoryPricing";
 import Section2 from "@/shared/sections/services-details/Section4";
 import Section3 from "@/shared/sections/about-3/Section7";
 
@@ -275,6 +276,7 @@ export default function PricingPage() {
           }
         />
         <SectionPricingPlans />
+        <SectionIntroductoryPricing />
         <Section2 />
         <Section3 />
       </div>
