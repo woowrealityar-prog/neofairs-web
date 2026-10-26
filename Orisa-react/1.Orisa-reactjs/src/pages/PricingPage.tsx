@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import PageMeta from "@/seo/PageMeta";
 import RevealText from "@/shared/effects/RevealText";
 import Section1 from "@/shared/sections/index-2/Section12";
@@ -6,6 +7,15 @@ import SectionIntroductoryPricing from "@/shared/sections/about-2/SectionIntrodu
 import Section2 from "@/shared/sections/services-details/Section4";
 import Section3 from "@/shared/sections/about-3/Section7";
 import SectionGetListedEarly from "@/shared/sections/about-2/SectionGetListedEarly";
+
+const ARROW_CIRCLE_SVG = (
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+    <path
+      d="M0.0001297 8.99993L0 3.00407e-05L2 0L2.0001 6.99993L12.1719 7.00003L8.22224 3.05027L9.63644 1.63606L16.0003 8.00003L9.63644 14.364L8.22224 12.9497L12.1719 9.00003L0.0001297 8.99993Z"
+      fill="currentColor"
+    />
+  </svg>
+);
 
 export default function PricingPage() {
   return (
@@ -276,9 +286,22 @@ export default function PricingPage() {
                     Marketplace members get discount on every fair.
                   </p>
                 </div>
-                <a className="pricing-2-custom__link text-decoration-underline ms-auto" href="/marketplace">
-                  Explore Marketplace
-                </a>
+                <div
+                  className="at-btn-group btn-brand-1 at_fade_anim ms-auto"
+                  data-delay=".4"
+                  data-fade-from="bottom"
+                  data-ease="bounce"
+                >
+                  <Link className="at-btn-circle" to="/marketplace" style={{ color: "#000" }}>
+                    {ARROW_CIRCLE_SVG}
+                  </Link>
+                  <Link className="at-btn z-index-1" to="/marketplace" style={{ color: "#000" }}>
+                    Explore Marketplace
+                  </Link>
+                  <Link className="at-btn-circle" to="/marketplace" style={{ color: "#000" }}>
+                    {ARROW_CIRCLE_SVG}
+                  </Link>
+                </div>
               </div>
             </>
           }
