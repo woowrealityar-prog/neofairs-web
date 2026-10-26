@@ -10,6 +10,15 @@ const ARROW_SVG = (
     </svg>
 );
 
+const ARROW_CIRCLE_SVG = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+        <path
+            d="M0.0001297 8.99993L0 3.00407e-05L2 0L2.0001 6.99993L12.1719 7.00003L8.22224 3.05027L9.63644 1.63606L16.0003 8.00003L9.63644 14.364L8.22224 12.9497L12.1719 9.00003L0.0001297 8.99993Z"
+            fill="currentColor"
+        />
+    </svg>
+);
+
 export default function SectionFairStall() {
     const sectionRef = useRef<HTMLDivElement>(null);
     const scaleUpRef = useRef<HTMLDivElement>(null);
@@ -83,19 +92,22 @@ export default function SectionFairStall() {
                                 Your showroom is your fair stall.
                             </h2>
                             <div className="pt-30">
-                                <Link
-                                    className="at-btn bg-theme-primary text-black rounded-0 text-decoration-none border-0"
-                                    to="/fairs"
+                                <div
+                                    className="at-btn-group btn-brand-1 at_fade_anim"
+                                    data-delay=".4"
+                                    data-fade-from="bottom"
+                                    data-ease="bounce"
                                 >
-                                    <span className="text-black">
-                                        <span className="text-1">See Upcoming Fairs</span>
-                                        <span className="text-2">See Upcoming Fairs</span>
-                                    </span>
-                                    <i>
-                                        {ARROW_SVG}
-                                        {ARROW_SVG}
-                                    </i>
-                                </Link>
+                                    <Link className="at-btn-circle" to="/fairs" style={{ color: "#000" }}>
+                                        {ARROW_CIRCLE_SVG}
+                                    </Link>
+                                    <Link className="at-btn z-index-1" to="/fairs" style={{ color: "#000" }}>
+                                        See Upcoming Fairs
+                                    </Link>
+                                    <Link className="at-btn-circle" to="/fairs" style={{ color: "#000" }}>
+                                        {ARROW_CIRCLE_SVG}
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                         <div className="col-lg-5 col-md-4 ms-auto text-md-end text-start pt-3 pt-md-0">

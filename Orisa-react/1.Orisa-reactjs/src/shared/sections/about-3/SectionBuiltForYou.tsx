@@ -102,14 +102,14 @@ export default function SectionBuiltForYou() {
                             ))}
                         </ul>
                         <div className="pt-40">
-                            <div className="at-btn-group at_fade_anim" data-delay=".4" data-fade-from="bottom" data-ease="bounce">
-                                <Link to="/contact-1" className="at-btn-circle">
+                            <div className="at-btn-group btn-brand-1 at_fade_anim" data-delay=".4" data-fade-from="bottom" data-ease="bounce">
+                                <Link to="/contact-1" className="at-btn-circle" style={{ color: "#000" }}>
                                     {ARROW_CIRCLE}
                                 </Link>
-                                <Link to="/contact-1" className="at-btn z-index-1">
+                                <Link to="/contact-1" className="at-btn z-index-1" style={{ color: "#000" }}>
                                     Book a Free Demo
                                 </Link>
-                                <Link to="/contact-1" className="at-btn-circle">
+                                <Link to="/contact-1" className="at-btn-circle" style={{ color: "#000" }}>
                                     {ARROW_CIRCLE}
                                 </Link>
                             </div>

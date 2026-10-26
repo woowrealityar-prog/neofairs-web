@@ -149,7 +149,7 @@ export default function SectionPricingPlans() {
                                 ))}
                             </ul>
                             <div className="pricing-2-row__action">
-                                <Link className="at-btn px-4" to="/contact-1">
+                                <Link className="at-btn pricing-plan-btn px-4" to="/contact-1">
                                     <span>
                                         <span className="text-1 text-capitalize">{plan.btnText}</span>
                                         <span className="text-2 text-capitalize">{plan.btnText}</span>
@@ -179,7 +179,7 @@ export default function SectionPricingPlans() {
                             All plans include full platform access, setup support, and zero commissions on your sales.
                         </p>
                     </div>
-                    <Link className="at-btn px-4" to="/pricing-2">
+                    <Link className="at-btn pricing-plan-btn px-4" to="/pricing-2">
                         <span>
                             <span className="text-1">See Full Pricing</span>
                             <span className="text-2">See Full Pricing</span>
