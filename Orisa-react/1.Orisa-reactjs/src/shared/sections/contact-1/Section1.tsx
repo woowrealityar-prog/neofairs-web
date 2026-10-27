@@ -43,7 +43,7 @@ export default function Section1() {
     };
 
     return (
-        <section className="sec-1-contact overflow-hidden pt-120 pb-80">
+        <section className="sec-1-contact overflow-hidden pt-130 pb-80">
             <div className="container">
                 {/* Header Row */}
                 <div className="row align-items-end">
@@ -76,7 +76,7 @@ export default function Section1() {
                 <div className="row g-5 pt-80 align-items-start">
                     {/* Left: Contact Form */}
                     <div className="col-xxl-6 col-lg-7">
-                        <h3 className="fw-600 mb-20 neutral-900">Send us a message</h3>
+                        <h3 className="fw-600 mb-25 neutral-900">Send us a message</h3>
                         <form className="sec-4-about-form" onSubmit={handleSubmit}>
                             <div className="sec-4-about-form__field">
                                 <input
@@ -326,14 +326,7 @@ export default function Section1() {
                             <div>
                                 <h5 className="fw-600 neutral-900 mb-2">Trade body or advisor?</h5>
                                 <p className="neutral-600 fz-font-md mb-20">
-                                    We plan each fair with industry partners. Write to us at{" "}
-                                    <a
-                                        href="mailto:enquiry@neofairs.com"
-                                        className="neutral-900 fw-600 text-decoration-underline"
-                                    >
-                                        enquiry@neofairs.com
-                                    </a>
-                                    .
+                                    We plan each fair with industry partners. Write to us.
                                 </p>
                             </div>
                             <div>
