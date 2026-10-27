@@ -111,10 +111,10 @@ export default function App() {
         <Route path="/about-2" element={<About2Page />} />
         <Route path="/marketplace" element={<About2Page />} />
         <Route path="/pricing" element={<PricingPage />} />
+        <Route path="/about-us" element={<AboutPage />} />
       </Route>
       <Route element={<MainLayout headerStyle={2} footerStyle={2} />}>
         <Route path="/404" element={<NotFoundPage />} />
-        <Route path="/about-us" element={<AboutPage />} />
         <Route path="/about-1" element={<About1Page />} />
         <Route path="/about-3" element={<About3Page />} />
         <Route path="/about-4" element={<About4Page />} />

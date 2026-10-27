@@ -127,7 +127,7 @@ export default function AboutPage() {
       />
       <SectionBrandScroll />
       <SectionImageStrips />
-      <Section5 />
+      {/* <Section5 /> */}
       <SectionAgastronGroup
         title="Part of Agastron Group"
         lead="NeoFairs is one of the Agastron Group ventures, alongside Aranidhi, RulerInsights and Mayvrion. The NeoFairs platform was engineered in-house by Mayvrion, the group’s engineering arm."
@@ -154,7 +154,7 @@ export default function AboutPage() {
           />
         </div>
       </section>
-      <Section6 />
+      {/* <Section6 /> */}
     </>
   );
 }
