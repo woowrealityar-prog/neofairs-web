@@ -76,12 +76,12 @@ export default function Section5({
                         {badge && (
                             isMarketplace ? (
                                 <div className="mb-10">
-                                    <span className="at-btn common-black text-uppercase bg-transparent mb-10 rounded-0 p-0">
-                                        <span className="text-uppercase">
-                                            <span className="text-1">{badge}</span>
-                                            <span className="text-2">{badge}</span>
+                                    <span className="at-btn common-white text-uppercase bg-transparent mb-10 rounded-0 p-0">
+                                        <span className="text-uppercase text-white">
+                                            <span className="text-1 text-white">{badge}</span>
+                                            <span className="text-2 text-white">{badge}</span>
                                         </span>
-                                        <i>
+                                        <i className="text-white">
                                             {ARROW_PILL_SVG}
                                             {ARROW_PILL_SVG}
                                         </i>
@@ -95,7 +95,7 @@ export default function Section5({
                                 </span>
                             )
                         )}
-                        <h2 className={finalTitleClass}><RevealText>{title}</RevealText></h2>
+                        <h2 className={`${finalTitleClass} text-white`}><RevealText>{title}</RevealText></h2>
                     </div>
                     {(copy || showCta) && (
                         <div className="col-xxl-4 col-xl-5 col-lg-5 col-12">
