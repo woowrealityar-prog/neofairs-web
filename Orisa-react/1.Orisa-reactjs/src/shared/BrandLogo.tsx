@@ -28,7 +28,7 @@ export default function BrandLogo({
           width={width}
           height={height}
           className="brand-logo-img brand-logo-light"
-          style={{ width: `${width}px`, height: `${height}px`, objectFit: "contain" }}
+          style={{ width: `${width}px`, height: `${height}px`, objectFit: "cover" }}
         />
         {/* neo-dark.svg shown in dark mode */}
         <img
@@ -37,7 +37,7 @@ export default function BrandLogo({
           width={width}
           height={height}
           className="brand-logo-img brand-logo-dark"
-          style={{ width: `${width}px`, height: `${height}px`, objectFit: "contain" }}
+          style={{ width: `${width}px`, height: `${height}px`, objectFit: "cover" }}
         />
       </span>
       {showText && <h6 className="fw-700 fz-24 mb-0">NeoFairs</h6>}

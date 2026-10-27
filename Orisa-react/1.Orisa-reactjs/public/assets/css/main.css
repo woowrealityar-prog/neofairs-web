@@ -44743,4 +44743,12 @@ body.at-magic-cursor #magic-cursor {
   display: none !important;
 }
 
+/* Ensure mobile menu and offcanvas logos always use object-fit: cover */
+.brand-logo-img,
+.at-offcanvas-logo img,
+.at-offcanvas-2-area .at-header-logo img,
+.at-offcanvas-menu img {
+  object-fit: cover !important;
+}
+
 /*# sourceMappingURL=main.css.map */
