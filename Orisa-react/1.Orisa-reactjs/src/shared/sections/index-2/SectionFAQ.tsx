@@ -129,9 +129,18 @@ export default function SectionFAQ({ classList = "" }: { classList?: string }) {
                                             <div
                                                 id={item.id}
                                                 className={`at-faq-collapse collapse${isOpen ? " show" : ""}`}
+                                                style={{
+                                                    display: "grid",
+                                                    gridTemplateRows: isOpen ? "1fr" : "0fr",
+                                                    transition: "grid-template-rows 300ms ease, opacity 300ms ease",
+                                                    opacity: isOpen ? 1 : 0,
+                                                    visibility: isOpen ? "visible" : "hidden",
+                                                }}
                                             >
-                                                <div className="at-faq-body">
-                                                    <p>{item.answer}</p>
+                                                <div className="overflow-hidden">
+                                                    <div className="at-faq-body">
+                                                        <p className="mb-0">{item.answer}</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
