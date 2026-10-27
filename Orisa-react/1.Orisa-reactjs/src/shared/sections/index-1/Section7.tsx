@@ -143,19 +143,6 @@ export default function Section7() {
                                 </div>
                                 <div className="col-md-6 col-12">
                                     <div className="hover-unborder">
-                                        <div className="bg-neutral-0 rounded-4 p-5 mb-2">
-                                            <h6 className="text-end mb-0">
-                                                Living <br />
-                                                Showroom stall
-                                            </h6>
-                                            <div className="pt-150">
-                                                {STAT_SVG_2}
-                                                <p className="fz-font-lg fw-600 mt-3 mb-0">
-                                                    This fair + forever
-                                                </p>
-                                                <span className="fz-font-sm neutral-500 d-block mt-1">Never rebuild. Ready for next fair.</span>
-                                            </div>
-                                        </div>
                                         <div className="bg-neutral-0 rounded-4 px-5 py-3 d-flex justify-content-between align-items-center">
                                             <h4 className="d-flex justify-content-between align-items-center mb-0">
                                                 <span>₹35K</span>
@@ -174,6 +161,19 @@ export default function Section7() {
                                                     {ARROW_SVG}
                                                 </i>
                                             </Link>
+                                        </div>
+                                        <div className="bg-neutral-0 rounded-4 p-5 mt-2">
+                                            <h6 className="text-end mb-0">
+                                                Living <br />
+                                                Showroom stall
+                                            </h6>
+                                            <div className="pt-150">
+                                                {STAT_SVG_2}
+                                                <p className="fz-font-lg fw-600 mt-3 mb-0">
+                                                    This fair + forever
+                                                </p>
+                                                <span className="fz-font-sm neutral-500 d-block mt-1">Never rebuild. Ready for next fair.</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
