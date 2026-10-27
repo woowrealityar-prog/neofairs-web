@@ -16,9 +16,41 @@ const ARROW_CIRCLE_SVG = (
     </svg>
 );
 
-export default function Section9() {
+interface Section9Props {
+    className?: string;
+    title?: React.ReactNode;
+    lead?: React.ReactNode;
+    primaryBtnText?: string;
+    primaryBtnLink?: string;
+    isExternalPrimaryLink?: boolean;
+    secondaryBtnText?: string;
+    secondaryBtnLink?: string;
+    showButtons?: boolean;
+    cardKicker?: string;
+    cardText?: React.ReactNode;
+    cardLink?: string;
+    cardImg?: string;
+    showCard?: boolean;
+}
+
+export default function Section9({
+    className,
+    title = "Priced per fair",
+    lead = "Each fair is priced by industry, region and scale. Domestic fairs cost less; international fairs more.",
+    primaryBtnText = "See the current fair",
+    primaryBtnLink = "/contact-1",
+    isExternalPrimaryLink = false,
+    secondaryBtnText = "Join the Marketplace",
+    secondaryBtnLink = "/contact-1",
+    showButtons = true,
+    cardKicker = "Marketplace Advantage",
+    cardText = "Members of the NeoFairs Marketplace get discount on every fair.",
+    cardLink = "/contact-1",
+    cardImg = "/assets/imgs/pages/home-8/sec9-card-visors.webp",
+    showCard = true,
+}: Section9Props) {
     return (
-        <section className="sec-9-home-8">
+        <section className={`sec-9-home-8 ${className ?? ""}`.trim()}>
             <div className="sec-9-home-8__bg" aria-hidden="true">
                 <img
                     src="/assets/imgs/pages/home-8/sec9-bg-blur.webp"
@@ -31,66 +63,93 @@ export default function Section9() {
             <div className="container-fluid sec-9-home-8__container">
                 <div className="row align-items-center justify-content-between g-5">
                     {/* Left copy */}
-                    <div className="col-xl-6">
+                    <div className={showCard ? "col-xl-6" : "col-xl-8 col-lg-10"}>
                         <div className="sec-9-home-8__content">
                             <h2 className="alt-section-title lh-1 mb-30 at_fade_anim reveal-text text-white">
-                                <RevealText>Priced per fair</RevealText>
+                                <RevealText>{title}</RevealText>
                             </h2>
                             <p className="sec-9-home-8__lead at_fade_anim reveal-text mb-3">
-                                <RevealText>Each fair is priced by industry, region and scale. Domestic fairs cost less; international fairs more.</RevealText>
+                                <RevealText>{lead}</RevealText>
                             </p>
-                            <div className="pt-30 d-flex flex-wrap align-items-center gap-4">
-                                <div
-                                    className="at-btn-group btn-brand-1 at_fade_anim"
-                                    data-delay=".4"
-                                    data-fade-from="bottom"
-                                    data-ease="bounce"
-                                >
-                                    <Link className="at-btn-circle" to="/contact-1" style={{ color: "#000" }}>
-                                        {ARROW_CIRCLE_SVG}
-                                    </Link>
-                                    <Link className="at-btn z-index-1" to="/contact-1" style={{ color: "#000" }}>
-                                        See the current fair
-                                    </Link>
-                                    <Link className="at-btn-circle" to="/contact-1" style={{ color: "#000" }}>
-                                        {ARROW_CIRCLE_SVG}
-                                    </Link>
+                            {showButtons && (
+                                <div className="pt-30 d-flex flex-wrap align-items-center gap-4">
+                                    {primaryBtnText && (
+                                        isExternalPrimaryLink ? (
+                                            <div
+                                                className="at-btn-group btn-brand-1 at_fade_anim"
+                                                data-delay=".4"
+                                                data-fade-from="bottom"
+                                                data-ease="bounce"
+                                            >
+                                                <a className="at-btn-circle" href={primaryBtnLink} target="_blank" rel="noopener noreferrer" style={{ color: "#000" }}>
+                                                    {ARROW_CIRCLE_SVG}
+                                                </a>
+                                                <a className="at-btn z-index-1" href={primaryBtnLink} target="_blank" rel="noopener noreferrer" style={{ color: "#000" }}>
+                                                    {primaryBtnText}
+                                                </a>
+                                                <a className="at-btn-circle" href={primaryBtnLink} target="_blank" rel="noopener noreferrer" style={{ color: "#000" }}>
+                                                    {ARROW_CIRCLE_SVG}
+                                                </a>
+                                            </div>
+                                        ) : (
+                                            <div
+                                                className="at-btn-group btn-brand-1 at_fade_anim"
+                                                data-delay=".4"
+                                                data-fade-from="bottom"
+                                                data-ease="bounce"
+                                            >
+                                                <Link className="at-btn-circle" to={primaryBtnLink} style={{ color: "#000" }}>
+                                                    {ARROW_CIRCLE_SVG}
+                                                </Link>
+                                                <Link className="at-btn z-index-1" to={primaryBtnLink} style={{ color: "#000" }}>
+                                                    {primaryBtnText}
+                                                </Link>
+                                                <Link className="at-btn-circle" to={primaryBtnLink} style={{ color: "#000" }}>
+                                                    {ARROW_CIRCLE_SVG}
+                                                </Link>
+                                            </div>
+                                        )
+                                    )}
+                                    {secondaryBtnText && (
+                                        <Link
+                                            to={secondaryBtnLink}
+                                            className="at-btn common-black border-bottom-900 text-uppercase bg-transparent rounded-0 p-0 pb-2 text-decoration-none"
+                                            style={{ color: "#ffffff", borderBottom: "1px solid #ffffff" }}
+                                        >
+                                            <span className="text-uppercase" style={{ color: "#ffffff" }}>
+                                                <span className="text-1" style={{ color: "#ffffff" }}>{secondaryBtnText}</span>
+                                                <span className="text-2" style={{ color: "#ffffff" }}>{secondaryBtnText}</span>
+                                            </span>
+                                            <i style={{ color: "#ffffff" }}>
+                                                {ARROW_SVG}
+                                                {ARROW_SVG}
+                                            </i>
+                                        </Link>
+                                    )}
                                 </div>
-                                <Link
-                                    to="/contact-1"
-                                    className="at-btn common-black border-bottom-900 text-uppercase bg-transparent rounded-0 p-0 pb-2 text-decoration-none"
-                                    style={{ color: "#ffffff", borderBottom: "1px solid #ffffff" }}
-                                >
-                                    <span className="text-uppercase" style={{ color: "#ffffff" }}>
-                                        <span className="text-1" style={{ color: "#ffffff" }}>Join the Marketplace</span>
-                                        <span className="text-2" style={{ color: "#ffffff" }}>Join the Marketplace</span>
-                                    </span>
-                                    <i style={{ color: "#ffffff" }}>
-                                        {ARROW_SVG}
-                                        {ARROW_SVG}
-                                    </i>
-                                </Link>
-                            </div>
+                            )}
                         </div>
                     </div>
 
                     {/* Right card */}
-                    <div className="col-xl-5">
-                        <Link className="sec-9-home-8__card" to="/contact-1" aria-label="NeoFairs Marketplace">
-                            <div className="sec-9-home-8__card-media">
-                                <img className="sec-9-home-8__card-visors w-100 scale-img-from-to" data-value-1="1.5" data-value-2="1" src="/assets/imgs/pages/home-8/sec9-card-visors.webp" alt="NeoFairs Marketplace" width={500} height={350} loading="lazy" />
-                            </div>
-                            <div className="sec-9-home-8__card-overlay">
-                                <span className="sec-9-home-8__card-kicker">
-                                    <span>Marketplace Advantage</span>
-                                    <img src="/assets/imgs/pages/home-8/sec9-arrow.svg" alt="arrow" width={16} height={16} loading="lazy" />
-                                </span>
-                                <p className="sec-9-home-8__card-text mb-0">
-                                    Members of the NeoFairs Marketplace get discount on every fair.
-                                </p>
-                            </div>
-                        </Link>
-                    </div>
+                    {showCard && (
+                        <div className="col-xl-5">
+                            <Link className="sec-9-home-8__card" to={cardLink} aria-label={typeof cardKicker === "string" ? cardKicker : "NeoFairs"}>
+                                <div className="sec-9-home-8__card-media">
+                                    <img className="sec-9-home-8__card-visors w-100 scale-img-from-to" data-value-1="1.5" data-value-2="1" src={cardImg} alt="NeoFairs" width={500} height={350} loading="lazy" />
+                                </div>
+                                <div className="sec-9-home-8__card-overlay">
+                                    <span className="sec-9-home-8__card-kicker">
+                                        <span>{cardKicker}</span>
+                                        <img src="/assets/imgs/pages/home-8/sec9-arrow.svg" alt="arrow" width={16} height={16} loading="lazy" />
+                                    </span>
+                                    <p className="sec-9-home-8__card-text mb-0">
+                                        {cardText}
+                                    </p>
+                                </div>
+                            </Link>
+                        </div>
+                    )}
                 </div>
             </div>
         </section>

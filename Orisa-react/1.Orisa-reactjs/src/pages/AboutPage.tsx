@@ -7,6 +7,7 @@ import SectionFounder from "@/shared/sections/index-7/Section8";
 import SectionBrandScroll from "@/shared/sections/index-2/SectionBrandScroll";
 import SectionImageStrips from "@/shared/sections/index-2/SectionImageStrips";
 import Section5 from "@/shared/sections/about-3/Section3";
+import SectionAgastronGroup from "@/shared/sections/index-8/Section9";
 import Section6 from "@/shared/sections/services-2/Section3";
 
 const STATS_ITEMS = [
@@ -126,6 +127,19 @@ export default function AboutPage() {
       <SectionBrandScroll />
       <SectionImageStrips />
       <Section5 />
+      <SectionAgastronGroup
+        title="Part of Agastron Group"
+        lead="NeoFairs is one of the Agastron Group ventures, alongside Aranidhi, RulerInsights and Mayvrion. The NeoFairs platform was engineered in-house by Mayvrion, the group’s engineering arm."
+        primaryBtnText="agastron.com"
+        primaryBtnLink="https://agastron.com"
+        isExternalPrimaryLink={true}
+        secondaryBtnText=""
+        showButtons={true}
+        cardKicker="Agastron Group"
+        cardText="NeoFairs is a product of CBP Technologies Private Limited, an Agastron Group company"
+        cardLink="https://agastron.com"
+        showCard={true}
+      />
       <Section6 />
     </>
   );
