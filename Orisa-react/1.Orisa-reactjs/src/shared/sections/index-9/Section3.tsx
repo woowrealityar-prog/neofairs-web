@@ -53,7 +53,7 @@ export default function Section3() {
                                 <img
                                     data-speed=".8"
                                     src="/assets/imgs/pages/home-9/sec-3-img-0.webp"
-                                    alt="Physical Fair vs NeoFairs"
+                                    alt="What a stall really costs"
                                     width={699}
                                     height={415}
                                     loading="lazy"
@@ -69,8 +69,8 @@ export default function Section3() {
                             <div>
                                 <span className="at-btn common-black bg-transparent mb-10 rounded-0 p-0">
                                     <span className="text-uppercase">
-                                        <span className="text-1">Physical Fair vs NeoFairs</span>
-                                        <span className="text-2">Physical Fair vs NeoFairs</span>
+                                        <span className="text-1">What a stall really costs</span>
+                                        <span className="text-2">What a stall really costs</span>
                                     </span>
                                     <i>
                                         {ARROW_SVG}
