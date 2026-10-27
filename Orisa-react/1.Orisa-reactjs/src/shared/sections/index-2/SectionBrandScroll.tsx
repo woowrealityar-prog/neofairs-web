@@ -39,18 +39,20 @@ function logoSrc(num: string) {
 interface SectionBrandScrollProps {
     eyebrowText?: string;
     title?: React.ReactNode;
+    titleClassName?: string;
 }
 
 export default function SectionBrandScroll({
     eyebrowText = "Our Clients",
     title = "Trusted by 100+ businesses across 21 countries",
+    titleClassName = "",
 }: SectionBrandScrollProps = {}) {
     return (
         <div className="mg-portfolio-area">
             <section className="sec-3-home-5 pt-130 pb-110">
                 <div className="container">
-                    <div className="row g-4">
-                        <div className="col-xxl-4 col-lg-8 col-12">
+                    <div className="row g-4 align-items-start">
+                        <div className="col-xxl-4 col-lg-4 col-12">
                             <div className="mb-25">
                                 <span className="at-btn common-black bg-transparent rounded-0 p-0 mb-20 d-inline-block">
                                     <span className="text-uppercase text-nowrap">
@@ -63,7 +65,15 @@ export default function SectionBrandScroll({
                                     </i>
                                 </span>
                             </div>
-                            <h2 className="alt-section-title lh-1 mb-30 reveal-text pe-xxl-4">
+                            <h2
+                                className={`alt-section-title mb-30 reveal-text pe-xxl-3 ${titleClassName}`.trim()}
+                                style={{
+                                    fontSize: "clamp(34px, 3.4vw, 56px)",
+                                    lineHeight: 1.15,
+                                    letterSpacing: "-0.03em",
+                                    wordBreak: "break-word",
+                                }}
+                            >
                                 <RevealText>
                                     {title}
                                 </RevealText>

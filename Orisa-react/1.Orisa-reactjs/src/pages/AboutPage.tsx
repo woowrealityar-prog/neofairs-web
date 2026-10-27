@@ -126,6 +126,7 @@ export default function AboutPage() {
         ]}
       />
       <SectionBrandScroll
+        eyebrowText="Inauguration"
         title="Inaugurated by Ambassadors and Consuls General"
       />
       <SectionImageStrips />
