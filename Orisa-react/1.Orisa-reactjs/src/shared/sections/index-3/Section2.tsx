@@ -16,7 +16,11 @@ const SCROLL_ICON = (
     </svg>
 );
 
-export default function Section2() {
+interface Section2Props {
+    items?: string[];
+}
+
+export default function Section2({ items = TICKER_ITEMS }: Section2Props) {
     return (
         <section className="sec-2-home-3">
             <div className="bg-neutral-900 py-5 changeless carouselTicker carouselTicker-right">
@@ -31,7 +35,7 @@ export default function Section2() {
                         className="d-flex align-items-center carouselTicker__list scroll-move-left"
                         style={{ listStyle: "none", margin: 0, padding: 0, overflow: "visible", gap: "0 2rem" }}
                     >
-                        {TICKER_ITEMS.map((label, i) => (
+                        {items.map((label, i) => (
                             <li key={`${label}-${i}`} className="d-flex align-items-center gap-4" style={{ margin: "0 1rem", float: "none" }}>
                                 <h5 className="neutral-0 mb-0 text-nowrap">{label}</h5>
                                 {SCROLL_ICON}

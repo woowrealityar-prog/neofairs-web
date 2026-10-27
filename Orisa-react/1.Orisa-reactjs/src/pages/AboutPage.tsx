@@ -1,9 +1,20 @@
 import PageMeta from "@/seo/PageMeta";
 import Section1 from "@/shared/sections/services-2/Section1";
-import Section2 from "@/shared/sections/services-2/Section2";
+import Section2 from "@/shared/sections/index-3/Section2";
 import Section3 from "@/shared/sections/index-2/Section4";
 import Section4 from "@/shared/sections/about-3/Section3";
 import Section5 from "@/shared/sections/services-2/Section3";
+
+const STATS_ITEMS = [
+  "21 Countries",
+  "100+ Clients",
+  "1,500+ Buyer Meetings",
+  "30,000+ Minutes of Meetings",
+  "21 Countries",
+  "100+ Clients",
+  "1,500+ Buyer Meetings",
+  "30,000+ Minutes of Meetings",
+];
 
 export default function AboutPage() {
   return (
@@ -14,7 +25,7 @@ export default function AboutPage() {
         title="Buyers for Indian businesses. Wherever the buyers are."
         subtitle="We took Indian exhibitors to buyers in 21 countries. Now we bring the same tools home."
       />
-      <Section2 />
+      <Section2 items={STATS_ITEMS} />
       <Section3
         eyebrow="How we got here"
         rightLabel="© Since 2012"

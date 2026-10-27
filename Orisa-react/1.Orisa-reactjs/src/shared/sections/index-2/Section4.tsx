@@ -100,11 +100,6 @@ export default function Section4({
                                         {ARROW_SVG}
                                     </i>
                                 </span>
-                                {rightLabel && (
-                                    <span className="fs-font-md fw-500 text-decoration-underline">
-                                        {rightLabel}
-                                    </span>
-                                )}
                             </div>
                         </div>
                     </div>
