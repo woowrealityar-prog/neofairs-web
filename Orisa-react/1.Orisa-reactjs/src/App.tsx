@@ -12,6 +12,7 @@ import Archive3Page from "@/pages/Archive3Page";
 import Archive4Page from "@/pages/Archive4Page";
 import BlogDetailsPage from "@/pages/BlogDetailsPage";
 import ComingSoonPage from "@/pages/ComingSoonPage";
+import CareersPage from "@/pages/CareersPage";
 import Contact1Page from "@/pages/Contact1Page";
 import Contact2Page from "@/pages/Contact2Page";
 import FaqsPage from "@/pages/FaqsPage";
@@ -112,6 +113,7 @@ export default function App() {
         <Route path="/marketplace" element={<About2Page />} />
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/about-us" element={<AboutPage />} />
+        <Route path="/careers" element={<CareersPage />} />
       </Route>
       <Route element={<MainLayout headerStyle={2} footerStyle={2} />}>
         <Route path="/404" element={<NotFoundPage />} />
