@@ -150,13 +150,14 @@ export default function Section7() {
                                             </h4>
                                             <Link
                                                 to="/contact-1"
-                                                className="at-btn common-black bg-transparent rounded-0 p-0"
+                                                className="at-btn bg-transparent rounded-0 p-0"
+                                                style={{ color: "#ace227" }}
                                             >
-                                                <span className="text-uppercase fw-600">
-                                                    <span className="text-1">Explore</span>
-                                                    <span className="text-2">Explore</span>
+                                                <span className="text-uppercase fw-600" style={{ color: "#ace227" }}>
+                                                    <span className="text-1" style={{ color: "#ace227" }}>Explore</span>
+                                                    <span className="text-2" style={{ color: "#ace227" }}>Explore</span>
                                                 </span>
-                                                <i>
+                                                <i style={{ color: "#ace227" }}>
                                                     {ARROW_SVG}
                                                     {ARROW_SVG}
                                                 </i>
