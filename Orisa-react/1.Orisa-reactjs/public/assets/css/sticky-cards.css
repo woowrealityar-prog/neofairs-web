@@ -108,7 +108,6 @@
    Ensure bottom border displays clearly on dark backgrounds
    ============================================================ */
 .border-bottom-white,
-.at-btn.common-white,
 .border-bottom-900 {
     border-bottom: 1px solid currentColor !important;
 }

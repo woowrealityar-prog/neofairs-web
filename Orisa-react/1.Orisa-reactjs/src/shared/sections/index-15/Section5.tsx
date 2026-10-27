@@ -78,10 +78,7 @@ export default function Section5({
                         {badge && (
                             isMarketplace ? (
                                 <div className="mb-10">
-                                    <span
-                                        className="at-btn common-white text-uppercase bg-transparent mb-10 rounded-0 p-0 border-0"
-                                        style={{ border: "none", borderBottom: "none", outline: "none", boxShadow: "none" }}
-                                    >
+                                    <span className="at-btn text-white text-uppercase bg-transparent mb-10 rounded-0 p-0 border-0">
                                         <span className="text-uppercase text-white">
                                             <span className="text-1 text-white">{badge}</span>
                                             <span className="text-2 text-white">{badge}</span>
