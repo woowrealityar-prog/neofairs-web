@@ -70,7 +70,7 @@ export default function SectionVideoTestimonials() {
                         <div className="card_case__studies-list card_case__studies">
                             <div className="card_case__studies-card">
                                 <div className="card_case__studies-left">
-                                    <span className="card_case__studies-featured-tag">
+                                    <span className="card_case__studies-featured-tag text-black" style={{ color: "#000000" }}>
                                         {DIGNITARY_CARD.badge}
                                     </span>
                                     <h4 className="card_case__studies-title">
@@ -92,16 +92,6 @@ export default function SectionVideoTestimonials() {
                                                 </span>
                                             ))}
                                         </div>
-                                        <a
-                                            href={DIGNITARY_CARD.videoUrl}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="card_case__studies-link text-white"
-                                            aria-label="Watch full review video"
-                                        >
-                                            <span className="text-white text-nowrap">Watch video</span>
-                                            {ARROW_SVG}
-                                        </a>
                                     </div>
                                 </div>
                                 <div className="card_case__studies-right">
