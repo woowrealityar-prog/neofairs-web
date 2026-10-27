@@ -2,8 +2,9 @@ import PageMeta from "@/seo/PageMeta";
 import Section1 from "@/shared/sections/services-2/Section1";
 import Section2 from "@/shared/sections/index-3/Section2";
 import Section3 from "@/shared/sections/index-2/Section4";
-import Section4 from "@/shared/sections/about-3/Section3";
-import Section5 from "@/shared/sections/services-2/Section3";
+import Section4 from "@/shared/sections/index-15/Section5";
+import Section5 from "@/shared/sections/about-3/Section3";
+import Section6 from "@/shared/sections/services-2/Section3";
 
 const STATS_ITEMS = [
   "21 Countries",
@@ -14,6 +15,27 @@ const STATS_ITEMS = [
   "100+ Clients",
   "1,500+ Buyer Meetings",
   "30,000+ Minutes of Meetings",
+];
+
+const VALUES_ITEMS = [
+  {
+    num: "01",
+    title: "We build it. You sell.",
+    desc: "No tech team needed on your side.",
+    delay: ".1",
+  },
+  {
+    num: "02",
+    title: "You keep 100%",
+    desc: "No commission on any sale.",
+    delay: ".15",
+  },
+  {
+    num: "03",
+    title: "Your data is yours",
+    desc: "Every visitor, every RFQ, every buyer. Yours.",
+    delay: ".2",
+  },
 ];
 
 export default function AboutPage() {
@@ -59,8 +81,17 @@ export default function AboutPage() {
           },
         ]}
       />
-      <Section4 />
+      <Section4
+        badge="Values"
+        badgeMeta="Our principles"
+        title="What we hold to."
+        copy=""
+        showCta={false}
+        gridColsClass="row row-cols-lg-3 row-cols-md-3 row-cols-1 gx-0 gy-0 sec-5-home-15__phases"
+        phases={VALUES_ITEMS}
+      />
       <Section5 />
+      <Section6 />
     </>
   );
 }

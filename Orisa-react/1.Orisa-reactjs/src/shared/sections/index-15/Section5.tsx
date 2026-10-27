@@ -15,45 +15,90 @@ const PHASES = [
     { num: "05", title: "[ Post & Deliver ]", desc: "Edit, retouch, master files, prints.\nHand-finished.", duration: "2—3 weeks", img: "sec-5-phase-5.webp", delay: ".3" },
 ];
 
-export default function Section5() {
+export type PhaseItem = {
+    num: string;
+    title: string;
+    desc: string;
+    duration?: string;
+    img?: string;
+    delay?: string;
+};
+
+interface Section5Props {
+    badge?: string;
+    badgeMeta?: string;
+    title?: React.ReactNode;
+    copy?: string;
+    ctaText?: string;
+    ctaLink?: string;
+    showCta?: boolean;
+    phases?: PhaseItem[];
+    gridColsClass?: string;
+}
+
+export default function Section5({
+    badge = "Our process",
+    badgeMeta = "— 5 phases · 4—8 weeks per project",
+    title = (
+        <>
+            From idea to<br />final project.
+        </>
+    ),
+    copy = "We move at the pace a story deserves. Most projects close in four to eight weeks; some take longer because they should.",
+    ctaText = "Start a project",
+    ctaLink = "/contact-1",
+    showCta = true,
+    phases = PHASES,
+    gridColsClass = "row row-cols-xxl-5 row-cols-xl-5 row-cols-lg-3 row-cols-md-2 row-cols-1 gx-0 gy-0 sec-5-home-15__phases",
+}: Section5Props) {
     return (
-        <section className="sec-5-home-15" aria-label="Our process">
+        <section className="sec-5-home-15" aria-label={typeof title === "string" ? title : "Process & Values"}>
             <div className="container">
                 <div className="row gx-4 gy-4 align-items-end mb-65">
-                    <div className="col-xxl-8 col-xl-7 col-lg-7 col-12">
-                        <span className="sec-5-home-15__eyebrow at_fade_anim" data-fade-from="bottom" data-delay=".1">
-                            <span className="sec-5-home-15__eyebrow-dot" aria-hidden="true"></span>
-                            <span className="sec-5-home-15__eyebrow-key">Our process</span>
-                            <span className="sec-5-home-15__eyebrow-meta">&mdash; 5 phases &middot; 4&mdash;8 weeks per project</span>
-                        </span>
-                        <h2 className="sec-5-home-15__heading reveal-text"><RevealText>From idea to<br />final project.</RevealText></h2>
+                    <div className={copy || showCta ? "col-xxl-8 col-xl-7 col-lg-7 col-12" : "col-12"}>
+                        {badge && (
+                            <span className="sec-5-home-15__eyebrow at_fade_anim" data-fade-from="bottom" data-delay=".1">
+                                <span className="sec-5-home-15__eyebrow-dot" aria-hidden="true"></span>
+                                <span className="sec-5-home-15__eyebrow-key">{badge}</span>
+                                {badgeMeta && <span className="sec-5-home-15__eyebrow-meta">&mdash; {badgeMeta}</span>}
+                            </span>
+                        )}
+                        <h2 className="sec-5-home-15__heading reveal-text"><RevealText>{title}</RevealText></h2>
                     </div>
-                    <div className="col-xxl-4 col-xl-5 col-lg-5 col-12">
-                        <div className="sec-5-home-15__intro at_fade_anim" data-fade-from="bottom" data-delay=".2">
-                            <p className="sec-5-home-15__copy">
-                                We move at the pace a story deserves. Most projects close in four to eight weeks; some take longer because they should.
-                            </p>
-                            <div className="at-btn-group sec-5-home-15__cta at_fade_anim" data-delay=".3" data-fade-from="bottom" data-ease="bounce">
-                                <Link className="at-btn-circle" to="/contact-1">{ARROW}</Link>
-                                <Link className="at-btn z-index-1" to="/contact-1">Start a project</Link>
-                                <Link className="at-btn-circle" to="/contact-1">{ARROW}</Link>
+                    {(copy || showCta) && (
+                        <div className="col-xxl-4 col-xl-5 col-lg-5 col-12">
+                            <div className="sec-5-home-15__intro at_fade_anim" data-fade-from="bottom" data-delay=".2">
+                                {copy && (
+                                    <p className="sec-5-home-15__copy">
+                                        {copy}
+                                    </p>
+                                )}
+                                {showCta && (
+                                    <div className="at-btn-group sec-5-home-15__cta at_fade_anim" data-delay=".3" data-fade-from="bottom" data-ease="bounce">
+                                        <Link className="at-btn-circle" to={ctaLink}>{ARROW}</Link>
+                                        <Link className="at-btn z-index-1" to={ctaLink}>{ctaText}</Link>
+                                        <Link className="at-btn-circle" to={ctaLink}>{ARROW}</Link>
+                                    </div>
+                                )}
                             </div>
                         </div>
-                    </div>
+                    )}
                 </div>
 
-                <div className="row row-cols-xxl-5 row-cols-xl-5 row-cols-lg-3 row-cols-md-2 row-cols-1 gx-0 gy-0 sec-5-home-15__phases">
-                    {PHASES.map((p) => (
-                        <div key={p.num} className="col">
-                            <article className="sec-5-home-15__phase at_fade_anim" data-fade-from="bottom" data-delay={p.delay}>
+                <div className={gridColsClass}>
+                    {phases.map((p, idx) => (
+                        <div key={p.num || idx} className="col">
+                            <article className="sec-5-home-15__phase at_fade_anim" data-fade-from="bottom" data-delay={p.delay || ".1"}>
                                 <span className="sec-5-home-15__phase-dot" aria-hidden="true"></span>
-                                <p className="sec-5-home-15__phase-num">{p.num}</p>
+                                {p.num && <p className="sec-5-home-15__phase-num">{p.num}</p>}
                                 <p className="sec-5-home-15__phase-title">{p.title}</p>
                                 <p className="sec-5-home-15__phase-desc">{p.desc}</p>
-                                <p className="sec-5-home-15__phase-duration">{p.duration}</p>
-                                <div className="sec-5-home-15__phase-thumb anim-zoomin-wrap mt-3">
-                                    <img className="sec-5-home-15__phase-img anim-zoomin" src={`/assets/imgs/pages/home-15/${p.img}`} alt="Orisa" loading="lazy" />
-                                </div>
+                                {p.duration && <p className="sec-5-home-15__phase-duration">{p.duration}</p>}
+                                {p.img && (
+                                    <div className="sec-5-home-15__phase-thumb anim-zoomin-wrap mt-3">
+                                        <img className="sec-5-home-15__phase-img anim-zoomin" src={`/assets/imgs/pages/home-15/${p.img}`} alt="Orisa" loading="lazy" />
+                                    </div>
+                                )}
                             </article>
                         </div>
                     ))}
