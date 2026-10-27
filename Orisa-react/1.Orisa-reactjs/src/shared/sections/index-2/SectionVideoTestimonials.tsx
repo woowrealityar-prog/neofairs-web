@@ -25,35 +25,16 @@ const PLUS_ICON = (
     </svg>
 );
 
-const VIDEO_CARDS = [
-    {
-        img: "/assets/imgs/pages/img-107.webp",
-        alt: "Consul General of India, New York",
-        quote: "“It comes as close to physical format as you can get.”",
-        author: "Mr. Randhir Jaiswal",
-        designation: "Consul General of India, New York",
-        badge: "Dignitary Review",
-        videoUrl: "https://www.youtube.com/watch?v=VCPGMjCW0is",
-        tags: ["Global Diplomat", "Virtual Expo", "Trade Review"],
-    },
-    {
-        img: "/assets/imgs/pages/img-108.webp",
-        alt: "News7 Feature - ₹10 Crore Orders Booked",
-        quote: "“One exhibitor booked orders worth ₹10 Crore at our fair.”",
-        author: "Exhibitor Success Story",
-        designation: "Featured on News7",
-        badge: "News7 Coverage",
-        videoUrl: "https://www.youtube.com/watch?v=VCPGMjCW0is",
-        tags: ["₹10 Cr Orders", "News7 Broadcast", "Exhibitor ROI"],
-    },
-];
-
-const FOOTER_TAGS = [
-    "[ High-Conversion Fairs ]",
-    "[ Verified Buyer Traffic ]",
-    "[ Real Commercial Orders ]",
-    "[ Government & Industry Backed ]",
-];
+const DIGNITARY_CARD = {
+    img: "/assets/imgs/pages/img-107.webp",
+    alt: "Consul General of India, New York",
+    quote: "“It comes as close to physical format as you can get.”",
+    author: "Mr. Randhir Jaiswal",
+    designation: "Consul General of India, New York",
+    badge: "Dignitary Review",
+    videoUrl: "https://www.youtube.com/watch?v=VCPGMjCW0is",
+    tags: ["Global Diplomat", "Virtual Expo", "Trade Review"],
+};
 
 export default function SectionVideoTestimonials() {
     return (
@@ -86,68 +67,69 @@ export default function SectionVideoTestimonials() {
                     </div>
 
                     <div className="container pt-60">
-                        <div className="row g-4">
-                            {VIDEO_CARDS.map((item, i) => (
-                                <div key={i} className="col-lg-6">
-                                    <div className="card_case__studies-list card_case__studies-list--row h-100">
-                                        <div className="card_case__studies-card card_case__studies-card--overlay bg-neutral-100 d-flex flex-column h-100">
-                                            {/* Visual / Image area */}
-                                            <div className="card_case__studies-visual anim-zoomin alt-portfolio-thumb p-relative overflow-hidden" style={{ borderRadius: "24px", minHeight: "340px" }}>
-                                                <img
-                                                    src={item.img}
-                                                    alt={item.alt}
-                                                    width={600}
-                                                    height={400}
-                                                    loading="lazy"
-                                                    className="w-100 h-100 object-fit-cover"
-                                                    style={{ minHeight: "340px" }}
-                                                />
-
-                                                {/* Play Button in the middle of the card image */}
-                                                <div className="postbox-play-btn" style={{ zIndex: 5 }}>
-                                                    <a
-                                                        className="popup-video size-100"
-                                                        href={item.videoUrl}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                        aria-label="Play testimonial video"
-                                                    >
-                                                        <span className="text-white d-flex align-items-center justify-content-center">
-                                                            {PLAY_ICON}
-                                                        </span>
-                                                    </a>
-                                                </div>
-
-                                                {/* Category Badge overlay */}
-                                                <div className="p-absolute" style={{ bottom: "24px", left: "24px", zIndex: 4 }}>
-                                                    <span className="bg-transparent text-uppercase border px-3 py-2 rounded-pill common-white fz-font-label">
-                                                        {item.badge}
-                                                    </span>
-                                                </div>
-                                            </div>
-
-                                            {/* Card Footer Content */}
-                                            <div className="card_case__studies-footer mt-10 p-4 bg-neutral-0 rounded-4 flex-grow-1 d-flex flex-column justify-content-between">
-                                                <div>
-                                                    <h4 className="card-home-12-service__title mb-15">
-                                                        {item.quote}
-                                                    </h4>
-                                                    <div className="testimonial-content-author mt-20">
-                                                        <h6 className="testimonial-content-author-name fw-600 mb-1 text-dark">
-                                                            {item.author}
-                                                        </h6>
-                                                        <p className="testimonial-content-author-position m-0 text-muted">
-                                                            {item.designation}
-                                                        </p>
-                                                    </div>
-                                                </div>
-
-
-                                            </div>
+                        <div className="card_case__studies-list card_case__studies">
+                            <div className="card_case__studies-card">
+                                <div className="card_case__studies-left">
+                                    <span className="card_case__studies-featured-tag">
+                                        {DIGNITARY_CARD.badge}
+                                    </span>
+                                    <h4 className="card_case__studies-title">
+                                        {DIGNITARY_CARD.quote}
+                                    </h4>
+                                    <div className="testimonial-content-author mt-20 mb-30">
+                                        <h5 className="testimonial-content-author-name fw-600 mb-1 text-white">
+                                            {DIGNITARY_CARD.author}
+                                        </h5>
+                                        <p className="testimonial-content-author-position m-0 text-white-50">
+                                            {DIGNITARY_CARD.designation}
+                                        </p>
+                                    </div>
+                                    <div className="d-flex align-items-end justify-content-between mt-auto pt-20">
+                                        <div className="card_case__studies-tags">
+                                            {DIGNITARY_CARD.tags.map((tag) => (
+                                                <span key={tag} className="card_case__studies-tag">
+                                                    {tag}
+                                                </span>
+                                            ))}
+                                        </div>
+                                        <a
+                                            href={DIGNITARY_CARD.videoUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="card_case__studies-link text-white"
+                                            aria-label="Watch full review video"
+                                        >
+                                            <span className="text-white text-nowrap">Watch video</span>
+                                            {ARROW_SVG}
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className="card_case__studies-right">
+                                    <div className="card_case__studies-thumb anim-zoomin">
+                                        <img
+                                            src={DIGNITARY_CARD.img}
+                                            alt={DIGNITARY_CARD.alt}
+                                            width={800}
+                                            height={500}
+                                            className="w-100 h-100 object-fit-cover"
+                                            loading="lazy"
+                                        />
+                                        <div className="card_case__studies-play p-relative postbox-play-btn">
+                                            <a
+                                                className="popup-video size-100"
+                                                href={DIGNITARY_CARD.videoUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                aria-label="Play testimonial video"
+                                            >
+                                                <span className="text-white d-flex align-items-center justify-content-center">
+                                                    {PLAY_ICON}
+                                                </span>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
-                            ))}
+                            </div>
                         </div>
                     </div>
                 </section>
