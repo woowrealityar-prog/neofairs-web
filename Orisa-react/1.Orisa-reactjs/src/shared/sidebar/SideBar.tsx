@@ -9,7 +9,6 @@ interface SideBarProps {
   onClose: () => void;
 }
 
-const AVATARS = ["avatar-10", "avatar-11", "avatar-12", "avatar-13", "avatar-14"] as const;
 
 function CloseIconSvg() {
   return (
@@ -139,15 +138,6 @@ export default function SideBar({ open, hamburgerOpen, onClose }: SideBarProps) 
             <nav />
           </div>
 
-          <div className="at-offcanvas-gallery d-none d-xl-block">
-            <div className="sec-2-home-5__avatars-row d-flex gap-2">
-              {AVATARS.map((name) => (
-                <div key={name} className="sec-2-home-5__avatar-sm at-offcanvas-gallery-img">
-                  <img className="img-cover" src={`/assets/imgs/template/avatar/${name}.webp`} alt="" width={80} height={80} />
-                </div>
-              ))}
-            </div>
-          </div>
 
           <div className="at-offcanvas-contact">
             <h5 className="at-offcanvas-title sm">Get in touch</h5>
@@ -161,11 +151,6 @@ export default function SideBar({ open, hamburgerOpen, onClose }: SideBarProps) 
                 <a className="fz-font-lg" href="mailto:enquiry@neofairs.com">
                   enquiry@neofairs.com
                 </a>
-              </li>
-              <li>
-                <span className="fz-font-lg opacity-75">
-                  [Office address placeholder]
-                </span>
               </li>
             </ul>
           </div>
