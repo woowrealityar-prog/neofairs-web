@@ -8,6 +8,8 @@ type ScrollSmootherInstance = {
     config?: { speed?: unknown; lag?: unknown; effectsPadding?: number; refresh?: boolean },
   ) => unknown;
   refresh?: (safe?: boolean) => void;
+  scrollTo?: (target: number | string | Element, smooth?: boolean, position?: string) => void;
+  scrollTop?: (value?: number) => number;
 };
 type TimelineInstance = { kill?: () => void };
 
@@ -119,6 +121,14 @@ export default function SmoothScrollEffect() {
   // once, so SPA navigation needs us to re-apply manually for the new page's sections.
   const firstRenderRef = useRef(true);
   useEffect(() => {
+    // Whenever route changes, always start at the very top of the new page
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior });
+    if (scrollSmootherRef.current?.scrollTo) {
+      scrollSmootherRef.current.scrollTo(0, false);
+    } else if (scrollSmootherRef.current?.scrollTop) {
+      scrollSmootherRef.current.scrollTop(0);
+    }
+
     if (firstRenderRef.current) {
       firstRenderRef.current = false;
       return;
@@ -129,6 +139,9 @@ export default function SmoothScrollEffect() {
     const apply = () => {
       if (cancelled) return;
       const smoother = scrollSmootherRef.current;
+      if (smoother?.scrollTo) {
+        smoother.scrollTo(0, false);
+      }
       if (!smoother?.effects) {
         if (attempts++ < 60) requestAnimationFrame(apply);
         return;
