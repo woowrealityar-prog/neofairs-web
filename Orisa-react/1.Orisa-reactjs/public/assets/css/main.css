@@ -44751,4 +44751,14 @@ body.at-magic-cursor #magic-cursor {
   object-fit: cover !important;
 }
 
+/* Mobile & Tablet buttery smooth scroll enhancements */
+#smooth-wrapper {
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+}
+
+#smooth-content {
+  will-change: transform;
+}
+
 /*# sourceMappingURL=main.css.map */
