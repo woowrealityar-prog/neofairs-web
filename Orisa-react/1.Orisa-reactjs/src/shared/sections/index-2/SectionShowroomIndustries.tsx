@@ -10,7 +10,7 @@ const ARROW_SVG = (
 const SHOWROOMS = [
     {
         id: "pos1",
-        href: "#showroom-fashion",
+        href: "/living-showroom",
         img: "/assets/imgs/pages/home-10/sec-4-service-1.webp",
         width: 800,
         height: 520,
@@ -22,32 +22,32 @@ const SHOWROOMS = [
     },
     {
         id: "pos2",
-        href: "#showroom-branding",
+        href: "/living-showroom",
         img: "/assets/imgs/pages/home-10/sec-4-service-2.webp",
         width: 720,
         height: 460,
         name: "Branding & Display",
         client: "Cuboc",
-        layout: "bar-first",
+        layout: "image-first",
         extraClass: "me-md-5 me-0",
         ariaLabel: "Branding & Display — Cuboc",
         delay: "0.14",
     },
     {
         id: "pos3",
-        href: "#showroom-food",
+        href: "/living-showroom",
         img: "/assets/imgs/pages/home-10/sec-4-service-3.webp",
         width: 900,
         height: 520,
         name: "Food Products",
         client: "Pansari",
-        layout: "bar-first",
+        layout: "image-first",
         ariaLabel: "Food Products — Pansari",
         delay: "0.16",
     },
     {
         id: "pos4",
-        href: "#showroom-silicone",
+        href: "/living-showroom",
         img: "/assets/imgs/pages/home-10/sec-4-service-4.webp",
         width: 900,
         height: 520,
@@ -62,21 +62,46 @@ const SHOWROOMS = [
 export default function SectionShowroomIndustries() {
     return (
         <section className="sec-4-home-10 changeless">
+            <style>{`
+                .sec-4-home-10__eyebrow a:hover .at-btn {
+                    color: #ace227 !important;
+                }
+                .sec-4-home-10__eyebrow a:hover i svg {
+                    fill: #ace227 !important;
+                }
+                .sec-4-home-10__title-link {
+                    color: inherit;
+                    text-decoration: none;
+                    transition: color 0.25s ease;
+                }
+                .sec-4-home-10__title-link:hover,
+                .sec-4-home-10__title-link:hover h2,
+                .sec-4-home-10__title-link:hover .reveal-text {
+                    color: #ace227 !important;
+                }
+                .sec-4-home-10__title-link:hover * {
+                    color: #ace227 !important;
+                }
+            `}</style>
             <div className="sec-4-home-10__container">
                 <div className="sec-4-home-10__stage">
                     <header className="sec-4-home-10__title-block">
                         <div className="sec-4-home-10__eyebrow d-inline-flex align-items-center gap-2 at_fade_anim" data-delay="0.05">
-                            <span className="at-btn text-white bg-transparent mb-10 rounded-0 p-0">
-                                <span className="text-uppercase">
-                                    <span className="text-1">Showrooms</span>
-                                    <span className="text-2">Showrooms</span>
+                            <Link to="/living-showroom" className="text-decoration-none">
+                                <span className="at-btn text-white bg-transparent mb-10 rounded-0 p-0">
+                                    <span className="text-uppercase">
+                                        <span className="text-1">Showrooms</span>
+                                        <span className="text-2">Showrooms</span>
+                                    </span>
+                                    <i>{ARROW_SVG}{ARROW_SVG}</i>
                                 </span>
-                                <i>{ARROW_SVG}{ARROW_SVG}</i>
-                            </span>
+                            </Link>
                         </div>
-                        <h2 className="alt-section-title lh-1 mb-30 at_fade_anim reveal-text text-white mt-3" data-delay="0.1">
-                            <RevealText>One showroom. Any industry.</RevealText>
-                        </h2>
+                        <Link to="/living-showroom" className="sec-4-home-10__title-link d-block">
+                            <h2 className="alt-section-title lh-1 mb-30 at_fade_anim reveal-text text-white mt-3" data-delay="0.1">
+                                <RevealText>One showroom. Any industry.</RevealText>
+                            </h2>
+                        </Link>
                     </header>
 
                     {SHOWROOMS.map((item) => (
