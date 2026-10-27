@@ -109,9 +109,11 @@ export default function Section12Pricing({
 }: Section12PricingProps) {
     return (
         <>
-            <div className="row align-items-end mb-60 g-4">
-                <div className="col-12">{titleSlot}</div>
-            </div>
+            {titleSlot && (
+                <div className="row align-items-end mb-60 g-4">
+                    <div className="col-12">{titleSlot}</div>
+                </div>
+            )}
 
             {contentSlot ? (
                 contentSlot

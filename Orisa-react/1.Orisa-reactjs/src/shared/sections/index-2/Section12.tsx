@@ -83,8 +83,9 @@ export default function Section12({
                     data-background="/assets/imgs/pages/noise.gif"
                 />
                 <div className="container p-relative z-1">
-                    <div className="row g-4">
-                        <div className="col-lg-2 p-relative d-flex flex-column justify-content-between align-items-start">
+                    {/* Top Row: Eyebrow + Title + Contact Info */}
+                    <div className="row g-4 align-items-start justify-content-between mb-50">
+                        <div className="col-lg-2 col-md-3 col-12">
                             <span className="at-btn common-black bg-transparent rounded-0 p-0">
                                 <span className="text-uppercase text-nowrap">
                                     <span className="text-1">{eyebrowText}</span>
@@ -95,39 +96,54 @@ export default function Section12({
                                     {ARROW_SVG}
                                 </i>
                             </span>
-
                         </div>
 
-                        <div className={showContact ? "col-3xl-9 col-xxl-10 col-lg-10 col-md-12" : "col-lg-10 col-md-12"}>
+                        <div className={showContact ? "col-lg-7 col-md-9 col-12" : "col-lg-10 col-12"}>
+                            {titleSlot ? (
+                                titleSlot
+                            ) : (
+                                <h2 className="alt-section-title lh-1 mb-0 reveal-text" style={{ fontSize: "clamp(2.5rem, 5vw, 4.5rem)" }}>
+                                    <RevealText>
+                                        Simple pricing. No commission.
+                                    </RevealText>
+                                </h2>
+                            )}
+                            {subtitleSlot && (
+                                <p className="fz-font-lg neutral-500 mt-20 mb-0" style={{ lineHeight: "1.7", maxWidth: "780px" }}>
+                                    {subtitleSlot}
+                                </p>
+                            )}
+                            {imageSlot && (
+                                <div className="mt-30">
+                                    {imageSlot}
+                                </div>
+                            )}
+                        </div>
+
+                        {showContact && (
+                            <div className="col-lg-3 col-12 text-lg-end text-start d-flex flex-column gap-2 mt-4 mt-lg-0">
+                                <Link to="/contact-1" className="text-decoration-underline neutral-900 fw-500">
+                                    Contact Us
+                                </Link>
+                                <h6 className="fw-600 mb-0">
+                                    <a href="mailto:enquiry@neofairs.com" className="text-break neutral-900">enquiry@neofairs.com</a>
+                                </h6>
+                                <h6 className="fw-600 mb-0">
+                                    <a href="tel:+917010130684" className="neutral-900">+91-70101 30684</a>
+                                </h6>
+                            </div>
+                        )}
+                    </div>
+
+                    {/* Cards Row: Full Width 3 Columns */}
+                    <div className="row">
+                        <div className="col-12">
                             <Section12Pricing
                                 maxFeatures={maxFeatures}
                                 contentSlot={contentSlot}
                                 showCards={showCards}
                                 plans={plans}
                                 colClass={colClass}
-                                titleSlot={
-                                    <>
-                                        {titleSlot ? (
-                                            titleSlot
-                                        ) : (
-                                            <h2 className="alt-section-title lh-1 mb-30 reveal-text">
-                                                <RevealText>
-                                                    Simple pricing. No commission.
-                                                </RevealText>
-                                            </h2>
-                                        )}
-                                        {subtitleSlot && (
-                                            <p className="fz-font-lg neutral-500 mb-30" style={{ lineHeight: "1.7", maxWidth: "780px" }}>
-                                                {subtitleSlot}
-                                            </p>
-                                        )}
-                                        {imageSlot && (
-                                            <div className="mb-50">
-                                                {imageSlot}
-                                            </div>
-                                        )}
-                                    </>
-                                }
                                 footerSlot={
                                     showFooter ? (
                                         <>
@@ -148,20 +164,6 @@ export default function Section12({
                                 }
                             />
                         </div>
-
-                        {showContact && (
-                            <div className="col-xxl-2 text-end d-flex flex-column gap-2">
-                                <Link to="/contact-1" className="text-decoration-underline">
-                                    Contact Us
-                                </Link>
-                                <h6 className="fw-600">
-                                    <a href="mailto:enquiry@neofairs.com">enquiry@neofairs.com</a>
-                                </h6>
-                                <h6 className="fw-600">
-                                    <a href="tel:+917010130684">+91-70101 30684</a>
-                                </h6>
-                            </div>
-                        )}
                     </div>
                 </div>
             </section>
