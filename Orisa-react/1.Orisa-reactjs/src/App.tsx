@@ -52,6 +52,7 @@ import PortfolioStackPage from "@/pages/PortfolioStackPage";
 import PortfolioVistaPage from "@/pages/PortfolioVistaPage";
 import PortfolioZstackPage from "@/pages/PortfolioZstackPage";
 import PricingPage from "@/pages/PricingPage";
+import PrivacyPolicyPage from "@/pages/PrivacyPolicyPage";
 import Pricing2Page from "@/pages/Pricing2Page";
 import Pricing3Page from "@/pages/Pricing3Page";
 import Pricing4Page from "@/pages/Pricing4Page";
@@ -116,6 +117,7 @@ export default function App() {
         <Route path="/careers" element={<CareersPage />} />
         <Route path="/contact-1" element={<Contact1Page />} />
         <Route path="/contact-us" element={<Contact1Page />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
       </Route>
       <Route element={<MainLayout headerStyle={2} footerStyle={2} />}>
         <Route path="/404" element={<NotFoundPage />} />
