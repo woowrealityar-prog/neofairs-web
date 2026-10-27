@@ -59,11 +59,30 @@ const SERVICES = [
     },
 ];
 
-type Section4Props = {
-    className?: string;
+export type ServiceOfferItem = {
+    title: string;
+    subtitle?: string;
+    description: string;
+    features?: string[];
+    image: string;
+    itemClass?: string;
+    btnText?: string;
+    btnLink?: string;
 };
 
-export default function Section4({ className }: Section4Props) {
+type Section4Props = {
+    className?: string;
+    eyebrow?: string;
+    rightLabel?: string;
+    items?: ServiceOfferItem[];
+};
+
+export default function Section4({
+    className,
+    eyebrow = "Things we offer",
+    rightLabel = "© Since 2012",
+    items = SERVICES,
+}: Section4Props) {
     return (
         <div className={`container-2200 ${className ?? ""}`.trim()}>
             <section className="at-service-area bg-neutral-50 rounded-5 mx-lg-3 mx-2 pt-120 pb-80">
@@ -73,24 +92,26 @@ export default function Section4({ className }: Section4Props) {
                             <div className="at-service-subtitle-wrap at-about-border d-flex justify-content-between gap-3 mb-50">
                                 <span className="at-btn common-black text-uppercase bg-transparent mb-10 rounded-0 p-0">
                                     <span className="text-uppercase">
-                                        <span className="text-1">Things we offer</span>
-                                        <span className="text-2">Things we offer</span>
+                                        <span className="text-1">{eyebrow}</span>
+                                        <span className="text-2">{eyebrow}</span>
                                     </span>
                                     <i>
                                         {ARROW_SVG}
                                         {ARROW_SVG}
                                     </i>
                                 </span>
-                                <span className="fs-font-md fw-500 text-decoration-underline">
-                                    © Since 2012
-                                </span>
+                                {rightLabel && (
+                                    <span className="fs-font-md fw-500 text-decoration-underline">
+                                        {rightLabel}
+                                    </span>
+                                )}
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="scroll-section vertical-section position-relative">
                     <div className="wrapper">
-                        {SERVICES.map((service, index) => (
+                        {items.map((service, index) => (
                             <div
                                 key={index}
                                 className="item w-100"
@@ -102,7 +123,7 @@ export default function Section4({ className }: Section4Props) {
                                 }}
                             >
                                 <div
-                                    className={`container bg-neutral-50 pt-20 ${service.itemClass}`}
+                                    className={`container bg-neutral-50 pt-20 ${service.itemClass ?? ""}`}
                                     style={{
                                         minHeight: "560px",
                                         display: "flex",
@@ -117,36 +138,42 @@ export default function Section4({ className }: Section4Props) {
                                                     {service.title}
                                                 </h1>
                                                 <div className="mb-4">
-                                                    <h5 className="fw-600 mb-2 neutral-950">
-                                                        {service.subtitle}
-                                                    </h5>
+                                                    {service.subtitle && (
+                                                        <h5 className="fw-600 mb-2 neutral-950">
+                                                            {service.subtitle}
+                                                        </h5>
+                                                    )}
                                                     <p className="fz-font-lg neutral-700 reveal-text pe-xxl-4 mb-4">
                                                         {service.description}
                                                     </p>
-                                                    <ul
-                                                        className="list-unstyled p-0 m-0 mb-4 d-flex flex-wrap gap-2 neutral-700 fz-font-lg"
-                                                    >
-                                                        {service.features.map((feature, i) => (
-                                                            <li
-                                                                key={i}
-                                                                className={`list-unstyled ${service.features.length > 4 ? "w-100 w-md-auto" : "w-100"}`}
-                                                                style={service.features.length > 4 ? { flex: "1 1 45%" } : undefined}
-                                                            >
-                                                                {feature}
-                                                            </li>
-                                                        ))}
-                                                    </ul>
-                                                    <div className="at-btn-group btn-brand-1 at_fade_anim mt-4" data-delay=".4" data-fade-from="bottom" data-ease="bounce">
-                                                        <Link className="at-btn-circle" to="#explore">
-                                                            {ARROW_CIRCLE_SVG}
-                                                        </Link>
-                                                        <Link className="at-btn z-index-1" to="#explore">
-                                                            Explore
-                                                        </Link>
-                                                        <Link className="at-btn-circle" to="#explore">
-                                                            {ARROW_CIRCLE_SVG}
-                                                        </Link>
-                                                    </div>
+                                                    {service.features && service.features.length > 0 && (
+                                                        <ul
+                                                            className="list-unstyled p-0 m-0 mb-4 d-flex flex-wrap gap-2 neutral-700 fz-font-lg"
+                                                        >
+                                                            {service.features.map((feature, i) => (
+                                                                <li
+                                                                    key={i}
+                                                                    className={`list-unstyled ${service.features && service.features.length > 4 ? "w-100 w-md-auto" : "w-100"}`}
+                                                                    style={service.features && service.features.length > 4 ? { flex: "1 1 45%" } : undefined}
+                                                                >
+                                                                    {feature}
+                                                                </li>
+                                                            ))}
+                                                        </ul>
+                                                    )}
+                                                    {service.btnText && (
+                                                        <div className="at-btn-group btn-brand-1 at_fade_anim mt-4" data-delay=".4" data-fade-from="bottom" data-ease="bounce">
+                                                            <Link className="at-btn-circle" to={service.btnLink ?? "#"}>
+                                                                {ARROW_CIRCLE_SVG}
+                                                            </Link>
+                                                            <Link className="at-btn z-index-1" to={service.btnLink ?? "#"}>
+                                                                {service.btnText}
+                                                            </Link>
+                                                            <Link className="at-btn-circle" to={service.btnLink ?? "#"}>
+                                                                {ARROW_CIRCLE_SVG}
+                                                            </Link>
+                                                        </div>
+                                                    )}
                                                 </div>
                                             </div>
                                         </div>
