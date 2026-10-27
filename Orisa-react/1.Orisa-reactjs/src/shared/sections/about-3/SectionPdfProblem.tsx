@@ -36,15 +36,15 @@ const PROBLEMS: ProblemItem[] = [
         avatar: "/assets/imgs/template/avatar/avatar-10.webp",
         quote: "It sits in a WhatsApp chat. You never know if it was opened.",
         headerFirst: true,
-        orderClass: "order-1",
+        orderClass: "",
     },
     {
         title: "Out of date on day one",
         subline: "02\nFile Management",
         avatar: "/assets/imgs/template/avatar/avatar-12.webp",
         quote: "New product, new price, new file. Resend to everyone.",
-        headerFirst: false,
-        orderClass: "order-md-2 order-3",
+        headerFirst: true,
+        orderClass: "",
     },
     {
         title: "No way back in",
@@ -52,7 +52,7 @@ const PROBLEMS: ProblemItem[] = [
         avatar: "/assets/imgs/template/avatar/avatar-16.webp",
         quote: "The buyer liked something. You'll never know which.",
         headerFirst: true,
-        orderClass: "order-md-3 order-2",
+        orderClass: "",
     },
 ];
 
