@@ -7,6 +7,15 @@ const ARROW = (
     </svg>
 );
 
+const ARROW_PILL_SVG = (
+    <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+            d="M0.21967 9.40717C-0.0732232 9.70006 -0.0732232 10.1749 0.21967 10.4678C0.512563 10.7607 0.987437 10.7607 1.28033 10.4678L0.21967 9.40717ZM10.6875 0.75C10.6875 0.335786 10.3517 2.97145e-09 9.9375 1.50485e-07L3.1875 -2.70983e-07C2.77329 -2.70983e-07 2.4375 0.335786 2.4375 0.75C2.4375 1.16421 2.77329 1.5 3.1875 1.5H9.1875V7.5C9.1875 7.91421 9.52329 8.25 9.9375 8.25C10.3517 8.25 10.6875 7.91421 10.6875 7.5L10.6875 0.75ZM0.75 9.9375L1.28033 10.4678L10.4678 1.28033L9.9375 0.75L9.40717 0.21967L0.21967 9.40717L0.75 9.9375Z"
+            fill="currentColor"
+        />
+    </svg>
+);
+
 const PHASES = [
     { num: "01", title: "[ Discovery ]", desc: "A long conversation. Mood, brief, references, expectations.", duration: "1 week", img: "sec-5-phase-1.webp", delay: ".1" },
     { num: "02", title: "[ Mood Board ]", desc: "A visual contract — references, palette, casting direction.", duration: "3—5 days", img: "sec-5-phase-2.webp", delay: ".15" },
@@ -27,7 +36,9 @@ export type PhaseItem = {
 interface Section5Props {
     badge?: string;
     badgeMeta?: string;
+    badgeStyle?: "home15" | "marketplace";
     title?: React.ReactNode;
+    titleClass?: string;
     copy?: string;
     ctaText?: string;
     ctaLink?: string;
@@ -39,11 +50,13 @@ interface Section5Props {
 export default function Section5({
     badge = "Our process",
     badgeMeta = "— 5 phases · 4—8 weeks per project",
+    badgeStyle = "home15",
     title = (
         <>
             From idea to<br />final project.
         </>
     ),
+    titleClass,
     copy = "We move at the pace a story deserves. Most projects close in four to eight weeks; some take longer because they should.",
     ctaText = "Start a project",
     ctaLink = "/contact-1",
@@ -51,19 +64,38 @@ export default function Section5({
     phases = PHASES,
     gridColsClass = "row row-cols-xxl-5 row-cols-xl-5 row-cols-lg-3 row-cols-md-2 row-cols-1 gx-0 gy-0 sec-5-home-15__phases",
 }: Section5Props) {
+    const isMarketplace = badgeStyle === "marketplace";
+    const defaultTitleClass = isMarketplace ? "alt-section-title lh-1 mb-0 reveal-text" : "sec-5-home-15__heading reveal-text";
+    const finalTitleClass = titleClass ?? defaultTitleClass;
+
     return (
         <section className="sec-5-home-15" aria-label={typeof title === "string" ? title : "Process & Values"}>
             <div className="container">
                 <div className="row gx-4 gy-4 align-items-end mb-65">
                     <div className={copy || showCta ? "col-xxl-8 col-xl-7 col-lg-7 col-12" : "col-12"}>
                         {badge && (
-                            <span className="sec-5-home-15__eyebrow at_fade_anim" data-fade-from="bottom" data-delay=".1">
-                                <span className="sec-5-home-15__eyebrow-dot" aria-hidden="true"></span>
-                                <span className="sec-5-home-15__eyebrow-key">{badge}</span>
-                                {badgeMeta && <span className="sec-5-home-15__eyebrow-meta">&mdash; {badgeMeta}</span>}
-                            </span>
+                            isMarketplace ? (
+                                <div className="mb-10">
+                                    <span className="at-btn common-black text-uppercase bg-transparent mb-10 rounded-0 p-0">
+                                        <span className="text-uppercase">
+                                            <span className="text-1">{badge}</span>
+                                            <span className="text-2">{badge}</span>
+                                        </span>
+                                        <i>
+                                            {ARROW_PILL_SVG}
+                                            {ARROW_PILL_SVG}
+                                        </i>
+                                    </span>
+                                </div>
+                            ) : (
+                                <span className="sec-5-home-15__eyebrow at_fade_anim" data-fade-from="bottom" data-delay=".1">
+                                    <span className="sec-5-home-15__eyebrow-dot" aria-hidden="true"></span>
+                                    <span className="sec-5-home-15__eyebrow-key">{badge}</span>
+                                    {badgeMeta && <span className="sec-5-home-15__eyebrow-meta">&mdash; {badgeMeta}</span>}
+                                </span>
+                            )
                         )}
-                        <h2 className="sec-5-home-15__heading reveal-text"><RevealText>{title}</RevealText></h2>
+                        <h2 className={finalTitleClass}><RevealText>{title}</RevealText></h2>
                     </div>
                     {(copy || showCta) && (
                         <div className="col-xxl-4 col-xl-5 col-lg-5 col-12">

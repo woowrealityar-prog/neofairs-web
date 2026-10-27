@@ -83,7 +83,7 @@ export default function AboutPage() {
       />
       <Section4
         badge="Values"
-        badgeMeta="Our principles"
+        badgeStyle="marketplace"
         title="What we hold to."
         copy=""
         showCta={false}
