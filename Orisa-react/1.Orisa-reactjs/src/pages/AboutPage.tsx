@@ -3,6 +3,7 @@ import Section1 from "@/shared/sections/services-2/Section1";
 import Section2 from "@/shared/sections/index-3/Section2";
 import Section3 from "@/shared/sections/index-2/Section4";
 import Section4 from "@/shared/sections/index-15/Section5";
+import SectionFounder from "@/shared/sections/index-7/Section8";
 import Section5 from "@/shared/sections/about-3/Section3";
 import Section6 from "@/shared/sections/services-2/Section3";
 
@@ -89,6 +90,13 @@ export default function AboutPage() {
         showCta={false}
         gridColsClass="row row-cols-lg-3 row-cols-md-3 row-cols-1 gx-0 gy-0 sec-5-home-15__phases"
         phases={VALUES_ITEMS}
+      />
+      <SectionFounder
+        eyebrowText="Founders"
+        eyebrowLink="#founders"
+        heading="Founders"
+        desc="Inaugurated by Ambassadors and Consuls General"
+        showCta={false}
       />
       <Section5 />
       <Section6 />

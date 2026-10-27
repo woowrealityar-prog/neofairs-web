@@ -59,39 +59,77 @@ const COL2_MEMBERS = [
     },
 ];
 
-export default function Section8() {
+export type TeamMember = {
+    name: string;
+    surname: string;
+    role: string;
+    img: string;
+    alt: string;
+    badgeClass?: string;
+    link?: string;
+};
+
+interface Section8Props {
+    className?: string;
+    eyebrowText?: string;
+    eyebrowLink?: string;
+    heading?: React.ReactNode;
+    desc?: React.ReactNode;
+    ctaText?: string;
+    ctaLink?: string;
+    showCta?: boolean;
+    col1Members?: TeamMember[];
+    col2Members?: TeamMember[];
+}
+
+export default function Section8({
+    className,
+    eyebrowText = "Meet Our Team",
+    eyebrowLink = "/team",
+    heading = "Dedicated Team",
+    desc = "Creative experts designing meaningful digital experiences that help ambitious brands grow faster and lead their markets.",
+    ctaText = "Join our Team",
+    ctaLink = "/team",
+    showCta = true,
+    col1Members = COL1_MEMBERS,
+    col2Members = COL2_MEMBERS,
+}: Section8Props) {
     return (
-        <div className="sec-8-home-7 p-relative bg-neutral-0">
+        <div className={`sec-8-home-7 p-relative bg-neutral-0 ${className ?? ""}`.trim()}>
             <div className="container-2200 px-lg-5 px-3">
                 <div className="row g-0 align-items-start">
                     {/* LEFT: Eyebrow + huge heading + description + CTA */}
                     <div className="col-xl-5 col-lg-5 col-12 sec-8-home-7__lead">
-                        <Link to="/team" className="sec-8-home-7__eyebrow d-inline-flex align-items-center gap-2 mb-4 text-uppercase">
-                            <span className="text-scramble" data-scramble-text="Meet Our Team">Meet Our Team</span>
-                            {EYEBROW_ARROW_SVG}
-                        </Link>
+                        {eyebrowText && (
+                            <Link to={eyebrowLink} className="sec-8-home-7__eyebrow d-inline-flex align-items-center gap-2 mb-4 text-uppercase">
+                                <span className="text-scramble" data-scramble-text={eyebrowText}>{eyebrowText}</span>
+                                {EYEBROW_ARROW_SVG}
+                            </Link>
+                        )}
 
                         <h2 className="sec-8-home-7__heading mb-40 reveal-text">
-                            <RevealText>Dedicated Team</RevealText>
+                            <RevealText>{heading}</RevealText>
                         </h2>
 
-                        <p className="sec-8-home-7__desc mb-40 reveal-text">
-                            <RevealText>
-                                Creative experts designing meaningful digital experiences that help ambitious brands grow faster and lead their markets.
-                            </RevealText>
-                        </p>
+                        {desc && (
+                            <p className="sec-8-home-7__desc mb-40 reveal-text">
+                                <RevealText>{desc}</RevealText>
+                            </p>
+                        )}
 
-                        <div className="sec-4-home-7__cta d-inline-flex align-items-stretch mb-60 at_fade_anim">
-                            <Link to="/team" className="at-btn sec-4-home-7__cta-btn text-capitalize">
-                                <span>
-                                    <span className="text-1">Join our Team</span>
-                                    <span className="text-2">Join our Team</span>
-                                </span>
-                            </Link>
-                            <Link to="/team" className="sec-4-home-7__cta-circle d-inline-flex align-items-center justify-content-center text-white" aria-label="Join our Team">
-                                {CTA_CIRCLE_SVG}
-                            </Link>
-                        </div>
+                        {showCta && (
+                            <div className="sec-4-home-7__cta d-inline-flex align-items-stretch mb-60 at_fade_anim">
+                                <Link to={ctaLink} className="at-btn sec-4-home-7__cta-btn text-capitalize">
+                                    <span>
+                                        <span className="text-1">{ctaText}</span>
+                                        <span className="text-2">{ctaText}</span>
+                                    </span>
+                                </Link>
+                                <Link to={ctaLink} className="sec-4-home-7__cta-circle d-inline-flex align-items-center justify-content-center text-white" aria-label={ctaText}>
+                                    {CTA_CIRCLE_SVG}
+                                </Link>
+                            </div>
+                        )}
                     </div>
 
                     {/* RIGHT: Staggered 2-column team grid */}
@@ -99,10 +137,10 @@ export default function Section8() {
                         <div className="sec-8-home-7__grid">
                             {/* Column 1 */}
                             <div className="sec-8-home-7__col">
-                                {COL1_MEMBERS.map((member, i) => (
+                                {col1Members.map((member, i) => (
                                     <Link
                                         key={i}
-                                        to="/team-details"
+                                        to={member.link ?? "/team-details"}
                                         className="sec-8-home-7__card"
                                         aria-label={`${member.name} ${member.surname} — ${member.role}`}
                                     >
@@ -126,10 +164,10 @@ export default function Section8() {
 
                             {/* Column 2 (offset down for staircase effect on desktop) */}
                             <div className="sec-8-home-7__col sec-8-home-7__col--offset">
-                                {COL2_MEMBERS.map((member, i) => (
+                                {col2Members.map((member, i) => (
                                     <Link
                                         key={i}
-                                        to="/team-details"
+                                        to={member.link ?? "/team-details"}
                                         className="sec-8-home-7__card"
                                         aria-label={`${member.name} ${member.surname} — ${member.role}`}
                                     >
