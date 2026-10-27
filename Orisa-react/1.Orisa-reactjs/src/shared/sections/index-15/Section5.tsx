@@ -34,6 +34,7 @@ export type PhaseItem = {
 };
 
 interface Section5Props {
+    className?: string;
     badge?: string;
     badgeMeta?: string;
     badgeStyle?: "home15" | "marketplace";
@@ -48,6 +49,7 @@ interface Section5Props {
 }
 
 export default function Section5({
+    className,
     badge = "Our process",
     badgeMeta = "— 5 phases · 4—8 weeks per project",
     badgeStyle = "home15",
@@ -69,14 +71,17 @@ export default function Section5({
     const finalTitleClass = titleClass ?? defaultTitleClass;
 
     return (
-        <section className="sec-5-home-15" aria-label={typeof title === "string" ? title : "Process & Values"}>
+        <section className={`sec-5-home-15 ${className ?? ""}`.trim()} aria-label={typeof title === "string" ? title : "Process & Values"}>
             <div className="container">
                 <div className="row gx-4 gy-4 align-items-end mb-65">
                     <div className={copy || showCta ? "col-xxl-8 col-xl-7 col-lg-7 col-12" : "col-12"}>
                         {badge && (
                             isMarketplace ? (
                                 <div className="mb-10">
-                                    <span className="at-btn common-white text-uppercase bg-transparent mb-10 rounded-0 p-0">
+                                    <span
+                                        className="at-btn common-white text-uppercase bg-transparent mb-10 rounded-0 p-0 border-0"
+                                        style={{ border: "none", borderBottom: "none", outline: "none", boxShadow: "none" }}
+                                    >
                                         <span className="text-uppercase text-white">
                                             <span className="text-1 text-white">{badge}</span>
                                             <span className="text-2 text-white">{badge}</span>
