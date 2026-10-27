@@ -4,7 +4,7 @@ import { MainMenuRootList } from "@/shared/mobile-menu/MobileMenuCloneContext";
 type Item = { to: string; label: string };
 
 const COMPANY_LINKS: Item[] = [
-  { to: "/about-1", label: "About" },
+  { to: "/about-us", label: "About" },
   { to: "/careers", label: "Careers" },
 ];
 

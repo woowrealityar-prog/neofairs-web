@@ -5,6 +5,7 @@ import About2Page from "@/pages/About2Page";
 import About3Page from "@/pages/About3Page";
 import About4Page from "@/pages/About4Page";
 import About5Page from "@/pages/About5Page";
+import AboutPage from "@/pages/AboutPage";
 import Archive1Page from "@/pages/Archive1Page";
 import Archive2Page from "@/pages/Archive2Page";
 import Archive3Page from "@/pages/Archive3Page";
@@ -113,7 +114,7 @@ export default function App() {
       </Route>
       <Route element={<MainLayout headerStyle={2} footerStyle={2} />}>
         <Route path="/404" element={<NotFoundPage />} />
-        <Route path="/about-us" element={<About1Page />} />
+        <Route path="/about-us" element={<AboutPage />} />
         <Route path="/about-1" element={<About1Page />} />
         <Route path="/about-3" element={<About3Page />} />
         <Route path="/about-4" element={<About4Page />} />
