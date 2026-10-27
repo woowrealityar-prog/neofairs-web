@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import RevealText from "@/shared/effects/RevealText";
 
-{/* Home 7 Section 8 (Team — Dedicated Team + Staggered Portrait Grid) */}
+{/* Home 7 Section 8 (Team — Dedicated Team + Staggered Portrait Grid) */ }
 
 const EYEBROW_ARROW_SVG = (
     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13" viewBox="0 0 14 13" fill="none">

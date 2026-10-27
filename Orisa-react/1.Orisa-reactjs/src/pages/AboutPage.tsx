@@ -4,6 +4,7 @@ import Section2 from "@/shared/sections/index-3/Section2";
 import Section3 from "@/shared/sections/index-2/Section4";
 import Section4 from "@/shared/sections/index-15/Section5";
 import SectionFounder from "@/shared/sections/index-7/Section8";
+import SectionBrandScroll from "@/shared/sections/index-2/SectionBrandScroll";
 import Section5 from "@/shared/sections/about-3/Section3";
 import Section6 from "@/shared/sections/services-2/Section3";
 
@@ -102,9 +103,9 @@ export default function AboutPage() {
         showCta={false}
         col1Members={[
           {
-            name: "Darrell",
-            surname: "Steward",
-            role: "Co-Founder & CEO",
+            name: "Group Chairman",
+            surname: "",
+            role: "Chairman & Founder",
             img: "/assets/imgs/pages/home-7/team-1-darrell.webp",
             alt: "Darrell Steward",
             badgeClass: "",
@@ -112,15 +113,16 @@ export default function AboutPage() {
         ]}
         col2Members={[
           {
-            name: "Esther",
-            surname: "Howard",
-            role: "Co-Founder & CTO",
+            name: "Group CEO",
+            surname: "",
+            role: "Chief Executive Officer",
             img: "/assets/imgs/pages/home-7/team-3-esther.webp",
             alt: "Esther Howard",
             badgeClass: "",
           },
         ]}
       />
+      <SectionBrandScroll />
       <Section5 />
       <Section6 />
     </>
