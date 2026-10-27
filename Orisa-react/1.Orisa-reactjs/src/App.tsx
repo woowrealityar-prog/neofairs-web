@@ -114,6 +114,8 @@ export default function App() {
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/about-us" element={<AboutPage />} />
         <Route path="/careers" element={<CareersPage />} />
+        <Route path="/contact-1" element={<Contact1Page />} />
+        <Route path="/contact-us" element={<Contact1Page />} />
       </Route>
       <Route element={<MainLayout headerStyle={2} footerStyle={2} />}>
         <Route path="/404" element={<NotFoundPage />} />
@@ -126,7 +128,6 @@ export default function App() {
         <Route path="/archive-4" element={<Archive4Page />} />
         <Route path="/blog-details" element={<BlogDetailsPage />} />
         <Route path="/coming-soon" element={<ComingSoonPage />} />
-        <Route path="/contact-1" element={<Contact1Page />} />
         <Route path="/contact-2" element={<Contact2Page />} />
         <Route path="/faqs" element={<FaqsPage />} />
         <Route path="/" element={<Home2Page />} />
