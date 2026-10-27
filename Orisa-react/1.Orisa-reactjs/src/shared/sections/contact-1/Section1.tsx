@@ -264,12 +264,13 @@ export default function Section1() {
                             <div>
                                 <a
                                     href="mailto:enquiry@neofairs.com?subject=Book%20a%20Free%20Demo%20-%20NeoFairs"
-                                    className="at-btn btn-sm"
+                                    className="at-btn text-capitalize"
                                     style={{
                                         backgroundColor: "#ace227",
                                         borderColor: "#ace227",
                                         color: "#000000",
                                         fontWeight: 600,
+                                        padding: "14px 28px",
                                     }}
                                 >
                                     <span>
@@ -297,7 +298,14 @@ export default function Section1() {
                             <div>
                                 <a
                                     href="mailto:enquiry@neofairs.com?subject=Register%20My%20Interest%20-%20NeoFairs"
-                                    className="at-btn btn-sm common-black border-100"
+                                    className="at-btn text-capitalize"
+                                    style={{
+                                        backgroundColor: "#1D1D1D",
+                                        borderColor: "#1D1D1D",
+                                        color: "#FEFEFE",
+                                        fontWeight: 600,
+                                        padding: "14px 28px",
+                                    }}
                                 >
                                     <span>
                                         <span className="text-1">Register My Interest</span>
@@ -331,7 +339,14 @@ export default function Section1() {
                             <div>
                                 <a
                                     href="mailto:enquiry@neofairs.com?subject=Trade%20Body%20Partnership%20-%20NeoFairs"
-                                    className="at-btn btn-sm common-black border-100"
+                                    className="at-btn text-capitalize"
+                                    style={{
+                                        backgroundColor: "#1D1D1D",
+                                        borderColor: "#1D1D1D",
+                                        color: "#FEFEFE",
+                                        fontWeight: 600,
+                                        padding: "14px 28px",
+                                    }}
                                 >
                                     <span>
                                         <span className="text-1">Contact Partners</span>
