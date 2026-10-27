@@ -114,7 +114,7 @@ export default function SectionCatalogCantDo() {
                                         </h3>
                                     </div>
                                 </div>
-                                <p className="sec-6-home-9__skills">{item.desc}</p>
+                                <p className="sec-6-home-9__skills text-transform-none" style={{ textTransform: "none" }}>{item.desc}</p>
                             </article>
                         ))}
                     </div>
