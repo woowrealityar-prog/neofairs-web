@@ -36,7 +36,15 @@ function logoSrc(num: string) {
     return `/assets/imgs/template/logo/logo-brand-${num}.webp`;
 }
 
-export default function SectionBrandScroll() {
+interface SectionBrandScrollProps {
+    eyebrowText?: string;
+    title?: React.ReactNode;
+}
+
+export default function SectionBrandScroll({
+    eyebrowText = "Our Clients",
+    title = "Trusted by 100+ businesses across 21 countries",
+}: SectionBrandScrollProps = {}) {
     return (
         <div className="mg-portfolio-area">
             <section className="sec-3-home-5 pt-130 pb-110">
@@ -46,8 +54,8 @@ export default function SectionBrandScroll() {
                             <div className="mb-25">
                                 <span className="at-btn common-black bg-transparent rounded-0 p-0 mb-20 d-inline-block">
                                     <span className="text-uppercase text-nowrap">
-                                        <span className="text-1">Our Clients</span>
-                                        <span className="text-2">Our Clients</span>
+                                        <span className="text-1">{eyebrowText}</span>
+                                        <span className="text-2">{eyebrowText}</span>
                                     </span>
                                     <i>
                                         {ARROW_SVG}
@@ -57,7 +65,7 @@ export default function SectionBrandScroll() {
                             </div>
                             <h2 className="alt-section-title lh-1 mb-30 reveal-text pe-xxl-4">
                                 <RevealText>
-                                    Trusted by 100+ businesses across 21 countries
+                                    {title}
                                 </RevealText>
                             </h2>
                         </div>

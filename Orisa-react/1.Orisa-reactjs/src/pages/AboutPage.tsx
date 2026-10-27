@@ -102,7 +102,7 @@ export default function AboutPage() {
         eyebrowText="Founders"
         eyebrowLink="#founders"
         heading="Founders"
-        desc="Inaugurated by Ambassadors and Consuls General"
+        desc="The People Behind It"
         showCta={false}
         col1Members={[
           {
@@ -125,7 +125,9 @@ export default function AboutPage() {
           },
         ]}
       />
-      <SectionBrandScroll />
+      <SectionBrandScroll
+        title="Inaugurated by Ambassadors and Consuls General"
+      />
       <SectionImageStrips />
       {/* <Section5 /> */}
       <SectionAgastronGroup
