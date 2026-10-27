@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import BrandLogo from "@/shared/BrandLogo";
 // Footer 2 - Neofairs Footer
 
 const ARROW_SVG = (
@@ -80,6 +81,9 @@ export default function Footer2() {
             {/* Col 1: About NeoFairs (Plain white text without links or underline) */}
             <div className="col-xl-3 col-lg-3 col-md-6">
               <div className="at-footer-widget alt-footer-link-item-wrap">
+                <div className="mb-3">
+                  <BrandLogo width={150} height={40} />
+                </div>
                 <span className="d-block fz-font-label neutral-0 opacity-50 text-uppercase mb-3">
                   About NeoFairs
                 </span>

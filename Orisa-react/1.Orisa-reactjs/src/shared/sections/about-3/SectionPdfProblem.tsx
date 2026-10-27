@@ -81,7 +81,7 @@ function ProblemCard({ item }: { item: ProblemItem }) {
                         </h6>
                         <div className="pt-100">
                             <blockquote className="neutral-500 fz-font-lg fw-500 mb-0 text-truncate-5">
-                                &ldquo;{item.quote}&rdquo;
+                                {item.quote}
                             </blockquote>
                         </div>
                     </div>
@@ -99,7 +99,7 @@ function ProblemCard({ item }: { item: ProblemItem }) {
                         </h6>
                         <div className="pt-100">
                             <blockquote className="neutral-500 fz-font-lg fw-500 mb-0 text-truncate-5">
-                                &ldquo;{item.quote}&rdquo;
+                                {item.quote}
                             </blockquote>
                         </div>
                     </div>

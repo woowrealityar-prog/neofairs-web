@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import MainMenu from "@/shared/MainMenu";
 import ThemeSwitcher from "@/shared/ThemeSwitcher";
+import BrandLogo from "@/shared/BrandLogo";
 
 interface Header2Props {
   onOpenSearch: () => void;
@@ -30,10 +31,7 @@ export default function Header2({ onOpenSearch, onToggleSidebar, onOpenHamburger
           <div className="row align-items-center flex-nowrap">
             <div className="col-auto">
               <div className="at-header-logo">
-                <Link to="/" className="text-decoration-none d-inline-flex align-items-center gap-2">
-                  <img width={30} height={30} src="/assets/imgs/template/logo/favicon.svg" alt="NeoFairs" />
-                  <h6 className="fw-700 fz-24 mb-0">NeoFairs</h6>
-                </Link>
+                <BrandLogo width={140} height={36} />
               </div>
             </div>
             <div className="col d-none d-xl-flex justify-content-center px-1">

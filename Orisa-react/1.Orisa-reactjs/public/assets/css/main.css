@@ -44712,5 +44712,35 @@ body.at-magic-cursor #magic-cursor {
     height: 210px !important;
   }
 }
+/* NeoFairs Brand Logo Theme-Aware Swapping */
+.brand-logo-swap {
+  display: inline-flex;
+  align-items: center;
+}
+.brand-logo-swap .brand-logo-dark {
+  display: none !important;
+}
+.brand-logo-swap .brand-logo-light {
+  display: inline-block !important;
+}
+
+[data-bs-theme="dark"] .brand-logo-swap .brand-logo-dark {
+  display: inline-block !important;
+}
+[data-bs-theme="dark"] .brand-logo-swap .brand-logo-light {
+  display: none !important;
+}
+
+/* On dark headers/footers (regardless of theme), show white logo */
+.theme-dark .brand-logo-swap .brand-logo-dark,
+.bg-neutral-950 .brand-logo-swap .brand-logo-dark,
+.menu-light .brand-logo-swap .brand-logo-dark {
+  display: inline-block !important;
+}
+.theme-dark .brand-logo-swap .brand-logo-light,
+.bg-neutral-950 .brand-logo-swap .brand-logo-light,
+.menu-light .brand-logo-swap .brand-logo-light {
+  display: none !important;
+}
 
 /*# sourceMappingURL=main.css.map */

@@ -1,5 +1,6 @@
 import { forwardRef } from "react";
 import { Link } from "react-router-dom";
+import BrandLogo from "@/shared/BrandLogo";
 
 const ARROW_SVG = (
   <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -54,6 +55,9 @@ const FooterFull = forwardRef<HTMLElement, Record<string, never>>(function Foote
             {/* Col 1: About NeoFairs */}
             <div className="col-lg-3 col-md-6">
               <div className="at-footer-widget alt-footer-link-item-wrap">
+                <div className="mb-3">
+                  <BrandLogo width={150} height={40} />
+                </div>
                 <span className="d-block fz-font-label neutral-0 opacity-50 text-uppercase mb-3">
                   About NeoFairs
                 </span>

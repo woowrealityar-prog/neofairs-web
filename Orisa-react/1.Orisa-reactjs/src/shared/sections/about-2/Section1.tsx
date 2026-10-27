@@ -148,7 +148,7 @@ export default function Section1() {
                                         display: "inline-block",
                                     }}
                                 />
-                                <span className="highlight">"Introductory pricing"</span> for early members
+                                <span className="highlight">Introductory pricing</span> for early members
                             </span>
                         </div>
                     </div>

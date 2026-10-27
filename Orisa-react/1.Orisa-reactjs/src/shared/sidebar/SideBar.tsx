@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { OffcanvasMenuMount } from "@/shared/mobile-menu/MobileMenuCloneContext";
 import MenuClone from "@/shared/mobile-menu/MenuClone";
+import BrandLogo from "@/shared/BrandLogo";
 
 interface SideBarProps {
   open: boolean;
@@ -117,10 +118,7 @@ export default function SideBar({ open, hamburgerOpen, onClose }: SideBarProps) 
         <div className={`at-offcanvas ${open ? "opened" : ""}`}>
           <div className="at-offcanvas-top d-flex align-items-center justify-content-between">
             <div className="at-offcanvas-logo">
-              <Link to="/" className="text-decoration-none d-inline-flex align-items-center gap-2">
-                <img data-width="30" src="/assets/imgs/template/logo/favicon.svg" alt="NeoFairs" width={30} height={30} />
-                <h6 className="fw-700 fz-24 mb-0">NeoFairs</h6>
-              </Link>
+              <BrandLogo width={140} height={36} />
             </div>
             <div className="at-offcanvas-close-btn">
               <button type="button" className="close-btn close-sidebar" aria-label="Close" onClick={onClose}>
@@ -185,17 +183,7 @@ export default function SideBar({ open, hamburgerOpen, onClose }: SideBarProps) 
         <div className="at-offcanvas-2-wrapper offcanvas-menu sidebar-left">
           <div className="at-offcanvas-2-left">
             <div className="at-header-logo d-flex justify-content-between align-items-center mb-50">
-              <Link to="/" className="text-decoration-none d-inline-flex align-items-center gap-2">
-                <img
-                  className="dark-mode-invert"
-                  data-width="30"
-                  src="/assets/imgs/template/logo/favicon.svg"
-                  alt="NeoFairs"
-                  width={30}
-                  height={30}
-                />
-                <h6 className="fw-700 fz-24 mb-0">NeoFairs</h6>
-              </Link>
+              <BrandLogo width={140} height={36} />
               <span className="hamburger-close-btn close-sidebar" role="button" tabIndex={0} aria-label="Close" onClick={onClose}>
                 <CloseIconSvg />
               </span>
