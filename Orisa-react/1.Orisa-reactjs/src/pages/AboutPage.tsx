@@ -47,6 +47,26 @@ export default function AboutPage() {
   return (
     <>
       <PageMeta title="NeoFairs — About Us" />
+      <style>{`
+        /* About page CTA buttons - brand green */
+        .pricing-2-cta__panel .pricing-2-cta__actions .at-btn {
+          background-color: #ace227 !important;
+          color: #000000 !important;
+          border-color: #ace227 !important;
+        }
+        .pricing-2-cta__panel .pricing-2-cta__actions .at-btn span,
+        .pricing-2-cta__panel .pricing-2-cta__actions .at-btn span span,
+        .pricing-2-cta__panel .pricing-2-cta__actions .at-btn i,
+        .pricing-2-cta__panel .pricing-2-cta__actions .at-btn i svg {
+          color: #000000 !important;
+          fill: #000000 !important;
+        }
+        .pricing-2-cta__panel .pricing-2-cta__actions .at-btn:hover {
+          background-color: #9cd318 !important;
+          border-color: #9cd318 !important;
+          color: #000000 !important;
+        }
+      `}</style>
       <Section1
         badge="About NeoFairs"
         title="Buyers for Indian businesses. Wherever the buyers are."
