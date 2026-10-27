@@ -5,6 +5,7 @@ import Section3 from "@/shared/sections/index-2/Section4";
 import Section4 from "@/shared/sections/index-15/Section5";
 import SectionFounder from "@/shared/sections/index-7/Section8";
 import SectionBrandScroll from "@/shared/sections/index-2/SectionBrandScroll";
+import SectionImageStrips from "@/shared/sections/index-2/SectionImageStrips";
 import Section5 from "@/shared/sections/about-3/Section3";
 import Section6 from "@/shared/sections/services-2/Section3";
 
@@ -124,6 +125,7 @@ export default function AboutPage() {
       />
       <SectionBrandScroll />
       <Section5 />
+      <SectionImageStrips />
       <Section6 />
     </>
   );
