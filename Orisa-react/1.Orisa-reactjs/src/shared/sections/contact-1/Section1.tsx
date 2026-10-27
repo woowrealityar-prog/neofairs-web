@@ -61,39 +61,15 @@ export default function Section1() {
                             </span>
                             <h1 className="at-section-title reveal-text mb-lg-0 mb-4 fw-600" style={{ fontSize: "clamp(2.5rem, 5vw, 4.25rem)", lineHeight: 1.15 }}>
                                 <RevealText>
-                                    A demo, a fair, a question.
+                                    Talk to us
                                 </RevealText>
                             </h1>
+                            <h6 className="mb-0 fz-font-xl fw-500 neutral-800" style={{ lineHeight: 1.5 }}>
+                                A demo, a fair, a question. We reply within one business day.
+                            </h6>
                         </div>
                     </div>
 
-                    <div className="col-xxl-4 col-lg-5 col-md-8 ms-xxl-auto position-relative">
-                        <div className="scroll-rotate d-md-inline-block d-none">
-                            <div className="icon">
-                                {SCROLL_ROTATE_SVG}
-                            </div>
-                        </div>
-                        <div className="sec-2-home-5__avatars-row d-flex gap-2 py-3">
-                            {AVATARS.map((avatar, i) => (
-                                <div
-                                    key={i}
-                                    className={`sec-2-home-5__avatar-sm at-offcanvas-gallery-img ${avatar.hiddenOnMobile ? "d-none d-md-block" : ""}`}
-                                >
-                                    <img
-                                        src={avatar.src}
-                                        alt={avatar.alt}
-                                        width={65}
-                                        height={65}
-                                        className="img-cover"
-                                        loading="lazy"
-                                    />
-                                </div>
-                            ))}
-                        </div>
-                        <h6 className="mb-0 fz-font-xl fw-500 neutral-800" style={{ lineHeight: 1.5 }}>
-                            We reply within one business day.
-                        </h6>
-                    </div>
                 </div>
 
                 {/* Form + Direct Contact Row */}
@@ -152,20 +128,18 @@ export default function Section1() {
                             </div>
 
                             <div className="sec-4-about-form__field pt-2">
-                                <label className="fz-font-sm neutral-500 d-block mb-1">
-                                    I’m interested in *
-                                </label>
                                 <select
                                     className="sec-4-about-form__input"
                                     name="interest"
-                                    defaultValue="Living Showroom"
+                                    defaultValue="Select Intrest"
                                     required
-                                    aria-label="I’m interested in"
+                                    aria-label="Interested in"
                                     style={{
                                         cursor: "pointer",
                                         paddingRight: "20px",
                                     }}
                                 >
+                                    <option value="Select Intrest">Select Intrest</option>
                                     <option value="Living Showroom">Living Showroom</option>
                                     <option value="Virtual Trade Fairs">Virtual Trade Fairs</option>
                                     <option value="Marketplace">Marketplace</option>
@@ -232,12 +206,12 @@ export default function Section1() {
                         </form>
                     </div>
 
-                    {/* Right: Direct Details & Quick Action Cards */}
+                    {/* Right: Direct Details */}
                     <div className="col-xxl-5 col-lg-5 ms-auto">
                         {/* Direct Contact Info */}
-                        <div className="p-4 p-md-5 rounded-4 bg-neutral-50 border-100 mb-4 at_fade_anim">
+                        <div className="p-4 p-md-5 rounded-4 bg-neutral-50 border-100 at_fade_anim h-100">
                             <h4 className="fw-600 mb-25 neutral-900">Direct Contact</h4>
-                            
+
                             <div className="mb-20">
                                 <span className="fz-font-sm text-uppercase fw-600 neutral-500 d-block mb-1">
                                     Phone / WhatsApp
@@ -273,15 +247,21 @@ export default function Section1() {
                                 </span>
                             </div>
                         </div>
+                    </div>
+                </div>
 
-                        {/* Quick Assistance Cards */}
-                        <div className="d-flex flex-column gap-3 at_fade_anim">
-                            {/* Card 1: Want a demo? */}
-                            <div className="p-4 rounded-4 bg-neutral-0 border-100">
-                                <h6 className="fw-600 neutral-900 mb-1">Want a demo?</h6>
-                                <p className="neutral-600 fz-font-md mb-15">
+                {/* 3 Quick Assistance Cards in a Horizontal Row */}
+                <div className="row g-4 pt-80 at_fade_anim">
+                    {/* Card 1: Want a demo? */}
+                    <div className="col-lg-4 col-md-6">
+                        <div className="p-4 rounded-4 bg-neutral-50 border-100 h-100 d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 className="fw-600 neutral-900 mb-2">Want a demo?</h5>
+                                <p className="neutral-600 fz-font-md mb-20">
                                     Book 30 minutes. We’ll show a real showroom.
                                 </p>
+                            </div>
+                            <div>
                                 <a
                                     href="mailto:enquiry@neofairs.com?subject=Book%20a%20Free%20Demo%20-%20NeoFairs"
                                     className="at-btn btn-sm"
@@ -302,13 +282,19 @@ export default function Section1() {
                                     </i>
                                 </a>
                             </div>
+                        </div>
+                    </div>
 
-                            {/* Card 2: Exhibiting? */}
-                            <div className="p-4 rounded-4 bg-neutral-0 border-100">
-                                <h6 className="fw-600 neutral-900 mb-1">Exhibiting?</h6>
-                                <p className="neutral-600 fz-font-md mb-15">
+                    {/* Card 2: Exhibiting? */}
+                    <div className="col-lg-4 col-md-6">
+                        <div className="p-4 rounded-4 bg-neutral-50 border-100 h-100 d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 className="fw-600 neutral-900 mb-2">Exhibiting?</h5>
+                                <p className="neutral-600 fz-font-md mb-20">
                                     Tell us your industry. We’ll tell you which fair fits.
                                 </p>
+                            </div>
+                            <div>
                                 <a
                                     href="mailto:enquiry@neofairs.com?subject=Register%20My%20Interest%20-%20NeoFairs"
                                     className="at-btn btn-sm common-black border-100"
@@ -323,11 +309,15 @@ export default function Section1() {
                                     </i>
                                 </a>
                             </div>
+                        </div>
+                    </div>
 
-                            {/* Card 3: Trade body or advisor? */}
-                            <div className="p-4 rounded-4 bg-neutral-0 border-100">
-                                <h6 className="fw-600 neutral-900 mb-1">Trade body or advisor?</h6>
-                                <p className="neutral-600 fz-font-md mb-0">
+                    {/* Card 3: Trade body or advisor? */}
+                    <div className="col-lg-4 col-md-12">
+                        <div className="p-4 rounded-4 bg-neutral-50 border-100 h-100 d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 className="fw-600 neutral-900 mb-2">Trade body or advisor?</h5>
+                                <p className="neutral-600 fz-font-md mb-20">
                                     We plan each fair with industry partners. Write to us at{" "}
                                     <a
                                         href="mailto:enquiry@neofairs.com"
@@ -337,6 +327,21 @@ export default function Section1() {
                                     </a>
                                     .
                                 </p>
+                            </div>
+                            <div>
+                                <a
+                                    href="mailto:enquiry@neofairs.com?subject=Trade%20Body%20Partnership%20-%20NeoFairs"
+                                    className="at-btn btn-sm common-black border-100"
+                                >
+                                    <span>
+                                        <span className="text-1">Contact Partners</span>
+                                        <span className="text-2">Contact Partners</span>
+                                    </span>
+                                    <i>
+                                        {ARROW_SVG}
+                                        {ARROW_SVG}
+                                    </i>
+                                </a>
                             </div>
                         </div>
                     </div>
