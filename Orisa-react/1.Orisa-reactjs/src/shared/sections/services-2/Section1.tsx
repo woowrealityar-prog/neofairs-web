@@ -9,7 +9,21 @@ const ARROW_SVG = (
     </svg>
 );
 
-export default function Section1() {
+interface Section1Props {
+    badge?: string;
+    title?: string;
+    subtitle?: string;
+    image?: string;
+    imageAlt?: string;
+}
+
+export default function Section1({
+    badge = "Creative - Innovative - Agile",
+    title = "Our Services",
+    subtitle = "We turn ideas into high-impact digital solutions that attract customers, boost conversions, and accelerate sustainable growth.",
+    image = "/assets/imgs/pages/img-154.webp",
+    imageAlt = "orisa",
+}: Section1Props) {
     return (
         <section className="sec-1-services2 pt-150 border-bottom-100 overflow-hidden">
             <div className="container">
@@ -17,8 +31,8 @@ export default function Section1() {
                     <div className="col-12">
                         <span className="at-btn common-black bg-transparent mb-10 rounded-0 p-0">
                             <span className="text-uppercase">
-                                <span className="text-1">Creative - Innovative - Agile</span>
-                                <span className="text-2">Creative - Innovative - Agile</span>
+                                <span className="text-1">{badge}</span>
+                                <span className="text-2">{badge}</span>
                             </span>
                             <i>
                                 {ARROW_SVG}
@@ -27,13 +41,13 @@ export default function Section1() {
                         </span>
                     </div>
                     <div className="col-lg-8">
-                        <h1 className="section-title d-flex fw-600 fz-200 reveal-text mb-0">
-                            Our Services
+                        <h1 className="section-title d-flex fw-600 fz-110 reveal-text mb-0" style={{ lineHeight: 1.1 }}>
+                            {title}
                         </h1>
                     </div>
                     <div className="col-lg-4 ms-auto">
                         <h6 className="fw-500 fz-font-lg reveal-text mb-0 ps-xxl-5">
-                            We turn ideas into high-impact digital solutions that attract customers, boost conversions, and accelerate sustainable growth.
+                            {subtitle}
                         </h6>
                     </div>
                 </div>
@@ -42,8 +56,8 @@ export default function Section1() {
                 <img
                     className="img-cover scale-up"
                     data-speed=".4"
-                    src="/assets/imgs/pages/img-154.webp"
-                    alt="orisa"
+                    src={image}
+                    alt={imageAlt}
                     width={1920}
                     height={800} loading="lazy" />
             </div>

@@ -9,7 +9,11 @@ export default function AboutPage() {
   return (
     <>
       <PageMeta title="NeoFairs — About Us" />
-      <Section1 />
+      <Section1
+        badge="About NeoFairs"
+        title="Buyers for Indian businesses. Wherever the buyers are."
+        subtitle="We took Indian exhibitors to buyers in 21 countries. Now we bring the same tools home."
+      />
       <Section2 />
       <Section3 />
       <Section4 />
