@@ -139,7 +139,7 @@ export default function SideBar({ open, hamburgerOpen, onClose }: SideBarProps) 
           </div>
 
 
-          <div className="at-offcanvas-contact">
+          <div className="at-offcanvas-contact mt-30">
             <h5 className="at-offcanvas-title sm">Get in touch</h5>
             <ul>
               <li>
