@@ -9,19 +9,19 @@ interface BrandLogoProps {
 
 /**
  * BrandLogo automatically switches between light mode and dark mode SVG icons:
- * - Light theme: /assets/imgs/pages/neoweb/neo-light.svg (dark mark + dark text)
- * - Dark theme:  /assets/imgs/pages/neoweb/neo-dark.svg  (dark mark + white text)
+ * - Light theme: /assets/imgs/pages/neoweb/neo-light.svg (dark text)
+ * - Dark theme:  /assets/imgs/pages/neoweb/neo-dark.svg  (white text)
  */
 export default function BrandLogo({
   className = "",
-  width = 140,
-  height = 36,
+  width = 200,
+  height = 50,
   showText = false,
 }: BrandLogoProps) {
   return (
     <Link to="/" className={`text-decoration-none d-inline-flex align-items-center gap-2 ${className}`.trim()}>
       <span className="brand-logo-swap d-inline-flex align-items-center">
-        {/* Visible in light mode, hidden in dark mode */}
+        {/* neo-light.svg shown in light mode */}
         <img
           src="/assets/imgs/pages/neoweb/neo-light.svg"
           alt="NeoFairs"
@@ -30,7 +30,7 @@ export default function BrandLogo({
           className="brand-logo-img brand-logo-light"
           style={{ width: `${width}px`, height: `${height}px`, objectFit: "contain" }}
         />
-        {/* Visible in dark mode, hidden in light mode */}
+        {/* neo-dark.svg shown in dark mode */}
         <img
           src="/assets/imgs/pages/neoweb/neo-dark.svg"
           alt="NeoFairs"

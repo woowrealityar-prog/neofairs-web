@@ -31,7 +31,7 @@ export default function Header2({ onOpenSearch, onToggleSidebar, onOpenHamburger
           <div className="row align-items-center flex-nowrap">
             <div className="col-auto">
               <div className="at-header-logo">
-                <BrandLogo width={140} height={36} />
+                <BrandLogo width={200} height={50} />
               </div>
             </div>
             <div className="col d-none d-xl-flex justify-content-center px-1">

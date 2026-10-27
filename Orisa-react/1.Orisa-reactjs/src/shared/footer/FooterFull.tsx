@@ -56,7 +56,7 @@ const FooterFull = forwardRef<HTMLElement, Record<string, never>>(function Foote
             <div className="col-lg-3 col-md-6">
               <div className="at-footer-widget alt-footer-link-item-wrap">
                 <div className="mb-3">
-                  <BrandLogo width={150} height={40} />
+                  <BrandLogo width={200} height={50} />
                 </div>
                 <span className="d-block fz-font-label neutral-0 opacity-50 text-uppercase mb-3">
                   About NeoFairs

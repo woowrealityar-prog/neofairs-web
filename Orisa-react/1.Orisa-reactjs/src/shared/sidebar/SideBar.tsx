@@ -118,7 +118,7 @@ export default function SideBar({ open, hamburgerOpen, onClose }: SideBarProps) 
         <div className={`at-offcanvas ${open ? "opened" : ""}`}>
           <div className="at-offcanvas-top d-flex align-items-center justify-content-between">
             <div className="at-offcanvas-logo">
-              <BrandLogo width={140} height={36} />
+              <BrandLogo width={200} height={50} />
             </div>
             <div className="at-offcanvas-close-btn">
               <button type="button" className="close-btn close-sidebar" aria-label="Close" onClick={onClose}>
@@ -183,7 +183,7 @@ export default function SideBar({ open, hamburgerOpen, onClose }: SideBarProps) 
         <div className="at-offcanvas-2-wrapper offcanvas-menu sidebar-left">
           <div className="at-offcanvas-2-left">
             <div className="at-header-logo d-flex justify-content-between align-items-center mb-50">
-              <BrandLogo width={140} height={36} />
+              <BrandLogo width={200} height={50} />
               <span className="hamburger-close-btn close-sidebar" role="button" tabIndex={0} aria-label="Close" onClick={onClose}>
                 <CloseIconSvg />
               </span>
