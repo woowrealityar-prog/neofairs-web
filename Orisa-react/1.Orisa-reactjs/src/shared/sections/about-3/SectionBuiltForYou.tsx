@@ -64,7 +64,7 @@ const STEPS = [
 
 export default function SectionBuiltForYou() {
     return (
-        <section className="sec-4-home-3 pt-120 pb-100 z-n1">
+        <section className="sec-4-home-3 pt-120 pb-0 z-n1">
             <div className="container">
                 <div className="row g-4 align-items-end">
                     <div className="col-12">

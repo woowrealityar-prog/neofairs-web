@@ -75,7 +75,7 @@ const FEATURES = [
 
 export default function SectionCatalogCantDo() {
     return (
-        <section className="sec-6-home-9 changeless bg-neutral-50 overflow-x-hidden pt-120 pb-120">
+        <section className="sec-6-home-9 changeless bg-neutral-50 overflow-x-hidden pt-50 pb-120">
             <div className="sec-6-home-9__container">
                 <div className="row g-4 align-items-end mb-60">
                     <div className="col-12">
