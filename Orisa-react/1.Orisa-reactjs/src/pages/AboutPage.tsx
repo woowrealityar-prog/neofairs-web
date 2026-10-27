@@ -92,11 +92,34 @@ export default function AboutPage() {
         phases={VALUES_ITEMS}
       />
       <SectionFounder
+        containerClass="container"
+        eyebrowStyle="testimonial"
+        titleStyle="testimonial"
         eyebrowText="Founders"
         eyebrowLink="#founders"
         heading="Founders"
         desc="Inaugurated by Ambassadors and Consuls General"
         showCta={false}
+        col1Members={[
+          {
+            name: "Darrell",
+            surname: "Steward",
+            role: "Co-Founder & CEO",
+            img: "/assets/imgs/pages/home-7/team-1-darrell.webp",
+            alt: "Darrell Steward",
+            badgeClass: "",
+          },
+        ]}
+        col2Members={[
+          {
+            name: "Esther",
+            surname: "Howard",
+            role: "Co-Founder & CTO",
+            img: "/assets/imgs/pages/home-7/team-3-esther.webp",
+            alt: "Esther Howard",
+            badgeClass: "",
+          },
+        ]}
       />
       <Section5 />
       <Section6 />

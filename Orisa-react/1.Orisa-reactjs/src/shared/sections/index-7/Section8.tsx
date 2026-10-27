@@ -59,6 +59,15 @@ const COL2_MEMBERS = [
     },
 ];
 
+const TESTIMONIAL_ARROW_SVG = (
+    <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+            d="M0.21967 9.40717C-0.0732232 9.70006 -0.0732232 10.1749 0.21967 10.4678C0.512563 10.7607 0.987437 10.7607 1.28033 10.4678L0.21967 9.40717ZM10.6875 0.75C10.6875 0.335786 10.3517 2.97145e-09 9.9375 1.50485e-07L3.1875 -2.70983e-07C2.77329 -2.70983e-07 2.4375 0.335786 2.4375 0.75C2.4375 1.16421 2.77329 1.5 3.1875 1.5H9.1875V7.5C9.1875 7.91421 9.52329 8.25 9.9375 8.25C10.3517 8.25 10.6875 7.91421 10.6875 7.5L10.6875 0.75ZM0.75 9.9375L1.28033 10.4678L10.4678 1.28033L9.9375 0.75L9.40717 0.21967L0.21967 9.40717L0.75 9.9375Z"
+            fill="currentColor"
+        />
+    </svg>
+);
+
 export type TeamMember = {
     name: string;
     surname: string;
@@ -71,8 +80,11 @@ export type TeamMember = {
 
 interface Section8Props {
     className?: string;
+    containerClass?: string;
     eyebrowText?: string;
     eyebrowLink?: string;
+    eyebrowStyle?: "default" | "testimonial";
+    titleStyle?: "default" | "testimonial";
     heading?: React.ReactNode;
     desc?: React.ReactNode;
     ctaText?: string;
@@ -84,8 +96,11 @@ interface Section8Props {
 
 export default function Section8({
     className,
+    containerClass = "container-2200 px-lg-5 px-3",
     eyebrowText = "Meet Our Team",
     eyebrowLink = "/team",
+    eyebrowStyle = "default",
+    titleStyle = "default",
     heading = "Dedicated Team",
     desc = "Creative experts designing meaningful digital experiences that help ambitious brands grow faster and lead their markets.",
     ctaText = "Join our Team",
@@ -94,22 +109,44 @@ export default function Section8({
     col1Members = COL1_MEMBERS,
     col2Members = COL2_MEMBERS,
 }: Section8Props) {
+    const isTestimonialEyebrow = eyebrowStyle === "testimonial";
+    const isTestimonialTitle = titleStyle === "testimonial";
+
     return (
         <div className={`sec-8-home-7 p-relative bg-neutral-0 ${className ?? ""}`.trim()}>
-            <div className="container-2200 px-lg-5 px-3">
+            <div className={containerClass}>
                 <div className="row g-0 align-items-start">
-                    {/* LEFT: Eyebrow + huge heading + description + CTA */}
+                    {/* LEFT: Eyebrow + heading + description + CTA */}
                     <div className="col-xl-5 col-lg-5 col-12 sec-8-home-7__lead">
                         {eyebrowText && (
-                            <Link to={eyebrowLink} className="sec-8-home-7__eyebrow d-inline-flex align-items-center gap-2 mb-4 text-uppercase">
-                                <span className="text-scramble" data-scramble-text={eyebrowText}>{eyebrowText}</span>
-                                {EYEBROW_ARROW_SVG}
-                            </Link>
+                            isTestimonialEyebrow ? (
+                                <span className="at-btn common-black bg-transparent mb-10 rounded-0 p-0 d-inline-flex align-items-center">
+                                    <span className="text-uppercase">
+                                        <span className="text-1">{eyebrowText}</span>
+                                        <span className="text-2">{eyebrowText}</span>
+                                    </span>
+                                    <i>
+                                        {TESTIMONIAL_ARROW_SVG}
+                                        {TESTIMONIAL_ARROW_SVG}
+                                    </i>
+                                </span>
+                            ) : (
+                                <Link to={eyebrowLink} className="sec-8-home-7__eyebrow d-inline-flex align-items-center gap-2 mb-4 text-uppercase">
+                                    <span className="text-scramble" data-scramble-text={eyebrowText}>{eyebrowText}</span>
+                                    {EYEBROW_ARROW_SVG}
+                                </Link>
+                            )
                         )}
 
-                        <h2 className="sec-8-home-7__heading mb-40 reveal-text">
-                            <RevealText>{heading}</RevealText>
-                        </h2>
+                        {isTestimonialTitle ? (
+                            <h3 className="reveal-text mb-20">
+                                <RevealText>{heading}</RevealText>
+                            </h3>
+                        ) : (
+                            <h2 className="sec-8-home-7__heading mb-40 reveal-text">
+                                <RevealText>{heading}</RevealText>
+                            </h2>
+                        )}
 
                         {desc && (
                             <p className="sec-8-home-7__desc mb-40 reveal-text">
@@ -136,58 +173,62 @@ export default function Section8({
                     <div className="col-xl-7 col-lg-7 col-12 mt-5 mt-lg-0">
                         <div className="sec-8-home-7__grid">
                             {/* Column 1 */}
-                            <div className="sec-8-home-7__col">
-                                {col1Members.map((member, i) => (
-                                    <Link
-                                        key={i}
-                                        to={member.link ?? "/team-details"}
-                                        className="sec-8-home-7__card"
-                                        aria-label={`${member.name} ${member.surname} — ${member.role}`}
-                                    >
-                                        <div className="sec-8-home-7__photo">
-                                            <div className="fix anim-zoomin">
-                                                <img src={member.img} alt={member.alt} width={400} height={480} loading="lazy" />
+                            {col1Members.length > 0 && (
+                                <div className="sec-8-home-7__col">
+                                    {col1Members.map((member, i) => (
+                                        <Link
+                                            key={i}
+                                            to={member.link ?? "/team-details"}
+                                            className="sec-8-home-7__card"
+                                            aria-label={`${member.name} ${member.surname} — ${member.role}`}
+                                        >
+                                            <div className="sec-8-home-7__photo">
+                                                <div className="fix anim-zoomin">
+                                                    <img src={member.img} alt={member.alt} width={400} height={480} loading="lazy" />
+                                                </div>
                                             </div>
-                                        </div>
-                                        <span className={`sec-8-home-7__badge${member.badgeClass ? ` ${member.badgeClass}` : ""}`}>
-                                            {BADGE_SVG}
-                                        </span>
-                                        <div className="sec-8-home-7__info">
-                                            <h3 className="sec-8-home-7__name mb-0 at_fade_anim">
-                                                {member.name} <br />{member.surname}
-                                            </h3>
-                                            <p className="sec-8-home-7__role mb-0 at_fade_anim" data-delay="0.1">{member.role}</p>
-                                        </div>
-                                    </Link>
-                                ))}
-                            </div>
+                                            <span className={`sec-8-home-7__badge${member.badgeClass ? ` ${member.badgeClass}` : ""}`}>
+                                                {BADGE_SVG}
+                                            </span>
+                                            <div className="sec-8-home-7__info">
+                                                <h3 className="sec-8-home-7__name mb-0 at_fade_anim">
+                                                    {member.name} <br />{member.surname}
+                                                </h3>
+                                                <p className="sec-8-home-7__role mb-0 at_fade_anim" data-delay="0.1">{member.role}</p>
+                                            </div>
+                                        </Link>
+                                    ))}
+                                </div>
+                            )}
 
                             {/* Column 2 (offset down for staircase effect on desktop) */}
-                            <div className="sec-8-home-7__col sec-8-home-7__col--offset">
-                                {col2Members.map((member, i) => (
-                                    <Link
-                                        key={i}
-                                        to={member.link ?? "/team-details"}
-                                        className="sec-8-home-7__card"
-                                        aria-label={`${member.name} ${member.surname} — ${member.role}`}
-                                    >
-                                        <div className="sec-8-home-7__photo">
-                                            <div className="fix anim-zoomin">
-                                                <img src={member.img} alt={member.alt} width={400} height={480} loading="lazy" />
+                            {col2Members.length > 0 && (
+                                <div className="sec-8-home-7__col sec-8-home-7__col--offset">
+                                    {col2Members.map((member, i) => (
+                                        <Link
+                                            key={i}
+                                            to={member.link ?? "/team-details"}
+                                            className="sec-8-home-7__card"
+                                            aria-label={`${member.name} ${member.surname} — ${member.role}`}
+                                        >
+                                            <div className="sec-8-home-7__photo">
+                                                <div className="fix anim-zoomin">
+                                                    <img src={member.img} alt={member.alt} width={400} height={480} loading="lazy" />
+                                                </div>
                                             </div>
-                                        </div>
-                                        <span className={`sec-8-home-7__badge${member.badgeClass ? ` ${member.badgeClass}` : ""}`}>
-                                            {BADGE_SVG}
-                                        </span>
-                                        <div className="sec-8-home-7__info">
-                                            <h3 className="sec-8-home-7__name mb-0 at_fade_anim">
-                                                {member.name} <br />{member.surname}
-                                            </h3>
-                                            <p className="sec-8-home-7__role mb-0 at_fade_anim" data-delay="0.1">{member.role}</p>
-                                        </div>
-                                    </Link>
-                                ))}
-                            </div>
+                                            <span className={`sec-8-home-7__badge${member.badgeClass ? ` ${member.badgeClass}` : ""}`}>
+                                                {BADGE_SVG}
+                                            </span>
+                                            <div className="sec-8-home-7__info">
+                                                <h3 className="sec-8-home-7__name mb-0 at_fade_anim">
+                                                    {member.name} <br />{member.surname}
+                                                </h3>
+                                                <p className="sec-8-home-7__role mb-0 at_fade_anim" data-delay="0.1">{member.role}</p>
+                                            </div>
+                                        </Link>
+                                    ))}
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>
