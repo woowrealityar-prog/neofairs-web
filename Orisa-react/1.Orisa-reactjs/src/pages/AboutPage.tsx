@@ -124,8 +124,8 @@ export default function AboutPage() {
         ]}
       />
       <SectionBrandScroll />
-      <Section5 />
       <SectionImageStrips />
+      <Section5 />
       <Section6 />
     </>
   );
