@@ -36,11 +36,9 @@ const SERVICES = [
         description: "Whatever your industry, your showroom is built for it.",
         features: [
             "Products that come alive — Videos, 360° walkthroughs, life-like models",
-            "Know who viewed what — Every visit, every product, every time",
             "RFQ, cart & pay — Buyers act without calling you",
             "Video in one click — Talk the moment interest is high",
             "NORA, your AI assistant — Answers buyer queries 24/7, trained by you",
-            "A permanent buyer list — Reach everyone who ever visited",
         ],
         image: "/assets/imgs/pages/img-31.webp",
         itemClass: "pb-40",

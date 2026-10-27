@@ -99,10 +99,8 @@ export default function SectionEcosystem({ classList = "" }: { classList?: strin
                                         </div>
                                         <div className="mg-portfolio-content cs-portfolio-content d-flex align-items-center flex-wrap flex-md-nowrap justify-content-between">
                                             <div>
-                                                <h5 className="cs-portfolio-title at-title-anim fix mr-20 mb-2">
-                                                    <span className="at-title-text">
-                                                        {step.title}
-                                                    </span>
+                                                <h5 className="cs-portfolio-title mr-20 mb-2">
+                                                    {step.title}
                                                 </h5>
                                                 <p className="mg-portfolio-dec mb-0 neutral-500">
                                                     {step.description}
