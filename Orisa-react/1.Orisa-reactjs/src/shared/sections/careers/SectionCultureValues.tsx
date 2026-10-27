@@ -47,7 +47,7 @@ export default function SectionCultureValues() {
                             </i>
                         </span>
                         <h2 className="section-title reveal-text mb-0">
-                            <RevealText>What it’s like here.</RevealText>
+                            <RevealText>What it’s like here</RevealText>
                         </h2>
                     </div>
                 </div>

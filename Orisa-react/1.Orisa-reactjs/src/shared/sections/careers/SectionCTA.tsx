@@ -37,16 +37,18 @@ export default function SectionCTA() {
                             <div className="pricing-2-cta__actions d-flex flex-wrap gap-3 align-items-center">
                                 <a
                                     href="mailto:enquiry@neofairs.com?subject=Careers%20Application%20-%20NeoFairs"
-                                    className="at-btn primary-bg-btn text-uppercase"
+                                    className="at-btn pricing-2-cta__btn px-4 text-capitalize"
                                     style={{
                                         backgroundColor: "#ace227",
                                         borderColor: "#ace227",
-                                        color: "#0d0d0d",
+                                        color: "#000000",
                                         fontWeight: 600,
                                     }}
                                 >
-                                    <span className="text-1">Apply</span>
-                                    <span className="text-2">Apply</span>
+                                    <span>
+                                        <span className="text-1">Apply</span>
+                                        <span className="text-2">Apply</span>
+                                    </span>
                                     <i>
                                         {ARROW_SVG}
                                         {ARROW_SVG}

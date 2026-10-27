@@ -26,7 +26,7 @@ export default function SectionOpenPositions() {
                             </i>
                         </span>
                         <h2 className="section-title reveal-text mb-30">
-                            <RevealText>Open roles.</RevealText>
+                            <RevealText>Open roles</RevealText>
                         </h2>
                         <p className="fz-font-xl neutral-700 mb-0" style={{ lineHeight: 1.6 }}>
                             We’re always interested in meeting exceptional people across engineering, operations, and product.
@@ -37,8 +37,8 @@ export default function SectionOpenPositions() {
                         <div className="p-5 rounded-4 bg-neutral-0 border-100 text-center at_fade_anim">
                             <div className="mb-20 opacity-40">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                                    <rect width="20" height="14" x="2" y="7" rx="2" ry="2"/>
-                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                                    <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
                                 </svg>
                             </div>
                             <h4 className="fw-600 mb-15 neutral-900">
