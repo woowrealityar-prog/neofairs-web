@@ -8,6 +8,7 @@ import SectionBrandScroll from "@/shared/sections/index-2/SectionBrandScroll";
 import SectionImageStrips from "@/shared/sections/index-2/SectionImageStrips";
 import Section5 from "@/shared/sections/about-3/Section3";
 import SectionAgastronGroup from "@/shared/sections/index-8/Section9";
+import { SectionCtaPanel } from "@/shared/sections/pricing-2/Section4";
 import Section6 from "@/shared/sections/services-2/Section3";
 
 const STATS_ITEMS = [
@@ -140,6 +141,19 @@ export default function AboutPage() {
         cardLink="https://agastron.com"
         showCard={true}
       />
+      <section className="pricing-2-cta pt-120 pb-120" aria-label="See what we’ve built">
+        <div className="container">
+          <SectionCtaPanel
+            title="See what we’ve built."
+            subtitle=""
+            primaryBtnText="Book a Free Demo"
+            primaryBtnLink="/contact-1"
+            secondaryBtnText="See Upcoming Fairs"
+            secondaryBtnLink="/virtual-trade-fairs"
+            email=""
+          />
+        </div>
+      </section>
       <Section6 />
     </>
   );

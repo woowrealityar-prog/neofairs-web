@@ -35,48 +35,91 @@ const FAQS = [
     },
 ];
 
+export interface SectionCtaPanelProps {
+    className?: string;
+    title?: React.ReactNode;
+    subtitle?: React.ReactNode;
+    primaryBtnText?: string;
+    primaryBtnLink?: string;
+    secondaryBtnText?: string;
+    secondaryBtnLink?: string;
+    email?: string;
+}
+
+export function SectionCtaPanel({
+    className = "",
+    title = "Still deciding which plan fits?",
+    subtitle = "Book a short call and we’ll recommend the right engagement for your goals, team, and budget—no pressure.",
+    primaryBtnText = "Book a call",
+    primaryBtnLink = "/contact-1",
+    secondaryBtnText,
+    secondaryBtnLink,
+    email = "hello@orisa.com",
+}: SectionCtaPanelProps) {
+    return (
+        <div className={`pricing-2-cta__panel bg-neutral-900 rounded-5 overflow-hidden p-relative ${className}`.trim()}>
+            <div
+                className="p-absolute top-0 left-0 w-100 h-100 opacity-10 z-0"
+                data-background="/assets/imgs/pages/noise.gif"
+                aria-hidden="true"
+            />
+            <div className="row g-5 align-items-center p-relative z-1">
+                <div className="col-lg-6">
+                    <h2 className="pricing-2-cta__title text-white reveal-text mb-20">
+                        <RevealText>{title}</RevealText>
+                    </h2>
+                    {subtitle && (
+                        <p className="text-white opacity-75 fz-font-lg mb-0">
+                            {subtitle}
+                        </p>
+                    )}
+                </div>
+                <div className="col-lg-5 ms-lg-auto">
+                    <div className="pricing-2-cta__actions d-flex flex-wrap gap-3 align-items-center justify-content-lg-end">
+                        {primaryBtnText && (
+                            <Link className="at-btn pricing-2-cta__btn px-4" to={primaryBtnLink}>
+                                <span>
+                                    <span className="text-1 text-capitalize">{primaryBtnText}</span>
+                                    <span className="text-2 text-capitalize">{primaryBtnText}</span>
+                                </span>
+                                <i>
+                                    {ARROW_SVG}
+                                    {ARROW_SVG}
+                                </i>
+                            </Link>
+                        )}
+                        {secondaryBtnText && (
+                            <Link className="at-btn common-white border-white text-capitalize" to={secondaryBtnLink ?? "/contact-1"}>
+                                <span>
+                                    <span className="text-1">{secondaryBtnText}</span>
+                                    <span className="text-2">{secondaryBtnText}</span>
+                                </span>
+                                <i>
+                                    {ARROW_SVG}
+                                    {ARROW_SVG}
+                                </i>
+                            </Link>
+                        )}
+                        {email && (
+                            <a
+                                className="pricing-2-cta__mail text-white text-decoration-underline"
+                                href={`mailto:${email}`}
+                            >
+                                {email}
+                            </a>
+                        )}
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
 export default function Section4() {
     return (
         <section className="pricing-2-cta pt-120 pb-120" aria-label="Ready to start">
             <div className="container">
-                <div className="pricing-2-cta__panel bg-neutral-900 rounded-5 overflow-hidden p-relative">
-                    <div
-                        className="p-absolute top-0 left-0 w-100 h-100 opacity-10 z-0"
-                        data-background="/assets/imgs/pages/noise.gif"
-                        aria-hidden="true"
-                    />
-                    <div className="row g-5 align-items-center p-relative z-1">
-                        <div className="col-lg-6">
-                            <h2 className="pricing-2-cta__title text-white reveal-text mb-20">
-                                <RevealText>Still deciding which plan fits?</RevealText>
-                            </h2>
-                            <p className="text-white opacity-75 fz-font-lg mb-0">
-                                Book a short call and we’ll recommend the right engagement for your
-                                goals, team, and budget—no pressure.
-                            </p>
-                        </div>
-                        <div className="col-lg-5 ms-lg-auto">
-                            <div className="pricing-2-cta__actions d-flex flex-wrap gap-3 align-items-center justify-content-lg-end">
-                                <Link className="at-btn pricing-2-cta__btn px-5" to="/contact-1">
-                                    <span>
-                                        <span className="text-1 text-capitalize">Book a call</span>
-                                        <span className="text-2 text-capitalize">Book a call</span>
-                                    </span>
-                                    <i>
-                                        {ARROW_SVG}
-                                        {ARROW_SVG}
-                                    </i>
-                                </Link>
-                                <a
-                                    className="pricing-2-cta__mail text-white text-decoration-underline"
-                                    href="mailto:hello@orisa.com"
-                                >
-                                    hello@orisa.com
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <SectionCtaPanel />
 
                 <div className="row g-5 mt-100">
                     <div className="col-lg-4">
