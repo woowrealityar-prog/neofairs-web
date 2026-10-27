@@ -147,8 +147,8 @@ export default function Section4({
                                                                 const separator = feature.includes("—")
                                                                     ? "—"
                                                                     : feature.includes(" - ")
-                                                                    ? " - "
-                                                                    : null;
+                                                                        ? " - "
+                                                                        : null;
 
                                                                 if (separator) {
                                                                     const [heading, ...rest] = feature.split(separator);
@@ -159,8 +159,8 @@ export default function Section4({
                                                                             style={{ lineHeight: 1.6 }}
                                                                         >
                                                                             <span
-                                                                                className="rounded-circle bg-neutral-900 flex-shrink-0"
-                                                                                style={{ width: "6px", height: "6px", transform: "translateY(-3px)" }}
+                                                                                className="rounded-circle flex-shrink-0"
+                                                                                style={{ width: "7px", height: "7px", backgroundColor: "#ace227", transform: "translateY(-3px)" }}
                                                                             />
                                                                             <span>
                                                                                 <strong className="fw-600 neutral-950">
@@ -179,8 +179,8 @@ export default function Section4({
                                                                         style={{ lineHeight: 1.6 }}
                                                                     >
                                                                         <span
-                                                                            className="rounded-circle bg-neutral-900 flex-shrink-0"
-                                                                            style={{ width: "6px", height: "6px", transform: "translateY(-3px)" }}
+                                                                            className="rounded-circle flex-shrink-0"
+                                                                            style={{ width: "7px", height: "7px", backgroundColor: "#ace227", transform: "translateY(-3px)" }}
                                                                         />
                                                                         <span>{feature}</span>
                                                                     </li>
