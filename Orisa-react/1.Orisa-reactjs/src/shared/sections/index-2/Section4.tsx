@@ -143,15 +143,49 @@ export default function Section4({
                                                         <ul
                                                             className="list-unstyled p-0 m-0 mb-4 d-flex flex-wrap gap-2 neutral-700 fz-font-lg"
                                                         >
-                                                            {service.features.map((feature, i) => (
-                                                                <li
-                                                                    key={i}
-                                                                    className={`list-unstyled ${service.features && service.features.length > 4 ? "w-100 w-md-auto" : "w-100"}`}
-                                                                    style={service.features && service.features.length > 4 ? { flex: "1 1 45%" } : undefined}
-                                                                >
-                                                                    {feature}
-                                                                </li>
-                                                            ))}
+                                                            {service.features.map((feature, i) => {
+                                                                const separator = feature.includes("—")
+                                                                    ? "—"
+                                                                    : feature.includes(" - ")
+                                                                    ? " - "
+                                                                    : null;
+
+                                                                if (separator) {
+                                                                    const [heading, ...rest] = feature.split(separator);
+                                                                    return (
+                                                                        <li
+                                                                            key={i}
+                                                                            className="w-100 d-flex align-items-baseline gap-2"
+                                                                            style={{ lineHeight: 1.6 }}
+                                                                        >
+                                                                            <span
+                                                                                className="rounded-circle bg-neutral-900 flex-shrink-0"
+                                                                                style={{ width: "6px", height: "6px", transform: "translateY(-3px)" }}
+                                                                            />
+                                                                            <span>
+                                                                                <strong className="fw-600 neutral-950">
+                                                                                    {heading.trim()}
+                                                                                </strong>{" "}
+                                                                                — {rest.join(separator).trim()}
+                                                                            </span>
+                                                                        </li>
+                                                                    );
+                                                                }
+
+                                                                return (
+                                                                    <li
+                                                                        key={i}
+                                                                        className="w-100 d-flex align-items-baseline gap-2"
+                                                                        style={{ lineHeight: 1.6 }}
+                                                                    >
+                                                                        <span
+                                                                            className="rounded-circle bg-neutral-900 flex-shrink-0"
+                                                                            style={{ width: "6px", height: "6px", transform: "translateY(-3px)" }}
+                                                                        />
+                                                                        <span>{feature}</span>
+                                                                    </li>
+                                                                );
+                                                            })}
                                                         </ul>
                                                     )}
                                                     {service.btnText && (
