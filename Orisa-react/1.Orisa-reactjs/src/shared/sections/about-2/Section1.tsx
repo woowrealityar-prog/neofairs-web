@@ -201,7 +201,7 @@ export default function Section1() {
                         <div className="rounded-5 overflow-hidden">
                             <div className="img anim-zoomin">
                                 <img
-                                    src="/assets/imgs/pages/img-122.webp"
+                                    src="/assets/imgs/pages/neoweb/marketplace/Hero.webp"
                                     alt="NeoFairs Marketplace"
                                     width={1700}
                                     height={830}

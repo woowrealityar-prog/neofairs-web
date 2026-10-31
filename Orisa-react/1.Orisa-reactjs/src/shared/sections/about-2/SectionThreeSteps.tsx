@@ -18,6 +18,7 @@ const STEPS = [
         num: "01",
         title: "Join",
         description: "Pick an industry category. Tell us what you make.",
+        iconImg: "/assets/imgs/pages/neoweb/marketplace/steps to listed 1.webp",
     },
     {
         cardClass: "card-2",
@@ -25,6 +26,7 @@ const STEPS = [
         num: "02",
         title: "Your listing goes live",
         description: "Products, company profile, RFQ button. Have a Living Showroom? It’s your listing.",
+        iconImg: "/assets/imgs/pages/neoweb/marketplace/steps to listed 2.webp",
     },
     {
         cardClass: "card-3",
@@ -32,6 +34,7 @@ const STEPS = [
         num: "03",
         title: "Buyers find you",
         description: "RFQs land in your dashboard. The next fair is one click away.",
+        iconImg: "/assets/imgs/pages/neoweb/marketplace/steps to listed 3.webp",
     },
 ];
 
@@ -88,8 +91,18 @@ export default function SectionThreeSteps() {
                                     data-fade-from="bottom"
                                     data-ease="bounce"
                                 >
-                                    <div className="card__process-visual">
-                                        <div className={`card__process-pill ${card.pillClass}`} />
+                                    <div className="card__process-visual d-flex align-items-center justify-content-between mb-4">
+                                        <div className="d-flex align-items-center gap-3">
+                                            <img
+                                                src={card.iconImg}
+                                                alt={card.title}
+                                                width={48}
+                                                height={48}
+                                                style={{ width: "48px", height: "48px", objectFit: "contain" }}
+                                                loading="lazy"
+                                            />
+                                            <div className={`card__process-pill ${card.pillClass}`} />
+                                        </div>
                                         <span className="card__process-num">{card.num}</span>
                                     </div>
                                     <div className="card__process-content">

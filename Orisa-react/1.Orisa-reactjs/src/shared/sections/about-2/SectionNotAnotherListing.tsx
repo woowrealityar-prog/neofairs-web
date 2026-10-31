@@ -52,7 +52,7 @@ export default function SectionNotAnotherListing() {
                     <div className="col-lg-6">
                         <div className="rounded-5 overflow-hidden">
                             <img
-                                src="/assets/imgs/pages/img-69.webp"
+                                src="/assets/imgs/pages/neoweb/marketplace/listing.webp"
                                 alt="Not another listing site"
                                 width={800}
                                 height={600}
