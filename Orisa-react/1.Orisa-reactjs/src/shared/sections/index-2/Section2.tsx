@@ -89,8 +89,8 @@ export default function Section2() {
                         ))}
                     </div>
                 </div> */}
-                <div className="container pt-100 pb-100 p-relative z-index-2">
-                    <div className="row g-4 justify-content-lg-between justify-content-center align-items-end">
+                <div className="container pt-160 pb-160 p-relative z-index-2">
+                    <div className="row g-4 justify-content-lg-between justify-content-center align-items-center" style={{ minHeight: "clamp(460px, 60vh, 720px)" }}>
                         <div className="col-lg-8 col-12">
                             <div className="at-about-title-wrap pe-xxl-4">
 
