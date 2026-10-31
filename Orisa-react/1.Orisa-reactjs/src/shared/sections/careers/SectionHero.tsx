@@ -22,7 +22,7 @@ export default function SectionHero({
     badge = "Join NeoFairs",
     title = "Build the fairground",
     subtitle = "A team putting Indian businesses in front of buyers. If that sounds like work worth doing, read on.",
-    image = "/assets/imgs/pages/img-154.webp",
+    image = "/assets/imgs/pages/neoweb/careers/Hero.webp",
     imageAlt = "NeoFairs Careers",
 }: SectionHeroProps) {
     return (
