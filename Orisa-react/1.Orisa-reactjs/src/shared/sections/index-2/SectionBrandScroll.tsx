@@ -20,16 +20,16 @@ const STAR_SVG = (
 );
 
 const BRAND_ROWS: { logos: string[]; delay: string }[] = [
-    { logos: ["01", "02", "03"], delay: ".4" },
-    { logos: ["07", "08", "09"], delay: ".6" },
-    { logos: ["03", "04", "05"], delay: ".6" },
-    { logos: ["04", "05", "06"], delay: ".7" },
-    { logos: ["05", "06", "07"], delay: ".4" },
-    { logos: ["06", "07", "08"], delay: ".5" },
-    { logos: ["02", "03", "04"], delay: ".5" },
-    { logos: ["08", "09", "10"], delay: ".7" },
-    { logos: ["09", "10", "01"], delay: ".6" },
-    { logos: ["10", "01", "02"], delay: ".7" },
+    { logos: ["01"], delay: ".4" },
+    { logos: ["02"], delay: ".5" },
+    { logos: ["03"], delay: ".6" },
+    { logos: ["04"], delay: ".7" },
+    { logos: ["05"], delay: ".4" },
+    { logos: ["06"], delay: ".5" },
+    { logos: ["07"], delay: ".6" },
+    { logos: ["08"], delay: ".7" },
+    { logos: ["09"], delay: ".5" },
+    { logos: ["10"], delay: ".6" },
 ];
 
 function logoSrc(num: string) {
