@@ -91,7 +91,7 @@ export default function Section2() {
                 </div> */}
                 <div className="container pt-100 pb-100 p-relative z-index-2">
                     <div className="row g-4 justify-content-lg-between justify-content-center align-items-end">
-                        <div className="col-lg-7 col-12">
+                        <div className="col-lg-8 col-12">
                             <div className="at-about-title-wrap pe-xxl-4">
 
                                 <h2 className="at-section-title reveal-text text-white lh-1 mb-30 mt-20">
@@ -131,37 +131,6 @@ export default function Section2() {
                                             {ARROW_SVG}
                                         </i>
                                     </Link>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-xxl-3 col-lg-4 col-md-7 tp_fade-anim">
-                            <div
-                                className="card-item p-relative at_fade_anim"
-                                data-fade-from="bottom"
-                                data-duration="1"
-                                data-delay="0.5"
-                            >
-                                <div className="card-item__bg">
-                                    <img
-                                        src="/assets/imgs/pages/img-29.webp"
-                                        alt="Mountain background"
-                                        className="home-2-card-item__bg-img img-cover"
-                                        width={400}
-                                        height={400} loading="lazy" />
-                                </div>
-                                <div className="card-item-avatar p-absolute top-0 end-0 changeless">
-                                    <img
-                                        src="/assets/imgs/template/avatar/avatar-9.webp"
-                                        alt="Profile"
-                                        className="home-2-card-item__avatar-img"
-                                        width={65}
-                                        height={65} loading="lazy" />
-                                </div>
-                                <div className="card-item-content p-absolute bottom-0 start-0">
-                                    {QUOTE_SVG}
-                                    <h6 className="card-item-text mb-0 text-white">
-                                        Trusted by fast-growing startups and global companies worldwide
-                                    </h6>
                                 </div>
                             </div>
                         </div>
