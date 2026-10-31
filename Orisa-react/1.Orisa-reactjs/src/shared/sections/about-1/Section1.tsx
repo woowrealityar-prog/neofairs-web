@@ -23,10 +23,9 @@ const ARROW_CIRCLE_SVG = (
 );
 
 const SLIDES = [
-    { src: "/assets/imgs/pages/img-117.webp", alt: "orisa" },
-    { src: "/assets/imgs/pages/img-118.webp", alt: "orisa" },
-    { src: "/assets/imgs/pages/img-119.webp", alt: "orisa" },
-    { src: "/assets/imgs/pages/img-120.webp", alt: "orisa" },
+    { src: "/assets/imgs/pages/neoweb/virtual-trade-fairs/hero 1.webp", alt: "NeoFairs Virtual Trade Fair" },
+    { src: "/assets/imgs/pages/neoweb/virtual-trade-fairs/hero 2.webp", alt: "NeoFairs Virtual Trade Fair" },
+    { src: "/assets/imgs/pages/neoweb/virtual-trade-fairs/hero 3.webp", alt: "NeoFairs Virtual Trade Fair" },
 ];
 
 export default function Section1() {

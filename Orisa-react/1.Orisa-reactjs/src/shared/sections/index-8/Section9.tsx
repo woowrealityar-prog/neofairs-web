@@ -46,14 +46,14 @@ export default function Section9({
     cardKicker = "Marketplace Advantage",
     cardText = "Members of the NeoFairs Marketplace get discount on every fair.",
     cardLink = "/contact-1",
-    cardImg = "/assets/imgs/pages/home-8/sec9-card-visors.webp",
+    cardImg = "/assets/imgs/pages/neoweb/virtual-trade-fairs/Cta card.webp",
     showCard = true,
 }: Section9Props) {
     return (
         <section className={`sec-9-home-8 ${className ?? ""}`.trim()}>
             <div className="sec-9-home-8__bg" aria-hidden="true">
                 <img
-                    src="/assets/imgs/pages/home-8/sec9-bg-blur.webp"
+                    src="/assets/imgs/pages/neoweb/virtual-trade-fairs/Cta bg.webp"
                     alt="NeoFairs"
                     width={1920}
                     height={1080}

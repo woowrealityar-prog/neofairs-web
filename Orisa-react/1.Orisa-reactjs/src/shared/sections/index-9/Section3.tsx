@@ -52,7 +52,7 @@ export default function Section3() {
                             <div className="fix anim-zoomin rounded-4 overflow-hidden">
                                 <img
                                     data-speed=".8"
-                                    src="/assets/imgs/pages/home-9/sec-3-img-0.webp"
+                                    src="/assets/imgs/pages/neoweb/virtual-trade-fairs/Stall costs.webp"
                                     alt="Physical Fair vs NeoFairs"
                                     width={699}
                                     height={415}

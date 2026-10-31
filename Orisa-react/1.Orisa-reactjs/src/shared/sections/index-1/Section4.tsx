@@ -17,10 +17,10 @@ const ARROW_CIRCLE_SVG = (
 );
 
 const SERVICE_IMAGES = [
-    "/assets/imgs/pages/img-5.webp",
-    "/assets/imgs/pages/img-6.webp",
-    "/assets/imgs/pages/img-7.webp",
-    "/assets/imgs/pages/img-8.webp",
+    "/assets/imgs/pages/neoweb/virtual-trade-fairs/step 1.webp",
+    "/assets/imgs/pages/neoweb/virtual-trade-fairs/step 2.webp",
+    "/assets/imgs/pages/neoweb/virtual-trade-fairs/step 3.webp",
+    "/assets/imgs/pages/neoweb/virtual-trade-fairs/step 4.webp",
 ];
 
 const SERVICES = [
@@ -28,25 +28,25 @@ const SERVICES = [
         num: "01",
         title: "Register",
         text: "Pick your stall type.",
-        thumb: "/assets/imgs/pages/img-5-sm.webp",
+        thumb: "/assets/imgs/pages/neoweb/virtual-trade-fairs/step 1.webp",
     },
     {
         num: "02",
         title: "We build your stall",
         text: "Products, videos, company story. Done for you.",
-        thumb: "/assets/imgs/pages/img-6-sm.webp",
+        thumb: "/assets/imgs/pages/neoweb/virtual-trade-fairs/step 2.webp",
     },
     {
         num: "03",
         title: "Buyers are matched to you",
         text: "AI matches your products to registered buyers.",
-        thumb: "/assets/imgs/pages/img-7-sm.webp",
+        thumb: "/assets/imgs/pages/neoweb/virtual-trade-fairs/step 3.webp",
     },
     {
         num: "04",
         title: "Meet on video",
         text: "A buyer walks into your stall, you talk face to face. From your office, no travel.",
-        thumb: "/assets/imgs/pages/img-8-sm.webp",
+        thumb: "/assets/imgs/pages/neoweb/virtual-trade-fairs/step 4.webp",
     },
 ];
 

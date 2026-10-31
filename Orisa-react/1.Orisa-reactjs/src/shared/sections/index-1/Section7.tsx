@@ -77,7 +77,7 @@ export default function Section7() {
                                     <div className="anim-zoomin">
                                         <img
                                             className="zoom-blur-image img-cover"
-                                            src="/assets/imgs/pages/img-15.webp"
+                                            src="/assets/imgs/pages/neoweb/virtual-trade-fairs/Stall 3D.webp"
                                             alt="Living Showroom Stall"
                                             width={600}
                                             height={400}
@@ -94,7 +94,7 @@ export default function Section7() {
                                     <div className="anim-zoomin">
                                         <img
                                             className="zoom-blur-image img-cover"
-                                            src="/assets/imgs/pages/img-16.webp"
+                                            src="/assets/imgs/pages/neoweb/virtual-trade-fairs/Stall Permanent.webp"
                                             alt="NeoFairs Showroom"
                                             width={600}
                                             height={450}
