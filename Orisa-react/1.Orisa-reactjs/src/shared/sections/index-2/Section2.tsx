@@ -62,15 +62,13 @@ export default function Section2() {
             </div> */}
             <div
                 className="bg-coating rounded-5 overflow-hidden mx-lg-3 mx-2 bg-cover"
-                data-background="/assets/imgs/pages/img-28.webp"
+                data-background="/assets/imgs/pages/neoweb/hero-showcase.webp"
             >
-                <video
-                    src="/assets/imgs/video/live-bg.mov"
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    className="img-cover p-absolute top-0 start-0 end-0 bottom-0 z-0"
+                <img
+                    src="/assets/imgs/pages/neoweb/hero-showcase.webp"
+                    alt="NeoFairs Living Showroom Showcase"
+                    className="img-cover p-absolute top-0 start-0 end-0 bottom-0 z-0 w-100 h-100"
+                    style={{ objectFit: "cover" }}
                 />
                 {/* Service tabs row - hidden while preserving hero visual height */}
                 {/* <div className="container pb-100 p-relative z-index-2">
