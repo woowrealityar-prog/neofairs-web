@@ -46,19 +46,19 @@ const STEPS = [
         navTitle: "Send us your products",
         title: "Send us your products",
         desc: "Photos, videos, specs, company story. That's all we need.",
-        img: "/assets/imgs/pages/img-58.webp",
+        img: "/assets/imgs/pages/neoweb/living-showroom/Built 1.webp",
     },
     {
         navTitle: "We build your showroom",
         title: "We build your showroom",
         desc: "Done for you. You review it. You get one QR and one link.",
-        img: "/assets/imgs/pages/img-59.webp",
+        img: "/assets/imgs/pages/neoweb/living-showroom/Built 2.webp",
     },
     {
         navTitle: "Share it everywhere",
         title: "Share it everywhere",
         desc: "Print it, WhatsApp it, embed it. Every buyer lands in the same showroom.",
-        img: "/assets/imgs/pages/img-60.webp",
+        img: "/assets/imgs/pages/neoweb/living-showroom/Built 3.webp",
     },
 ];
 

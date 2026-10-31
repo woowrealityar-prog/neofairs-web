@@ -70,7 +70,7 @@ export default function SectionFairStall() {
                 <img
                     data-speed=".4"
                     className="img-cover"
-                    src="/assets/imgs/pages/img-22.webp"
+                    src="/assets/imgs/pages/neoweb/living-showroom/Fair stall.webp"
                     alt="Your showroom is your fair stall"
                     loading="lazy"
                 />

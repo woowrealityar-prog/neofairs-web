@@ -113,8 +113,8 @@ export default function Section1() {
                 <img
                     className="img-cover scale-up"
                     data-speed=".4"
-                    src="/assets/imgs/pages/img-137.webp"
-                    alt="orisa"
+                    src="/assets/imgs/pages/neoweb/living-showroom/Hero.webp"
+                    alt="NeoFairs Living Showroom"
                     width={1400}
                     height={700} loading="lazy" />
             </div>

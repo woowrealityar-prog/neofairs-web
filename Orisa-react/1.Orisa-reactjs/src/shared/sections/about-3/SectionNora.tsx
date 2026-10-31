@@ -10,9 +10,9 @@ export default function SectionNora() {
     return (
         <section
             className="home-3-section-8 bg-cover pt-120 pb-120 bg-neutral-900"
-            data-background="/assets/imgs/pages/bg-img-3.webp"
+            data-background="/assets/imgs/pages/neoweb/living-showroom/Nora bg.webp"
             style={{
-                backgroundImage: "url(/assets/imgs/pages/bg-img-3.webp)",
+                backgroundImage: "url(/assets/imgs/pages/neoweb/living-showroom/Nora%20bg.webp)",
                 backgroundSize: "cover",
             }}
         >
@@ -39,7 +39,7 @@ export default function SectionNora() {
                     <div className="col-lg-5">
                         <div className="p-relative rounded-4 overflow-hidden">
                             <img
-                                src="/assets/imgs/pages/img-70.webp"
+                                src="/assets/imgs/pages/neoweb/living-showroom/Nora.webp"
                                 alt="NORA AI"
                                 width={600}
                                 height={400}
