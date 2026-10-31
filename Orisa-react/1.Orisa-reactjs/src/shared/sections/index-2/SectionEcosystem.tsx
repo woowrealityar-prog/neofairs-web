@@ -27,17 +27,17 @@ const ARROW_CIRCLE_SVG = (
 
 const STEPS = [
     {
-        img: "/assets/imgs/pages/img-11.webp",
+        img: "/assets/imgs/pages/neoweb/ecosystem-step-1.webp",
         title: "Exhibit at a virtual fair",
         description: "Meet buyers in your industry. Face to face, on video. No travel.",
     },
     {
-        img: "/assets/imgs/pages/img-12.webp",
+        img: "/assets/imgs/pages/neoweb/ecosystem-step-2.webp",
         title: "Keep your stall. It becomes your showroom.",
         description: "The fair ends. Your stall doesn't. It lives on as your Living Showroom.",
     },
     {
-        img: "/assets/imgs/pages/img-13.webp",
+        img: "/assets/imgs/pages/neoweb/ecosystem-step-3.webp",
         title: "Stay listed all year",
         description: "Buyers find you on the Marketplace. The next fair is one click away.",
     },
