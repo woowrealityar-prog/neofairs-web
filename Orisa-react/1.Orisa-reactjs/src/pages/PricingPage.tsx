@@ -99,7 +99,7 @@ export default function PricingPage() {
             >
               <img
                 className="anim-zoomin w-100"
-                src="/assets/imgs/pages/img-153.webp"
+                src="/assets/imgs/pages/neoweb/pricing/Hero.webp"
                 alt="NeoFairs Pricing"
                 width={1920}
                 height={570}
@@ -317,28 +317,28 @@ export default function PricingPage() {
               num: "01",
               title: "Built for you",
               description: "We do the build. You review.",
-              img: "/assets/imgs/pages/img-161.webp",
+              img: "/assets/imgs/pages/neoweb/pricing/Built.webp",
               cardClass: "at-service-card hover-up card-1 no-before rounded-2 overflow-hidden p-relative bg-neutral-0 z-index-3",
             },
             {
               num: "02",
               title: "Your dashboard",
               description: "Products, prices, visitors, RFQs",
-              img: "/assets/imgs/pages/img-162.webp",
+              img: "/assets/imgs/pages/neoweb/pricing/Dashboard.webp",
               cardClass: "at-service-card hover-up card-2 rounded-2 overflow-hidden p-relative bg-neutral-0",
             },
             {
               num: "03",
               title: "Support",
               description: "Real people, [response time placeholder]",
-              img: "/assets/imgs/pages/img-163.webp",
+              img: "/assets/imgs/pages/neoweb/pricing/Support.webp",
               cardClass: "at-service-card hover-up card-3 rounded-2 overflow-hidden p-relative bg-neutral-0",
             },
             {
               num: "04",
               title: "Your data",
               description: "Buyer data stays yours",
-              img: "/assets/imgs/pages/img-164.webp",
+              img: "/assets/imgs/pages/neoweb/pricing/Data.webp",
               cardClass: "at-service-card hover-up card-2 rounded-2 overflow-hidden p-relative bg-neutral-0",
             },
           ]}
