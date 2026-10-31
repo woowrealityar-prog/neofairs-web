@@ -9,14 +9,23 @@ const ARROW_SVG = (
 export default function SectionNora() {
     return (
         <section
-            className="home-3-section-8 bg-cover pt-120 pb-120 bg-neutral-900"
+            className="home-3-section-8 bg-cover pt-120 pb-120 bg-neutral-900 p-relative overflow-hidden"
             data-background="/assets/imgs/pages/neoweb/living-showroom/Nora bg.webp"
             style={{
                 backgroundImage: "url(/assets/imgs/pages/neoweb/living-showroom/Nora%20bg.webp)",
                 backgroundSize: "cover",
+                backgroundPosition: "center",
             }}
         >
-            <div className="container">
+            {/* Background dark overlay for optimal text readability */}
+            <div
+                className="position-absolute top-0 bottom-0 start-0 end-0"
+                style={{
+                    backgroundColor: "rgba(0, 0, 0, 0.65)",
+                    pointerEvents: "none",
+                }}
+            />
+            <div className="container position-relative z-1">
                 <div className="row g-4 align-items-center">
                     <div className="col-lg-6 me-auto">
                         <span className="at-btn common-white text-uppercase bg-transparent mb-15 rounded-0 p-0 d-inline-block">
