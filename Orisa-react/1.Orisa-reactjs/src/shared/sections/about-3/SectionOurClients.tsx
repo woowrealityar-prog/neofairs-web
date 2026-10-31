@@ -1,37 +1,17 @@
 import { Link } from "react-router-dom";
 import RevealText from "@/shared/effects/RevealText";
 
-const LOGO_DIMS: Record<string, { width: number; height: number }> = {
-    "01": { width: 130, height: 33 },
-    "02": { width: 130, height: 38 },
-    "03": { width: 125, height: 27 },
-    "04": { width: 105, height: 24 },
-    "05": { width: 120, height: 27 },
-    "06": { width: 125, height: 28 },
-    "07": { width: 94, height: 42 },
-    "08": { width: 109, height: 32 },
-    "09": { width: 117, height: 32 },
-    "10": { width: 135, height: 48 },
-};
-
-const makeLogo = (n: string) => ({
-    src: `/assets/imgs/template/logo/logo-brand-${n}.webp`,
-    alt: "brand",
-    dataLogo: n,
-    ...LOGO_DIMS[n],
-});
-
-const BRAND_ROWS = [
-    { delay: ".4", logos: ["01", "02", "03"].map(makeLogo) },
-    { delay: ".6", logos: ["07", "08", "09"].map(makeLogo) },
-    { delay: ".6", logos: ["03", "04", "05"].map(makeLogo) },
-    { delay: ".7", logos: ["04", "05", "06"].map(makeLogo) },
-    { delay: ".4", logos: ["05", "06", "07"].map(makeLogo) },
-    { delay: ".5", logos: ["06", "07", "08"].map(makeLogo) },
-    { delay: ".5", logos: ["02", "03", "04"].map(makeLogo) },
-    { delay: ".7", logos: ["08", "09", "10"].map(makeLogo) },
-    { delay: ".6", logos: ["09", "10", "01"].map(makeLogo) },
-    { delay: ".7", logos: ["10", "01", "02"].map(makeLogo) },
+const BRAND_ROWS: { delay: string; logos: { src: string; alt: string; dataLogo: string; width: number; height: number }[] }[] = [
+    { delay: ".4", logos: [{ src: "/assets/imgs/pages/neoweb/home/Clients logo 1.webp", alt: "NeoFairs Client", dataLogo: "01", width: 120, height: 48 }] },
+    { delay: ".5", logos: [{ src: "/assets/imgs/pages/neoweb/home/Clients logo 2.webp", alt: "NeoFairs Client", dataLogo: "02", width: 120, height: 48 }] },
+    { delay: ".6", logos: [{ src: "/assets/imgs/pages/neoweb/home/Clients logo 3.webp", alt: "NeoFairs Client", dataLogo: "03", width: 120, height: 48 }] },
+    { delay: ".7", logos: [{ src: "/assets/imgs/pages/neoweb/home/Clients logo 4.webp", alt: "NeoFairs Client", dataLogo: "04", width: 120, height: 48 }] },
+    { delay: ".4", logos: [{ src: "/assets/imgs/pages/neoweb/home/Clients logo 5.webp", alt: "NeoFairs Client", dataLogo: "05", width: 120, height: 48 }] },
+    { delay: ".5", logos: [{ src: "/assets/imgs/pages/neoweb/home/Clients logo 6.webp", alt: "NeoFairs Client", dataLogo: "06", width: 120, height: 48 }] },
+    { delay: ".6", logos: [{ src: "/assets/imgs/pages/neoweb/home/Clients logo 7.webp", alt: "NeoFairs Client", dataLogo: "07", width: 120, height: 48 }] },
+    { delay: ".7", logos: [{ src: "/assets/imgs/pages/neoweb/home/Clients logo 8.webp", alt: "NeoFairs Client", dataLogo: "08", width: 120, height: 48 }] },
+    { delay: ".5", logos: [{ src: "/assets/imgs/pages/neoweb/home/Clients logo 9.webp", alt: "NeoFairs Client", dataLogo: "09", width: 120, height: 48 }] },
+    { delay: ".6", logos: [{ src: "/assets/imgs/pages/neoweb/home/Clients logo 10.webp", alt: "NeoFairs Client", dataLogo: "10", width: 120, height: 48 }] },
 ];
 
 function StarIcon() {
