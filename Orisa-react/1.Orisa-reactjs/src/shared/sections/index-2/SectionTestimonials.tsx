@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const TESTIMONIAL_SOURCES = [
     {
         starColor: "#FFB618",
-        img: "/assets/imgs/template/avatar/avatar-6.webp",
+        img: "/assets/imgs/pages/neoweb/home/Dignitaries 1.webp",
         logo: "/assets/imgs/icons/brand-7.webp",
         logoWidth: 86,
         logoHeight: 25,
@@ -18,7 +18,7 @@ const TESTIMONIAL_SOURCES = [
     },
     {
         starColor: "#FFB618",
-        img: "/assets/imgs/template/avatar/avatar-7.webp",
+        img: "/assets/imgs/pages/neoweb/home/Dignitaries 2.webp",
         logo: "/assets/imgs/icons/brand-8.webp",
         logoWidth: 101,
         logoHeight: 25,
@@ -30,7 +30,7 @@ const TESTIMONIAL_SOURCES = [
     },
     {
         starColor: "#FFB618",
-        img: "/assets/imgs/template/avatar/avatar-8.webp",
+        img: "/assets/imgs/pages/neoweb/home/Dignitaries 3.webp",
         logo: "/assets/imgs/icons/brand-9.webp",
         logoWidth: 119,
         logoHeight: 25,
@@ -42,7 +42,7 @@ const TESTIMONIAL_SOURCES = [
     },
     {
         starColor: "#FFB618",
-        img: "/assets/imgs/template/avatar/avatar-9.webp",
+        img: "/assets/imgs/pages/neoweb/home/Dignitaries 4.webp",
         logo: "/assets/imgs/icons/brand-7.webp",
         logoWidth: 86,
         logoHeight: 25,

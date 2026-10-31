@@ -1,21 +1,21 @@
 import Marquee from "react-fast-marquee";
 
 const STRIP_1_TILES = [
-    { img: "sec-1-tile-1.webp", alt: "NeoFairs Expo 1" },
-    { img: "sec-1-tile-2.webp", alt: "NeoFairs Expo 2" },
-    { img: "sec-1-tile-3.webp", alt: "NeoFairs Expo 3" },
-    { img: "sec-1-tile-4.webp", alt: "NeoFairs Expo 4" },
-    { img: "sec-1-tile-5.webp", alt: "NeoFairs Expo 5" },
-    { img: "sec-1-tile-6.webp", alt: "NeoFairs Expo 6" },
+    { src: "/assets/imgs/pages/neoweb/home/Dignitaries 1.webp", alt: "NeoFairs Dignitary 1" },
+    { src: "/assets/imgs/pages/neoweb/home/Dignitaries 2.webp", alt: "NeoFairs Dignitary 2" },
+    { src: "/assets/imgs/pages/neoweb/home/Dignitaries 3.webp", alt: "NeoFairs Dignitary 3" },
+    { src: "/assets/imgs/pages/neoweb/home/Dignitaries 4.webp", alt: "NeoFairs Dignitary 4" },
+    { src: "/assets/imgs/pages/neoweb/home/Dignitaries 5.webp", alt: "NeoFairs Dignitary 5" },
+    { src: "/assets/imgs/pages/neoweb/home/Dignitaries 6.webp", alt: "NeoFairs Dignitary 6" },
 ];
 
 const STRIP_2_TILES = [
-    { img: "sec-2-project-1.webp", alt: "NeoFairs Showroom 1" },
-    { img: "sec-2-project-2.webp", alt: "NeoFairs Showroom 2" },
-    { img: "sec-2-project-3.webp", alt: "NeoFairs Showroom 3" },
-    { img: "sec-2-project-4.webp", alt: "NeoFairs Showroom 4" },
-    { img: "sec-4-process-1.webp", alt: "NeoFairs Showroom 5" },
-    { img: "sec-4-process-2.webp", alt: "NeoFairs Showroom 6" },
+    { src: "/assets/imgs/pages/neoweb/home/face 1.webp", alt: "NeoFairs Face 1" },
+    { src: "/assets/imgs/pages/neoweb/home/face 2.webp", alt: "NeoFairs Face 2" },
+    { src: "/assets/imgs/pages/neoweb/home/face 3.webp", alt: "NeoFairs Face 3" },
+    { src: "/assets/imgs/pages/neoweb/home/face 4.webp", alt: "NeoFairs Face 4" },
+    { src: "/assets/imgs/pages/neoweb/home/face 5.webp", alt: "NeoFairs Face 5" },
+    { src: "/assets/imgs/pages/neoweb/home/face 6.webp", alt: "NeoFairs Face 6" },
 ];
 
 export default function SectionImageStrips() {
@@ -34,7 +34,7 @@ export default function SectionImageStrips() {
                             <div key={`s1-${idx}`} className="at-gallery-item sec-landscape-tile">
                                 <img
                                     className="w-100 h-100 object-fit-cover"
-                                    src={`/assets/imgs/pages/home-12/${item.img}`}
+                                    src={item.src}
                                     alt={item.alt}
                                     loading="lazy"
                                 />
@@ -57,7 +57,7 @@ export default function SectionImageStrips() {
                             <div key={`s2-${idx}`} className="at-gallery-item sec-landscape-tile">
                                 <img
                                     className="w-100 h-100 object-fit-cover"
-                                    src={`/assets/imgs/pages/home-12/${item.img}`}
+                                    src={item.src}
                                     alt={item.alt}
                                     loading="lazy"
                                 />

@@ -11,7 +11,7 @@ const SHOWROOMS = [
     {
         id: "pos1",
         href: "/living-showroom",
-        img: "/assets/imgs/pages/home-10/sec-4-service-1.webp",
+        img: "/assets/imgs/pages/neoweb/home/Tanzeb showroom.webp",
         width: 800,
         height: 520,
         name: "Clothing & Fashion",
@@ -23,7 +23,7 @@ const SHOWROOMS = [
     {
         id: "pos2",
         href: "/living-showroom",
-        img: "/assets/imgs/pages/home-10/sec-4-service-2.webp",
+        img: "/assets/imgs/pages/neoweb/home/Cuboc showroom.webp",
         width: 720,
         height: 460,
         name: "Branding & Display",
@@ -36,7 +36,7 @@ const SHOWROOMS = [
     {
         id: "pos3",
         href: "/living-showroom",
-        img: "/assets/imgs/pages/home-10/sec-4-service-3.webp",
+        img: "/assets/imgs/pages/neoweb/home/Pansari showroom.webp",
         width: 900,
         height: 520,
         name: "Food Products",
@@ -48,7 +48,7 @@ const SHOWROOMS = [
     {
         id: "pos4",
         href: "/living-showroom",
-        img: "/assets/imgs/pages/home-10/sec-4-service-4.webp",
+        img: "/assets/imgs/pages/neoweb/home/Sevitsil showroom.webp",
         width: 900,
         height: 520,
         name: "Silicone Products",

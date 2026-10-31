@@ -27,7 +27,7 @@ const SERVICES = [
             "AI matchmaking — Buyers matched to your products",
             "Exhibit from your factory — No travel, no stall setup, no week lost",
         ],
-        image: "/assets/imgs/pages/neoweb/offer-virtual-fairs.webp",
+        image: "/assets/imgs/pages/neoweb/home/Virtual Trade Fairs 1.webp",
         itemClass: "pb-40",
     },
     {
@@ -40,7 +40,7 @@ const SERVICES = [
             "Video in one click — Talk the moment interest is high",
             "NORA, your AI assistant — Answers buyer queries 24/7, trained by you",
         ],
-        image: "/assets/imgs/pages/neoweb/offer-living-showroom.webp",
+        image: "/assets/imgs/pages/neoweb/home/Virtual Trade Fairs 2.webp",
         itemClass: "pb-40",
     },
     {
@@ -52,7 +52,7 @@ const SERVICES = [
             "RFQs to you — Enquiries land in your dashboard",
             "Every fair, one click — Members join any fair instantly",
         ],
-        image: "/assets/imgs/pages/neoweb/offer-marketplace.webp",
+        image: "/assets/imgs/pages/neoweb/home/Virtual Trade Fairs 3.webp",
         itemClass: "pb-50",
     },
 ];

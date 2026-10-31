@@ -62,10 +62,10 @@ export default function Section2() {
             </div> */}
             <div
                 className="bg-coating rounded-5 overflow-hidden mx-lg-3 mx-2 bg-cover"
-                data-background="/assets/imgs/pages/neoweb/hero-showcase.webp"
+                data-background="/assets/imgs/pages/neoweb/home/Hero.webp"
             >
                 <img
-                    src="/assets/imgs/pages/neoweb/hero-showcase.webp"
+                    src="/assets/imgs/pages/neoweb/home/Hero.webp"
                     alt="NeoFairs Living Showroom Showcase"
                     className="img-cover p-absolute top-0 start-0 end-0 bottom-0 z-0 w-100 h-100"
                     style={{ objectFit: "cover" }}

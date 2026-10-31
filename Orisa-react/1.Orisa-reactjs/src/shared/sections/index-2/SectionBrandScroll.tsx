@@ -33,7 +33,8 @@ const BRAND_ROWS: { logos: string[]; delay: string }[] = [
 ];
 
 function logoSrc(num: string) {
-    return `/assets/imgs/template/logo/logo-brand-${num}.webp`;
+    const n = parseInt(num, 10);
+    return `/assets/imgs/pages/neoweb/home/Clients logo ${n}.webp`;
 }
 
 interface SectionBrandScrollProps {
@@ -93,7 +94,7 @@ export default function SectionBrandScroll({
                                                         data-delay=".4"
                                                         data-fade-from="bottom"
                                                         data-ease="bounce"
-                                                        src="/assets/imgs/pages/img-3.webp"
+                                                        src="/assets/imgs/pages/neoweb/home/Our Clients.webp"
                                                         alt="Mr. Randhir Jaiswal"
                                                         width={600}
                                                         height={450}
@@ -127,7 +128,7 @@ export default function SectionBrandScroll({
                                                         data-delay=".4"
                                                         data-fade-from="bottom"
                                                         data-ease="bounce"
-                                                        src="/assets/imgs/pages/img-4.webp"
+                                                        src="/assets/imgs/pages/neoweb/home/Clients Certificate.webp"
                                                         alt="NeoFairs Innovation"
                                                         width={500}
                                                         height={450}

@@ -26,7 +26,7 @@ const PLUS_ICON = (
 );
 
 const DIGNITARY_CARD = {
-    img: "/assets/imgs/pages/img-107.webp",
+    img: "/assets/imgs/pages/neoweb/home/TESTIMONIAL VIDEOS.webp",
     alt: "Consul General of India, New York",
     quote: "“It comes as close to physical format as you can get.”",
     author: "Mr. Randhir Jaiswal",
