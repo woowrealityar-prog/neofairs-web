@@ -71,6 +71,8 @@ export default function AboutPage() {
         badge="About NeoFairs"
         title="Buyers for Indian businesses. Wherever the buyers are."
         subtitle="We took Indian exhibitors to buyers in 21 countries. Now we bring the same tools home."
+        image="/assets/imgs/pages/neoweb/about/Hero.webp"
+        imageAlt="NeoFairs About Hero"
       />
       <Section2 items={STATS_ITEMS} />
       <Section3
@@ -81,7 +83,7 @@ export default function AboutPage() {
             title: "We started with fairs",
             subtitle: "Virtual trade fairs across 21 countries.",
             description: "Trusted by the Ministry of Textiles, Govt of India.",
-            image: "/assets/imgs/pages/img-30.webp",
+            image: "/assets/imgs/pages/neoweb/about/started with fairs.webp",
             itemClass: "pb-40",
             btnText: "Explore Fairs",
             btnLink: "/virtual-trade-fairs",
@@ -90,7 +92,7 @@ export default function AboutPage() {
             title: "The fairs worked. For three days a year.",
             subtitle: "Exhibitors needed more.",
             description: "Exhibitors kept telling us the same thing: we need buyers every day, not three days a year. So we built the Living Showroom.",
-            image: "/assets/imgs/pages/img-31.webp",
+            image: "/assets/imgs/pages/neoweb/about/three days.webp",
             itemClass: "pb-40",
             btnText: "Explore Showrooms",
             btnLink: "/living-showroom",
@@ -99,7 +101,7 @@ export default function AboutPage() {
             title: "Now, one ecosystem",
             subtitle: "Built for businesses finding buyers.",
             description: "A fair to meet buyers. A showroom that lives on after it. A marketplace that keeps you listed all year. Built for businesses finding buyers in India first, and abroad when they’re ready.",
-            image: "/assets/imgs/pages/img-32.webp",
+            image: "/assets/imgs/pages/neoweb/about/ecosystem.webp",
             itemClass: "pb-50",
             btnText: "Explore Marketplace",
             btnLink: "/marketplace",
@@ -129,8 +131,8 @@ export default function AboutPage() {
             name: "Group Chairman",
             surname: "",
             role: "Chairman & Founder",
-            img: "/assets/imgs/pages/home-7/team-1-darrell.webp",
-            alt: "Darrell Steward",
+            img: "/assets/imgs/pages/neoweb/about/Group 1.webp",
+            alt: "Group Chairman",
             badgeClass: "",
           },
         ]}
@@ -139,8 +141,8 @@ export default function AboutPage() {
             name: "Group CEO",
             surname: "",
             role: "Chief Executive Officer",
-            img: "/assets/imgs/pages/home-7/team-3-esther.webp",
-            alt: "Esther Howard",
+            img: "/assets/imgs/pages/neoweb/about/Group 2.webp",
+            alt: "Group CEO",
             badgeClass: "",
           },
         ]}
