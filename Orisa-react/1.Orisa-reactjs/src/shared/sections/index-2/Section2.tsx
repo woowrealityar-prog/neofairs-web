@@ -61,8 +61,9 @@ export default function Section2() {
                 </div>
             </div> */}
             <div
-                className="bg-coating rounded-5 overflow-hidden mx-lg-3 mx-2 bg-cover"
+                className="bg-coating rounded-5 overflow-hidden mx-lg-3 mx-2 bg-cover d-flex flex-column justify-content-between p-relative"
                 data-background="/assets/imgs/pages/neoweb/home/Hero.webp"
+                style={{ minHeight: "clamp(560px, 75vh, 850px)" }}
             >
                 <img
                     src="/assets/imgs/pages/neoweb/home/Hero.webp"
@@ -70,37 +71,39 @@ export default function Section2() {
                     className="img-cover p-absolute top-0 start-0 end-0 bottom-0 z-0 w-100 h-100"
                     style={{ objectFit: "cover" }}
                 />
-                {/* Service tabs row - hidden while preserving hero visual height */}
-                {/* <div className="container pb-100 p-relative z-index-2">
-                    <div className="row">
-                        {[1, 2, 3, 4].map((i) => (
-                            <div key={i} className="col-lg-3 col-md-6 col-12 text-center">
-                                <div className={`${SERVICE_BTN_CLASS}`}>
-                                    <span>
-                                        <span className="text-1">{SERVICE_LABEL[i - 1]}</span>
-                                        <span className="text-2">{SERVICE_LABEL[i - 1]}</span>
+
+                {/* Top spacer / header clearance */}
+                <div className="pt-60 pt-lg-80 p-relative z-index-2" />
+
+                {/* Bottom Left-Aligned Content fitted at bottom left like the original template */}
+                <div className="container pb-60 pb-lg-70 pt-80 p-relative z-index-2 mt-auto">
+                    <div className="row g-4 align-items-end">
+                        <div className="col-xxl-7 col-xl-8 col-lg-8 col-md-10 col-12 text-start">
+                            <div className="at-about-title-wrap pe-xxl-4">
+                                <span className="at-btn common-white text-uppercase bg-transparent mb-15 rounded-0 p-0 d-inline-block at_fade_anim">
+                                    <span className="text-uppercase">
+                                        <span className="text-1">Virtual Trade Fairs & Showrooms</span>
+                                        <span className="text-2">Virtual Trade Fairs & Showrooms</span>
                                     </span>
                                     <i>
                                         {ARROW_SVG}
                                         {ARROW_SVG}
                                     </i>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div> */}
-                <div className="container pt-160 pb-160 p-relative z-index-2">
-                    <div className="row g-4 justify-content-lg-between justify-content-center align-items-center" style={{ minHeight: "clamp(460px, 60vh, 720px)" }}>
-                        <div className="col-lg-8 col-12">
-                            <div className="at-about-title-wrap pe-xxl-4">
+                                </span>
 
-                                <h2 className="at-section-title reveal-text text-white lh-1 mb-30 mt-20">
+                                <h1
+                                    className="at-section-title reveal-text text-white lh-1 mb-25 mt-10"
+                                    style={{ fontSize: "clamp(32px, 4.2vw, 64px)", letterSpacing: "-0.03em" }}
+                                >
                                     <RevealText>Buyers for your business. Without the cost of a trade fair.</RevealText>
-                                </h2>
-                                <p className="text-white mb-40">
+                                </h1>
+                                <p
+                                    className="text-white mb-35 opacity-90 at_fade_anim"
+                                    style={{ maxWidth: "620px", fontSize: "clamp(15px, 1.1vw, 18px)", lineHeight: "1.6" }}
+                                >
                                     NeoFairs runs virtual trade fairs by industry, builds showrooms that work all year, and keeps you in front of buyers — for a fraction of what one physical stall costs.
                                 </p>
-                                <div className="pt-30 d-flex flex-wrap align-items-center gap-4">
+                                <div className="pt-10 d-flex flex-wrap align-items-center gap-4">
                                     <div
                                         className="at-btn-group btn-brand-1 at_fade_anim"
                                         data-delay=".4"
