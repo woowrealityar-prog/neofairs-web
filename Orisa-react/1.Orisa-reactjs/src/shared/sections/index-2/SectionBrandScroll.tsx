@@ -159,7 +159,7 @@ export default function SectionBrandScroll({
                                                     className="carouselTicker__item"
                                                     style={{ margin: "0 2rem", float: "none" }}
                                                 >
-                                                    <div className="brand-item dark-mode-invert d-flex align-items-center justify-content-center">
+                                                    <div className="brand-item d-flex align-items-center justify-content-center">
                                                         <img
                                                             src={logo.src}
                                                             alt={logo.alt}
