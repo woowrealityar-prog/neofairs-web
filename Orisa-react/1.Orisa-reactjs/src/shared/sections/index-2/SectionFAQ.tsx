@@ -25,7 +25,7 @@ const FAQ_ITEMS = [
         id: "faqTwo",
         num: "2",
         question: "How long until my showroom is live?",
-        answer: "Essentials and Showcase in days. Signature and Immersive in 2–4 weeks.",
+        answer: "In an hour if you set it up yourself. Built-for-you and Immersive showrooms take 2–4 weeks.",
     },
     {
         id: "faqThree",

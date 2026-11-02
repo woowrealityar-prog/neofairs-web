@@ -11,6 +11,10 @@ import SectionImageStrips from "@/shared/sections/index-2/SectionImageStrips";
 import SectionPricedPerFair from "@/shared/sections/index-8/Section9";
 import SectionFaq from "@/shared/sections/about-3/Section7";
 import SectionExhibitForm from "@/shared/sections/about-1/SectionExhibitForm";
+import { ALL_CLIENT_LOGOS } from "@/data/clientLogos";
+
+// Virtual Trade Fairs uses client logos 1 to 15
+const VIRTUAL_FAIR_CLIENT_LOGOS = ALL_CLIENT_LOGOS.slice(0, 15);
 
 export default function About1Page() {
   return (
@@ -24,7 +28,7 @@ export default function About1Page() {
       <SectionExhibitors />
       <SectionBuyerAcquisition />
       <SectionLivingShowroom />
-      <SectionOurClients />
+      <SectionOurClients logos={VIRTUAL_FAIR_CLIENT_LOGOS} />
       <SectionImageStrips />
       <SectionFaq />
       <SectionPricedPerFair />

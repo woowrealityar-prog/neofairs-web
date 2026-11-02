@@ -22,12 +22,10 @@ const SOCIAL_ARROW = (
 const FOOTER_SERVICES = ["Web Development", "Motion Graphics", "Brand Strategy", "Product Design"];
 
 const SOCIAL_LINKS = [
-  { label: "Twitter", href: "#" },
-  { label: "Facebook", href: "#" },
-  { label: "Instagram", href: "#" },
-  { label: "Linkedin", href: "#" },
-  { label: "Behance", href: "#" },
-  { label: "Dribbble", href: "#" },
+  { label: "Facebook", href: "https://www.facebook.com/neofairs" },
+  { label: "Instagram", href: "https://www.instagram.com/neofairs.virtualevents/" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/neofairs/" },
+  { label: "YouTube", href: "https://www.youtube.com/@neofairs" },
 ] as const;
 
 const NAV_LINKS = [
@@ -101,7 +99,7 @@ export default function Footer1() {
                 <div className="at-footer-widget at-footer-link pt-50">
                   <div className="at-hero-social justify-content-lg-end">
                     {SOCIAL_LINKS.map(({ label, href }) => (
-                      <a key={label} href={href} onClick={(e) => href === "#" && e.preventDefault()}>
+                      <a key={label} href={href} target="_blank" rel="noopener noreferrer">
                         {label}
                         {SOCIAL_ARROW}
                       </a>

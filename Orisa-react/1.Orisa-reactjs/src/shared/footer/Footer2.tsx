@@ -21,9 +21,10 @@ const SOCIAL_ARROW = (
 );
 
 const SOCIAL_LINKS = [
-  { label: "LinkedIn", href: "#" },
-  { label: "YouTube", href: "#" },
-  { label: "Instagram", href: "#" },
+  { label: "Facebook", href: "https://www.facebook.com/neofairs" },
+  { label: "Instagram", href: "https://www.instagram.com/neofairs.virtualevents/" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/neofairs/" },
+  { label: "YouTube", href: "https://www.youtube.com/@neofairs" },
 ];
 
 const PRODUCTS_LINKS = [
@@ -180,10 +181,15 @@ export default function Footer2() {
                 </span>
                 <div className="at-hero-social">
                   {SOCIAL_LINKS.map((item) => (
-                    <Link key={item.label} to={item.href}>
+                    <a
+                      key={item.label}
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       {item.label}
                       {SOCIAL_ARROW}
-                    </Link>
+                    </a>
                   ))}
                 </div>
               </div>

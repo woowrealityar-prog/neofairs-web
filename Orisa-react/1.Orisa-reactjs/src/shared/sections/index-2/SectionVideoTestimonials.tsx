@@ -32,7 +32,7 @@ const DIGNITARY_CARD = {
     author: "Mr. Randhir Jaiswal",
     designation: "Consul General of India, New York",
     badge: "Dignitary Review",
-    videoUrl: "https://www.youtube.com/watch?v=VCPGMjCW0is",
+    videoUrl: "https://www.youtube.com/watch?v=iU-9N3dS0Tc",
     tags: ["Global Diplomat", "Virtual Expo", "Trade Review"],
 };
 

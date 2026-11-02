@@ -6,19 +6,21 @@ import { Link } from "react-router-dom";
 const TESTIMONIAL_SOURCES = [
     {
         starColor: "#FFB618",
-        img: "/assets/imgs/pages/neoweb/home/Dignitaries 1.webp",
+        initials: "FF",
+        avatarBg: "linear-gradient(135deg, #242820 0%, #12140e 100%)",
         logo: "/assets/imgs/icons/brand-7.webp",
         logoWidth: 86,
         logoHeight: 25,
-        name: "Mr. Randhir Jaiswal",
-        position: "Consul General of India",
-        company: "New York",
+        name: "Franscisca Foncea",
+        position: "Buyer / Trade Partner",
+        company: "San Tiago, Chile",
         comment:
-            "It comes as close to physical format as you can get.",
+            "Very grateful with the Fair and the contacts made.",
     },
     {
         starColor: "#FFB618",
-        img: "/assets/imgs/pages/neoweb/home/Dignitaries 2.webp",
+        initials: "MC",
+        avatarBg: "linear-gradient(135deg, #242820 0%, #12140e 100%)",
         logo: "/assets/imgs/icons/brand-8.webp",
         logoWidth: 101,
         logoHeight: 25,
@@ -30,7 +32,8 @@ const TESTIMONIAL_SOURCES = [
     },
     {
         starColor: "#FFB618",
-        img: "/assets/imgs/pages/neoweb/home/Dignitaries 3.webp",
+        initials: "HG",
+        avatarBg: "linear-gradient(135deg,  #242820 0%, #12140e 100%)",
         logo: "/assets/imgs/icons/brand-9.webp",
         logoWidth: 119,
         logoHeight: 25,
@@ -42,7 +45,8 @@ const TESTIMONIAL_SOURCES = [
     },
     {
         starColor: "#FFB618",
-        img: "/assets/imgs/pages/neoweb/home/Dignitaries 4.webp",
+        initials: "DC",
+        avatarBg: "linear-gradient(135deg,  #242820 0%, #12140e 100%)",
         logo: "/assets/imgs/icons/brand-7.webp",
         logoWidth: 86,
         logoHeight: 25,
@@ -134,7 +138,8 @@ export default function SectionTestimonials() {
                                 {TESTIMONIALS.map((item, idx) => (
                                     <TestimonialCard1
                                         key={`testimonial-${idx}`}
-                                        img={item.img}
+                                        initials={item.initials}
+                                        avatarBg={item.avatarBg}
                                         name={item.name}
                                         position={item.position}
                                         company={item.company}

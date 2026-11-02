@@ -1,5 +1,7 @@
 export type TestimonialCard1Props = {
-  img: string;
+  img?: string;
+  initials?: string;
+  avatarBg?: string;
   logo?: string;
   name: string;
   position: string;
@@ -9,8 +11,16 @@ export type TestimonialCard1Props = {
   className?: string;
 };
 
+function getInitials(name: string): string {
+  const parts = name.trim().split(/\s+/);
+  if (parts.length === 1) return parts[0].substring(0, 2).toUpperCase();
+  return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+}
+
 export default function TestimonialCard1({
   img,
+  initials,
+  avatarBg = "linear-gradient(135deg, #1f2327 0%, #111315 100%)",
   logo,
   name,
   position,
@@ -19,13 +29,34 @@ export default function TestimonialCard1({
   starColor = "#FFB618",
   className,
 }: TestimonialCard1Props) {
+  const displayInitials = initials || getInitials(name);
+
   return (
     <div className={className}>
       <div className="testimonial-cart-wrap p-xxl-5 p-lg-4 p-md-5 p-3">
         <div className="rectangular" />
         <div className="testimonial-top d-flex align-items-center justify-content-between">
           <div className="testimonial-top-left-img">
-            <img src={img} alt="orisa" width={85} height={85} />
+            {img ? (
+              <img src={img} alt={name} width={85} height={85} className="rounded-circle object-fit-cover" />
+            ) : (
+              <div
+                className="d-flex align-items-center justify-content-center rounded-circle text-uppercase"
+                style={{
+                  width: 85,
+                  height: 85,
+                  background: avatarBg,
+                  color: "#ace227",
+                  border: "2px solid rgba(172, 226, 39, 0.45)",
+                  boxShadow: "0 8px 24px rgba(0, 0, 0, 0.4)",
+                  fontSize: 28,
+                  fontWeight: 700,
+                  letterSpacing: "1px",
+                }}
+              >
+                {displayInitials}
+              </div>
+            )}
           </div>
           {logo ? (
             <div className="testimonial-top-right-logo">

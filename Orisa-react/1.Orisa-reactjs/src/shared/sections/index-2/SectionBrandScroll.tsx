@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Marquee from "react-fast-marquee";
 import RevealText from "@/shared/effects/RevealText";
+import { ALL_CLIENT_LOGOS, type ClientLogo } from "@/data/clientLogos";
 
 const ARROW_SVG = (
     <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -20,37 +21,20 @@ const STAR_SVG = (
     </svg>
 );
 
-type ClientLogo = {
-    src: string;
-    alt: string;
-};
-
-const CLIENT_LOGOS: ClientLogo[] = [
-    { src: "/assets/imgs/pages/neoweb/home/Clients logo 1.webp", alt: "Garvi Gurjari" },
-    { src: "/assets/imgs/pages/neoweb/home/Clients logo 2.webp", alt: "Coircraft" },
-    { src: "/assets/imgs/pages/neoweb/home/Clients logo 3.webp", alt: "Metro" },
-    { src: "/assets/imgs/pages/neoweb/home/Clients logo 4.webp", alt: "Ministry of Textiles" },
-    { src: "/assets/imgs/pages/neoweb/home/Clients logo 5.webp", alt: "NCJ" },
-    { src: "/assets/imgs/pages/neoweb/home/Clients logo 6.webp", alt: "Rakhava Impex" },
-    { src: "/assets/imgs/pages/neoweb/home/Clients logo 7.webp", alt: "APCO" },
-    { src: "/assets/imgs/pages/neoweb/home/Clients logo 8.webp", alt: "Boyanika" },
-    { src: "/assets/imgs/pages/neoweb/home/Clients logo 9.webp", alt: "EPCH" },
-    { src: "/assets/imgs/pages/neoweb/home/Clients logo 10.webp", alt: "International Sourcing Expo Australia" },
-];
-
-const MARQUEE_CLIENTS: ClientLogo[] = [...CLIENT_LOGOS, ...CLIENT_LOGOS, ...CLIENT_LOGOS];
-
 interface SectionBrandScrollProps {
     eyebrowText?: string;
     title?: React.ReactNode;
     titleClassName?: string;
+    logos?: ClientLogo[];
 }
 
 export default function SectionBrandScroll({
     eyebrowText = "Our Clients",
     title = "Trusted by 100+ businesses across 21 countries",
     titleClassName = "",
+    logos = ALL_CLIENT_LOGOS,
 }: SectionBrandScrollProps = {}) {
+    const marqueeList = logos.length <= 10 ? [...logos, ...logos, ...logos] : [...logos, ...logos];
     return (
         <div className="mg-portfolio-area">
             <section className="sec-3-home-5 pt-130 pb-110">
@@ -169,7 +153,7 @@ export default function SectionBrandScroll({
                                                 gap: "0 2rem",
                                             }}
                                         >
-                                            {MARQUEE_CLIENTS.map((logo, i) => (
+                                            {marqueeList.map((logo, i) => (
                                                 <li
                                                     key={i}
                                                     className="carouselTicker__item"
