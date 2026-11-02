@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Marquee from "react-fast-marquee";
 import RevealText from "@/shared/effects/RevealText";
 
 const ARROW_SVG = (
@@ -19,23 +20,25 @@ const STAR_SVG = (
     </svg>
 );
 
-const BRAND_ROWS: { logos: string[]; delay: string }[] = [
-    { logos: ["01"], delay: ".4" },
-    { logos: ["02"], delay: ".5" },
-    { logos: ["03"], delay: ".6" },
-    { logos: ["04"], delay: ".7" },
-    { logos: ["05"], delay: ".4" },
-    { logos: ["06"], delay: ".5" },
-    { logos: ["07"], delay: ".6" },
-    { logos: ["08"], delay: ".7" },
-    { logos: ["09"], delay: ".5" },
-    { logos: ["10"], delay: ".6" },
+type ClientLogo = {
+    src: string;
+    alt: string;
+};
+
+const CLIENT_LOGOS: ClientLogo[] = [
+    { src: "/assets/imgs/pages/neoweb/home/Clients logo 1.webp", alt: "Garvi Gurjari" },
+    { src: "/assets/imgs/pages/neoweb/home/Clients logo 2.webp", alt: "Coircraft" },
+    { src: "/assets/imgs/pages/neoweb/home/Clients logo 3.webp", alt: "Metro" },
+    { src: "/assets/imgs/pages/neoweb/home/Clients logo 4.webp", alt: "Ministry of Textiles" },
+    { src: "/assets/imgs/pages/neoweb/home/Clients logo 5.webp", alt: "NCJ" },
+    { src: "/assets/imgs/pages/neoweb/home/Clients logo 6.webp", alt: "Rakhava Impex" },
+    { src: "/assets/imgs/pages/neoweb/home/Clients logo 7.webp", alt: "APCO" },
+    { src: "/assets/imgs/pages/neoweb/home/Clients logo 8.webp", alt: "Boyanika" },
+    { src: "/assets/imgs/pages/neoweb/home/Clients logo 9.webp", alt: "EPCH" },
+    { src: "/assets/imgs/pages/neoweb/home/Clients logo 10.webp", alt: "International Sourcing Expo Australia" },
 ];
 
-function logoSrc(num: string) {
-    const n = parseInt(num, 10);
-    return `/assets/imgs/pages/neoweb/home/Clients logo ${n}.webp`;
-}
+const MARQUEE_CLIENTS: ClientLogo[] = [...CLIENT_LOGOS, ...CLIENT_LOGOS, ...CLIENT_LOGOS];
 
 interface SectionBrandScrollProps {
     eyebrowText?: string;
@@ -81,7 +84,7 @@ export default function SectionBrandScroll({
                             </h2>
                         </div>
 
-                        {/* Index 1 Page About section block added above col-xxl-8 col-12 */}
+                        {/* Index 1 Page About section block */}
                         <div className="col-12 col-lg-8 ms-auto mb-4 pb-2">
                             <div className="at-about-thumb-wrap">
                                 <div className="row g-4 gx-lg-5">
@@ -143,63 +146,76 @@ export default function SectionBrandScroll({
                             </div>
                         </div>
 
-                        <div className="col-xxl-8 col-12 ms-auto">
-                            <div className="d-inline-flex w-100">
-                                <div className="at-brand-scroll">
-                                    <div className="at-brand-scroll-wrap d-flex flex-wrap gap-2">
-                                        {BRAND_ROWS.map((row, i) => (
-                                            <div
-                                                key={i}
-                                                className="at-brand-item at_fade_anim"
-                                                data-delay={row.delay}
-                                                data-fade-from="bottom"
-                                                data-ease="bounce"
-                                            >
-                                                <div className="brand">
-                                                    {row.logos.map((logo) => (
-                                                        <span
-                                                            key={logo}
-                                                            className="brand-logo-slide"
-                                                            data-logo={logo}
-                                                        >
-                                                            <img
-                                                                src={logoSrc(logo)}
-                                                                alt="NeoFairs Client"
-                                                                width={120}
-                                                                height={48}
-                                                                className="dark-mode-invert"
-                                                                loading="lazy"
-                                                            />
-                                                        </span>
-                                                    ))}
-                                                </div>
-                                            </div>
-                                        ))}
-                                        <div className="flex-grow-1 text-center d-flex flex-column justify-content-center ml-100 py-5">
-                                            <div className="d-flex mb-2" style={{ color: "#ace227" }}>
-                                                {[true, true, true, true, true].map((filled, i) => (
-                                                    <span key={i} className={filled ? "star" : ""}>
-                                                        {STAR_SVG}
-                                                    </span>
-                                                ))}
-                                            </div>
-                                            <div className="d-flex">
-                                                <Link
-                                                    to="#reviews"
-                                                    className="at-btn common-black bg-transparent mb-10 rounded-0 p-0"
+                        {/* at-brand-area at_fade_anim continuous brand ticker section replacing col-xxl-8 col-12 ms-auto */}
+                        <div className="col-12">
+                            <div className="at-brand-area at_fade_anim my-4">
+                                <div className="carouselTicker carouselTicker-right position-relative z-1">
+                                    <Marquee
+                                        speed={40}
+                                        direction="right"
+                                        pauseOnHover={false}
+                                        gradient={false}
+                                        className="carouselTicker__marquee"
+                                    >
+                                        <ul
+                                            className="carouselTicker__list scroll-move-right"
+                                            style={{
+                                                display: "flex",
+                                                alignItems: "center",
+                                                listStyle: "none",
+                                                margin: 0,
+                                                padding: 0,
+                                                overflow: "visible",
+                                                gap: "0 2rem",
+                                            }}
+                                        >
+                                            {MARQUEE_CLIENTS.map((logo, i) => (
+                                                <li
+                                                    key={i}
+                                                    className="carouselTicker__item"
+                                                    style={{ margin: "0 2rem", float: "none" }}
                                                 >
-                                                    <span className="text-uppercase">
-                                                        <span className="text-1">Customer reviews</span>
-                                                        <span className="text-2">Customer reviews</span>
-                                                    </span>
-                                                    <i>
-                                                        {ARROW_SVG}
-                                                        {ARROW_SVG}
-                                                    </i>
-                                                </Link>
-                                            </div>
-                                        </div>
+                                                    <div className="brand-item dark-mode-invert d-flex align-items-center justify-content-center">
+                                                        <img
+                                                            src={logo.src}
+                                                            alt={logo.alt}
+                                                            style={{ height: 42, width: "auto", objectFit: "contain" }}
+                                                            loading="lazy"
+                                                        />
+                                                    </div>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </Marquee>
+                                </div>
+                            </div>
+
+                            {/* Customer reviews rating block */}
+                            <div className="d-flex flex-wrap align-items-center justify-content-between pt-2">
+                                <div className="d-flex align-items-center gap-3">
+                                    <div className="d-flex" style={{ color: "#ace227" }}>
+                                        {[true, true, true, true, true].map((filled, i) => (
+                                            <span key={i} className={filled ? "star" : ""}>
+                                                {STAR_SVG}
+                                            </span>
+                                        ))}
                                     </div>
+                                    <span className="small text-muted fw-600">Rated 4.9/5 by Global Organizers & Exhibitors</span>
+                                </div>
+                                <div className="d-flex">
+                                    <Link
+                                        to="#reviews"
+                                        className="at-btn common-black bg-transparent rounded-0 p-0"
+                                    >
+                                        <span className="text-uppercase">
+                                            <span className="text-1">Customer reviews</span>
+                                            <span className="text-2">Customer reviews</span>
+                                        </span>
+                                        <i>
+                                            {ARROW_SVG}
+                                            {ARROW_SVG}
+                                        </i>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

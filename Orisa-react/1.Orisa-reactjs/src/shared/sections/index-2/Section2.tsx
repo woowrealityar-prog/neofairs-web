@@ -63,7 +63,7 @@ export default function Section2() {
             <div
                 className="bg-coating rounded-5 overflow-hidden mx-lg-3 mx-2 bg-cover d-flex flex-column justify-content-between p-relative"
                 data-background="/assets/imgs/pages/neoweb/home/Hero.webp"
-                style={{ minHeight: "clamp(560px, 75vh, 850px)" }}
+                style={{ minHeight: "clamp(560px, 80vh, 850px)" }}
             >
                 <img
                     src="/assets/imgs/pages/neoweb/home/Hero.webp"
