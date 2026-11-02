@@ -14,8 +14,8 @@ interface BrandLogoProps {
  */
 export default function BrandLogo({
   className = "",
-  width = 160,
-  height = 42,
+  width = 200,
+  height = 50,
   showText = false,
 }: BrandLogoProps) {
   return (
@@ -28,7 +28,7 @@ export default function BrandLogo({
           width={width}
           height={height}
           className="brand-logo-img brand-logo-light"
-          style={{ width: "auto", height: `${height}px`, maxHeight: "100%", objectFit: "contain" }}
+          style={{ width: `${width}px`, height: `${height}px`, objectFit: "cover" }}
         />
         {/* neo-dark.svg shown in dark mode */}
         <img
@@ -37,7 +37,7 @@ export default function BrandLogo({
           width={width}
           height={height}
           className="brand-logo-img brand-logo-dark"
-          style={{ width: "auto", height: `${height}px`, maxHeight: "100%", objectFit: "contain" }}
+          style={{ width: `${width}px`, height: `${height}px`, objectFit: "cover" }}
         />
       </span>
       {showText && <h6 className="fw-700 fz-24 mb-0">NeoFairs</h6>}
