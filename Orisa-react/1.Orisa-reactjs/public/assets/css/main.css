@@ -44985,4 +44985,55 @@ body.at-magic-cursor #magic-cursor {
   fill: #000000 !important;
 }
 
+/* Fix sec-5-home-15 (Values - "What we hold to.") in dark mode: Keep dark background and white text */
+[data-bs-theme="dark"] .sec-5-home-15 {
+  background-color: #0F0F0F !important;
+  color: #FFFFFF !important;
+}
+
+[data-bs-theme="dark"] .sec-5-home-15 h2,
+[data-bs-theme="dark"] .sec-5-home-15 h2 span,
+[data-bs-theme="dark"] .sec-5-home-15 h2 .text-white {
+  color: #FFFFFF !important;
+}
+
+[data-bs-theme="dark"] .sec-5-home-15__eyebrow-key {
+  color: #FFFFFF !important;
+}
+
+[data-bs-theme="dark"] .sec-5-home-15__eyebrow-dot {
+  background-color: #FFFFFF !important;
+}
+
+[data-bs-theme="dark"] .sec-5-home-15 .at-btn,
+[data-bs-theme="dark"] .sec-5-home-15 .at-btn span,
+[data-bs-theme="dark"] .sec-5-home-15 .at-btn i {
+  color: #FFFFFF !important;
+}
+
+[data-bs-theme="dark"] .sec-5-home-15__phase {
+  color: #FFFFFF !important;
+  border-left-color: #262626 !important;
+}
+
+[data-bs-theme="dark"] .sec-5-home-15__phase-dot {
+  background-color: #FFFFFF !important;
+}
+
+[data-bs-theme="dark"] .sec-5-home-15__phase-num {
+  color: #FFFFFF !important;
+}
+
+[data-bs-theme="dark"] .sec-5-home-15__phase-title {
+  color: #FFFFFF !important;
+}
+
+[data-bs-theme="dark"] .sec-5-home-15__phase-desc {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+[data-bs-theme="dark"] .sec-5-home-15__copy {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
 /*# sourceMappingURL=main.css.map */
