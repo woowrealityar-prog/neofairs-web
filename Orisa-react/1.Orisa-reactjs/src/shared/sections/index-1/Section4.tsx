@@ -103,27 +103,25 @@ export default function Section4() {
                     <div className="col-xxl-7 ms-auto col-lg-8 col-xl-8 mb-40">
                         <div className="at-service-list-wrap">
                             {SERVICES.map((s) => (
-                                <Link key={s.num} to="/contact-1">
-                                    <div className="at-service-item service-item">
-                                        <div className="count">
-                                            <span className="number">[{s.num}]</span>
-                                        </div>
-                                        <div className="content">
-                                            <h2
-                                                className="title"
-                                                style={{ fontSize: "clamp(32px, 3.2vw, 44px)", lineHeight: "1.15" }}
-                                            >
-                                                {s.title}
-                                            </h2>
-                                            <p className="text mt-10">
-                                                {s.text}
-                                            </p>
-                                        </div>
-                                        <div className="thumb anim-zoomin">
-                                            <img src={s.thumb} alt="NeoFairs step" width={200} height={200} loading="lazy" />
-                                        </div>
+                                <div key={s.num} className="at-service-item service-item">
+                                    <div className="count">
+                                        <span className="number">[{s.num}]</span>
                                     </div>
-                                </Link>
+                                    <div className="content">
+                                        <h2
+                                            className="title"
+                                            style={{ fontSize: "clamp(32px, 3.2vw, 44px)", lineHeight: "1.15" }}
+                                        >
+                                            {s.title}
+                                        </h2>
+                                        <p className="text mt-10">
+                                            {s.text}
+                                        </p>
+                                    </div>
+                                    <div className="thumb anim-zoomin">
+                                        <img src={s.thumb} alt="NeoFairs step" width={200} height={200} loading="lazy" />
+                                    </div>
+                                </div>
                             ))}
                             <div className="pt-30">
                                 <div
