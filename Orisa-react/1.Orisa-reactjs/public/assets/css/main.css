@@ -45036,4 +45036,17 @@ body.at-magic-cursor #magic-cursor {
   color: rgba(255, 255, 255, 0.75) !important;
 }
 
+/* Fix pricing-2-cta in dark mode: Keep background dark (#141414) with subtle border so white text stays visible */
+[data-bs-theme="dark"] .pricing-2-cta__panel {
+  background-color: #141414 !important;
+  border: 1px solid #282828 !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+}
+
+[data-bs-theme="dark"] .pricing-2-cta__title,
+[data-bs-theme="dark"] .pricing-2-cta__title span,
+[data-bs-theme="dark"] .pricing-2-cta__panel h2 {
+  color: #FFFFFF !important;
+}
+
 /*# sourceMappingURL=main.css.map */
