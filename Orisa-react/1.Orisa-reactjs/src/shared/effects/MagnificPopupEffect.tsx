@@ -44,7 +44,50 @@ const initPopups = () => {
     const $ = (window as WindowWithGlobals).jQuery;
     if (!$ || !$.fn || typeof $.fn.magnificPopup !== "function") return;
     if ($(".popup-video").length) {
-        $(".popup-video").magnificPopup({ type: "iframe" });
+        $(".popup-video").magnificPopup({
+            type: "iframe",
+            callbacks: {
+                markupParse: function (template: any, values: any, item: any) {
+                    const url = (item && item.src) ? String(item.src) : "";
+                    const isReel = url.includes("instagram.com") || url.includes("/reel/") || url.includes("/p/");
+                    const wrap = (window as WindowWithGlobals).jQuery?.magnificPopup?.instance?.wrap;
+                    if (wrap) {
+                        if (isReel) {
+                            wrap.addClass("mfp-reel-popup");
+                        } else {
+                            wrap.removeClass("mfp-reel-popup");
+                        }
+                    }
+                },
+            },
+            iframe: {
+                patterns: {
+                    youtube: {
+                        index: "youtube.com/",
+                        id: "v=",
+                        src: "https://www.youtube.com/embed/%id%?autoplay=1",
+                    },
+                    youtu_be: {
+                        index: "youtu.be/",
+                        id: "/",
+                        src: "https://www.youtube.com/embed/%id%?autoplay=1",
+                    },
+                    vimeo: {
+                        index: "vimeo.com/",
+                        id: "/",
+                        src: "https://player.vimeo.com/video/%id%?autoplay=1",
+                    },
+                    instagram: {
+                        index: "instagram.com/",
+                        id: function (url: string) {
+                            const m = url.match(/\/(?:reel|p)\/([^/?#&]+)/);
+                            return m ? m[1] : "";
+                        },
+                        src: "https://www.instagram.com/reel/%id%/embed",
+                    },
+                },
+            },
+        });
     }
     if ($(".popup-image").length) {
         $(".popup-image").magnificPopup({

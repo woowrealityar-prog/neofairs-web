@@ -163,7 +163,7 @@ export default function SectionBrandScroll({
                                                         <img
                                                             src={logo.src}
                                                             alt={logo.alt}
-                                                            style={{ height: 42, width: "auto", objectFit: "contain" }}
+                                                            style={{ height: 70, width: 250, objectFit: "cover", filter: "none" }}
                                                             loading="lazy"
                                                         />
                                                     </div>

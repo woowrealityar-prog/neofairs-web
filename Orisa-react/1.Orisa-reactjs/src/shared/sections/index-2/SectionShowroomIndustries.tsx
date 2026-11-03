@@ -7,10 +7,19 @@ const ARROW_SVG = (
     </svg>
 );
 
+const ARROW_CIRCLE_SVG = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+        <path
+            d="M0.0001297 8.99993L0 3.00407e-05L2 0L2.0001 6.99993L12.1719 7.00003L8.22224 3.05027L9.63644 1.63606L16.0003 8.00003L9.63644 14.364L8.22224 12.9497L12.1719 9.00003L0.0001297 8.99993Z"
+            fill="currentColor"
+        />
+    </svg>
+);
+
 const SHOWROOMS = [
     {
         id: "pos1",
-        href: "/living-showroom",
+        href: "https://tanzeb.neofairs.com",
         img: "/assets/imgs/pages/neoweb/home/Tanzeb showroom.webp",
         width: 800,
         height: 520,
@@ -22,10 +31,10 @@ const SHOWROOMS = [
     },
     {
         id: "pos2",
-        href: "/living-showroom",
+        href: "https://cuboc.neofairs.com",
         img: "/assets/imgs/pages/neoweb/home/Cuboc showroom.webp",
-        width: 720,
-        height: 460,
+        width: 900,
+        height: 520,
         name: "Branding & Display",
         client: "Cuboc",
         layout: "image-first",
@@ -35,7 +44,7 @@ const SHOWROOMS = [
     },
     {
         id: "pos3",
-        href: "/living-showroom",
+        href: "https://pansari.neofairs.com",
         img: "/assets/imgs/pages/neoweb/home/Pansari showroom.webp",
         width: 900,
         height: 520,
@@ -47,7 +56,7 @@ const SHOWROOMS = [
     },
     {
         id: "pos4",
-        href: "/living-showroom",
+        href: "https://sevitsil.neofairs.com",
         img: "/assets/imgs/pages/neoweb/home/Sevitsil showroom.webp",
         width: 900,
         height: 520,
@@ -82,6 +91,28 @@ export default function SectionShowroomIndustries() {
                 .sec-4-home-10__title-link:hover * {
                     color: #ace227 !important;
                 }
+                .sec-4-home-10__title-block {
+                    padding-left: clamp(12px, 2vw, 28px);
+                    padding-right: clamp(12px, 2vw, 28px);
+                    pointer-events: auto !important;
+                }
+                .sec-4-home-10__title-block * {
+                    pointer-events: auto !important;
+                }
+                .sec-4-home-10__expand {
+                    color: #1d1d1d !important;
+                    background: #f7f7f7;
+                    border: 1px solid #d5d5d5;
+                    transition: all 0.25s ease;
+                }
+                .sec-4-home-10__expand svg {
+                    fill: currentColor !important;
+                }
+                .sec-4-home-10__expand:hover {
+                    background: #ace227 !important;
+                    border-color: #ace227 !important;
+                    color: #000000 !important;
+                }
             `}</style>
             <div className="sec-4-home-10__container">
                 <div className="sec-4-home-10__stage">
@@ -98,10 +129,28 @@ export default function SectionShowroomIndustries() {
                             </Link>
                         </div>
                         <Link to="/living-showroom" className="sec-4-home-10__title-link d-block">
-                            <h2 className="alt-section-title lh-1 mb-30 at_fade_anim reveal-text text-white mt-3" data-delay="0.1">
+                            <h2 className="alt-section-title lh-1 mb-20 at_fade_anim reveal-text text-white mt-3" data-delay="0.1">
                                 <RevealText>One showroom. Any industry.</RevealText>
                             </h2>
                         </Link>
+                        <div className="pt-2 d-inline-flex justify-content-center">
+                            <div
+                                className="at-btn-group btn-brand-1 at_fade_anim"
+                                data-delay=".15"
+                                data-fade-from="bottom"
+                                data-ease="bounce"
+                            >
+                                <Link className="at-btn-circle" to="/living-showroom">
+                                    {ARROW_CIRCLE_SVG}
+                                </Link>
+                                <Link className="at-btn z-index-1" to="/living-showroom">
+                                    Explore Showrooms
+                                </Link>
+                                <Link className="at-btn-circle" to="/living-showroom">
+                                    {ARROW_CIRCLE_SVG}
+                                </Link>
+                            </div>
+                        </div>
                     </header>
 
                     {SHOWROOMS.map((item) => (
@@ -114,7 +163,13 @@ export default function SectionShowroomIndustries() {
                                 {item.layout === "image-first" ? (
                                     <>
                                         <div className="sec-4-home-10__visual">
-                                            <Link className="sec-4-home-10__visual-link" to={item.href} aria-label={item.ariaLabel}>
+                                            <a
+                                                className="sec-4-home-10__visual-link"
+                                                href={item.href}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                aria-label={item.ariaLabel}
+                                            >
                                                 <img
                                                     src={item.img}
                                                     alt={item.name}
@@ -123,32 +178,64 @@ export default function SectionShowroomIndustries() {
                                                     loading="lazy"
                                                     decoding="async"
                                                 />
-                                            </Link>
+                                            </a>
                                             <div className="sec-4-home-10__overlay">
                                                 <p className="sec-4-home-10__excerpt mb-0">{item.client}</p>
                                             </div>
                                         </div>
                                         <div className="sec-4-home-10__bar">
                                             <h3 className="sec-4-home-10__service-name mb-0">
-                                                {item.name} <span className="opacity-75 fz-font-sm fw-normal">— {item.client}</span>
+                                                <a
+                                                    href={item.href}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-decoration-none text-reset"
+                                                >
+                                                    {item.name} <span className="opacity-75 fz-font-sm fw-normal">— {item.client}</span>
+                                                </a>
                                             </h3>
-                                            <button type="button" className="sec-4-home-10__expand" aria-label={`Expand ${item.ariaLabel}`}>
-                                                <span className="sec-4-home-10__expand-icon" aria-hidden="true"></span>
-                                            </button>
+                                            <a
+                                                href={item.href}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="sec-4-home-10__expand"
+                                                aria-label={`Open ${item.ariaLabel}`}
+                                            >
+                                                {ARROW_SVG}
+                                            </a>
                                         </div>
                                     </>
                                 ) : (
                                     <>
                                         <div className="sec-4-home-10__bar">
                                             <h3 className="sec-4-home-10__service-name mb-0">
-                                                {item.name} <span className="opacity-75 fz-font-sm fw-normal">— {item.client}</span>
+                                                <a
+                                                    href={item.href}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-decoration-none text-reset"
+                                                >
+                                                    {item.name} <span className="opacity-75 fz-font-sm fw-normal">— {item.client}</span>
+                                                </a>
                                             </h3>
-                                            <button type="button" className="sec-4-home-10__expand" aria-label={`Expand ${item.ariaLabel}`}>
-                                                <span className="sec-4-home-10__expand-icon" aria-hidden="true"></span>
-                                            </button>
+                                            <a
+                                                href={item.href}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="sec-4-home-10__expand"
+                                                aria-label={`Open ${item.ariaLabel}`}
+                                            >
+                                                {ARROW_SVG}
+                                            </a>
                                         </div>
                                         <div className="sec-4-home-10__visual">
-                                            <Link className="sec-4-home-10__visual-link" to={item.href} aria-label={item.ariaLabel}>
+                                            <a
+                                                className="sec-4-home-10__visual-link"
+                                                href={item.href}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                aria-label={item.ariaLabel}
+                                            >
                                                 <img
                                                     src={item.img}
                                                     alt={item.name}
@@ -157,7 +244,7 @@ export default function SectionShowroomIndustries() {
                                                     loading="lazy"
                                                     decoding="async"
                                                 />
-                                            </Link>
+                                            </a>
                                             <div className="sec-4-home-10__overlay">
                                                 <p className="sec-4-home-10__excerpt mb-0">{item.client}</p>
                                             </div>

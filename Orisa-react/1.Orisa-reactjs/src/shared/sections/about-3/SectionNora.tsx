@@ -28,7 +28,7 @@ export default function SectionNora() {
             <div className="container position-relative z-1">
                 <div className="row g-4 align-items-center">
                     <div className="col-lg-6 me-auto">
-                        <span className="at-btn common-white text-uppercase bg-transparent mb-15 rounded-0 p-0 d-inline-block">
+                        <span className="at-btn text-white text-uppercase bg-transparent mb-15 rounded-0 p-0 d-inline-block">
                             <span className="text-uppercase">
                                 <span className="text-1">NORA</span>
                                 <span className="text-2">NORA</span>

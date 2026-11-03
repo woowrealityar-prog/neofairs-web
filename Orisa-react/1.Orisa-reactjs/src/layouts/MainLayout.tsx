@@ -34,6 +34,7 @@ import { MobileMenuCloneProvider } from "@/shared/mobile-menu/MobileMenuCloneCon
 import GlobalEffects from "@/shared/effects/GlobalEffects";
 import ThemeRouteSync from "@/shared/effects/ThemeRouteSync";
 import BackToTop from "@/shared/elements/BackToTop";
+import ScrollToTop from "@/shared/elements/ScrollToTop";
 import SmoothScrollEffect from "@/shared/effects/SmoothScrollEffect";
 
 type HeaderHandlers = {
@@ -175,6 +176,7 @@ export default function MainLayout({
 
   return (
     <MobileMenuCloneProvider>
+      <ScrollToTop />
       <div className="px-blur-bottom" />
       <SmoothScrollEffect />
       <GlobalEffects />

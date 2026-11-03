@@ -86,7 +86,7 @@ export default function Section1() {
                                     {ARROW_CIRCLE_SVG}
                                 </Link>
                                 <Link className="at-btn z-index-1" to="/contact-1" style={{ color: "#000" }}>
-                                    Free Demo
+                                    Start Free Trial
                                 </Link>
                                 <Link className="at-btn-circle" to="/contact-1" style={{ color: "#000" }}>
                                     {ARROW_CIRCLE_SVG}

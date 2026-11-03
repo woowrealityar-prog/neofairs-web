@@ -1,8 +1,8 @@
 import Marquee from "react-fast-marquee";
 
 const STATS_ITEMS = [
-    "Live in days",
-    "From ₹35,000",
+    "Live in Hours",
+    "₹499 /month",
     "No commission",
     "8 Industries",
 ];

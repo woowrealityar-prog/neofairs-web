@@ -32,7 +32,7 @@ const ITEMS = [
 
 export default function Section3() {
     return (
-        <section className="sec-3-services-details pb-120">
+        <section className="sec-3-services-details pb-60">
             <style>{`
                 .sec-3-services-details .scroll-active-item .item.active .block-number {
                     background: var(--at-neutral-900) !important;
@@ -43,8 +43,13 @@ export default function Section3() {
                 .sec-3-services-details .scroll-active-item .item.active .rectangular::after {
                     display: none !important;
                 }
+                .sec-3-services-details .scroll-section .item,
+                .sec-3-services-details .scroll-section .item:first-child {
+                    min-height: auto !important;
+                    height: auto !important;
+                }
             `}</style>
-            <div className="container section-fix pt-100">
+            <div className="container section-fix pt-80">
                 <div className="row">
                     <div className="col-lg-5 h-100">
                         <div>

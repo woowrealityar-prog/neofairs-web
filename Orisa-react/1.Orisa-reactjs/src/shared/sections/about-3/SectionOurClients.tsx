@@ -77,12 +77,11 @@ export default function SectionOurClients() {
                                                     >
                                                         <img
                                                             decoding="async"
-                                                            className="dark-mode-invert"
                                                             src={logo.src}
                                                             alt={logo.alt}
-                                                            width={logo.width}
-                                                            height={logo.height}
-                                                            style={{ height: 30, width: "auto" }} loading="lazy" />
+                                                            style={{ maxWidth: "120px", maxHeight: "48px", width: "auto", height: "auto", objectFit: "contain", filter: "none" }}
+                                                            loading="lazy"
+                                                        />
                                                     </span>
                                                 ))}
                                             </div>

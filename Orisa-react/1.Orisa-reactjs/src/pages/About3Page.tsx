@@ -7,9 +7,18 @@ import SectionShowroomGoesToWork from "@/shared/sections/about-3/SectionShowroom
 import SectionNora from "@/shared/sections/about-3/SectionNora";
 import SectionPricingPlans from "@/shared/sections/about-3/SectionPricingPlans";
 import SectionAnyIndustry from "@/shared/sections/about-3/SectionAnyIndustry";
+import SectionVideoZoom from "@/shared/sections/index-2/Section11";
 import SectionFairStall from "@/shared/sections/about-3/SectionFairStall";
 import SectionShowroomLiveDemo from "@/shared/sections/about-3/SectionShowroomLiveDemo";
 import Section7 from "@/shared/sections/about-3/Section7";
+
+// Custom Marquee rows for Living Showroom video scroll-zoom
+const SHOWROOM_MARQUEE_ROWS = [
+  { dir: "left" as const, items: ["LIVING SHOWROOM", "•", "WATCH REEL", "•", "360° VIEW", "•", "NEOFAIRS", "•"] },
+  { dir: "right" as const, items: ["SCROLL TO EXPLORE", "•", "INTERACTIVE SHOWROOM", "•", "ANY INDUSTRY", "•", "2026", "•"] },
+  { dir: "left" as const, items: ["PLAY", "•", "LIVING SHOWROOM", "•", "EXPERIENCE 3D", "•", "WATCH", "•"] },
+  { dir: "right" as const, items: ["NEOFAIRS SHOWROOM", "•", "REPLACE STATIC CATALOG", "•", "PLAY", "•", "EXPLORE", "•"] },
+];
 
 export default function About3Page() {
   return (
@@ -97,6 +106,12 @@ export default function About3Page() {
         <SectionNora />
         <SectionPricingPlans />
         <SectionAnyIndustry />
+        <SectionVideoZoom
+          videoUrl="https://www.instagram.com/reel/DcswwKkIGy2/?exln=NDBuOWQwYmgycjlm"
+          imgSrc="/assets/imgs/pages/neoweb/virtual-trade-fairs/neofairs-showroom.webp"
+          marqueeRows={SHOWROOM_MARQUEE_ROWS}
+          className="pb-120"
+        />
         <SectionFairStall />
         <Section7 />
         <SectionShowroomLiveDemo />

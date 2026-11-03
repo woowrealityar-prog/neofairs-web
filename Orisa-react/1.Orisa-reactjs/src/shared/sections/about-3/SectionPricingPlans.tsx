@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import RevealText from "@/shared/effects/RevealText";
 
@@ -35,15 +36,6 @@ const PLANS = [
         name: "Essentials",
         desc: "Clean product showcase. Images, specs and your full showroom. Best for 2–5 products. The quickest way to go live.",
         priceClass: "text-price-starter",
-        price: "From ₹35,000",
-        period: "one-time",
-        features: [
-            "Clean product showcase",
-            "Images, specs & full showroom",
-            "Best for 2–5 products",
-            "Quickest way to go live",
-        ],
-        btnText: "Get Started",
         delay: ".05",
         popular: false,
     },
@@ -52,7 +44,7 @@ const PLANS = [
         desc: "Detailed multi-product catalog. Organised into categories and sub-categories. Built for larger ranges.",
         priceClass: "text-price-growth",
         price: "Get a quote",
-        period: "custom",
+        period: "/custom",
         features: [
             "Detailed multi-product catalog",
             "Categories & sub-categories",
@@ -68,7 +60,7 @@ const PLANS = [
         desc: "Life-like model showcase. Animated models that bring your products to life. Production once reserved for big brands.",
         priceClass: "text-price-scale",
         price: "Get a quote",
-        period: "custom",
+        period: "/custom",
         features: [
             "Life-like model showcase",
             "Interactive animated models",
@@ -84,7 +76,7 @@ const PLANS = [
         desc: "Full 360° environment. A real photoshoot or a virtually crafted space. Buyers walk through it with audio and video at every stop.",
         priceClass: "text-price-growth",
         price: "Get a quote",
-        period: "custom",
+        period: "/custom",
         features: [
             "Full 360° walkthrough space",
             "Real photoshoot or virtual 3D",
@@ -98,6 +90,20 @@ const PLANS = [
 ];
 
 export default function SectionPricingPlans() {
+    const [isAnnual, setIsAnnual] = useState(false);
+
+    const essentialFeatures = [
+        "product showcase with images, video and specs",
+        "Buyer analytics",
+        "RFQ, cart & pay",
+        "Video call in one click",
+        "NORA, your AI assistant",
+        "Permanent buyer list",
+        "Update once, live everywhere",
+        "Embed on your website",
+        "Join any fair in one click",
+        "No commission",
+    ];
     return (
         <section className="pricing-2-plans pt-120 pb-120 bg-neutral-0" aria-label="Pricing plans">
             <div className="container">
@@ -106,8 +112,8 @@ export default function SectionPricingPlans() {
                     <div className="col-lg-7">
                         <span className="at-btn common-black bg-transparent rounded-0 p-0 mb-15">
                             <span className="text-uppercase">
-                                <span className="text-1">pricing plans</span>
-                                <span className="text-2">pricing plans</span>
+                                <span className="text-1">Living Showroom</span>
+                                <span className="text-2">Living Showroom</span>
                             </span>
                             <i>
                                 {ARROW_SVG}
@@ -127,50 +133,141 @@ export default function SectionPricingPlans() {
 
                 {/* Stacked pricing plan rows */}
                 <div className="pricing-2-plans__list">
-                    {PLANS.map((plan, idx) => (
-                        <article
-                            key={plan.name || idx}
-                            className={`pricing-2-row ${plan.popular ? "pricing-2-row--popular" : ""} at_fade_anim`.replace(
-                                /\s+/g,
-                                " "
-                            )}
-                            data-fade-from="bottom"
-                            data-delay={plan.delay}
-                        >
-                            {plan.popular && (
-                                <span className="pricing-2-row__badge">Most popular</span>
-                            )}
-                            <div className="pricing-2-row__meta">
-                                <h3 className="pricing-2-row__name h4 mb-0">{plan.name}</h3>
-                                <p className="pricing-2-row__desc mb-0">{plan.desc}</p>
-                            </div>
-                            <div className="pricing-2-row__price">
-                                <span className={`pricing-2-row__amount ${plan.priceClass}`} style={{ fontSize: plan.price.includes("₹") ? "clamp(26px, 2.5vw, 36px)" : undefined }}>
-                                    {plan.price}
-                                </span>
-                                {plan.period === "one-time" && (
-                                    <span className="pricing-2-row__period">/one-time</span>
+                    {PLANS.map((plan, idx) => {
+                        const isEssential = plan.name === "Essentials";
+                        const planPrice = isEssential
+                            ? isAnnual
+                                ? "₹4,999"
+                                : "₹499"
+                            : plan.price;
+                        const planPeriod = isEssential
+                            ? isAnnual
+                                ? "/ year"
+                                : "/ month"
+                            : plan.period;
+                        const planFeatures = isEssential
+                            ? essentialFeatures
+                            : plan.features || [];
+                        const planBtnText = isEssential
+                            ? "Start 21-Day Free Trial"
+                            : plan.btnText;
+
+                        return (
+                            <article
+                                key={plan.name || idx}
+                                className={`pricing-2-row ${plan.popular ? "pricing-2-row--popular" : ""} at_fade_anim`.replace(
+                                    /\s+/g,
+                                    " "
                                 )}
-                            </div>
-                            <ul className="pricing-2-row__features">
-                                {plan.features.map((feature) => (
-                                    <li key={feature}>{feature}</li>
-                                ))}
-                            </ul>
-                            <div className="pricing-2-row__action">
-                                <Link className="at-btn pricing-plan-btn px-4" to="/contact-1">
-                                    <span>
-                                        <span className="text-1 text-capitalize">{plan.btnText}</span>
-                                        <span className="text-2 text-capitalize">{plan.btnText}</span>
-                                    </span>
-                                    <i>
-                                        {ARROW_SVG}
-                                        {ARROW_SVG}
-                                    </i>
-                                </Link>
-                            </div>
-                        </article>
-                    ))}
+                                data-fade-from="bottom"
+                                data-delay={plan.delay}
+                            >
+                                {plan.popular && (
+                                    <span className="pricing-2-row__badge">Most popular</span>
+                                )}
+                                <div className="pricing-2-row__meta">
+                                    <h3 className="pricing-2-row__name h4 mb-0">{plan.name}</h3>
+                                    <p className="pricing-2-row__desc mb-0">{plan.desc}</p>
+
+                                    {/* Monthly / Annual Toggle for Essentials plan */}
+                                    {isEssential && (
+                                        <div className="change-price-plan pricing-2-hero__toggle mt-20" style={{ gap: "10px", alignItems: "center" }}>
+                                            <span
+                                                className={`price-plan-toggle-label ${!isAnnual ? "active fw-600" : "neutral-500"}`}
+                                                role="button"
+                                                tabIndex={0}
+                                                style={{ cursor: "pointer", fontSize: "14px" }}
+                                                onClick={() => setIsAnnual(false)}
+                                                onKeyDown={(e) => e.key === "Enter" && setIsAnnual(false)}
+                                            >
+                                                Monthly
+                                            </span>
+                                            <label className="price-plan-toggle mb-0" style={{ cursor: "pointer" }}>
+                                                <input
+                                                    type="checkbox"
+                                                    className="price-plan-toggle__input"
+                                                    id="essential-plan-toggle"
+                                                    aria-label="Toggle Monthly or Annual billing"
+                                                    checked={isAnnual}
+                                                    onChange={(e) => setIsAnnual(e.target.checked)}
+                                                />
+                                                <span className="price-plan-toggle__track" />
+                                                <span className="price-plan-toggle__thumb" />
+                                            </label>
+                                            <span
+                                                className={`price-plan-toggle-label ${isAnnual ? "active fw-600" : "neutral-500"}`}
+                                                role="button"
+                                                tabIndex={0}
+                                                style={{ cursor: "pointer", fontSize: "14px" }}
+                                                onClick={() => setIsAnnual(true)}
+                                                onKeyDown={(e) => e.key === "Enter" && setIsAnnual(true)}
+                                            >
+                                                Annual
+                                            </span>
+                                            <span
+                                                className="badge bg-success-subtle text-success border border-success-subtle rounded-pill px-2 py-1"
+                                                style={{ fontSize: "11px", fontWeight: "600", letterSpacing: "0.2px" }}
+                                            >
+                                                2 months free
+                                            </span>
+                                        </div>
+                                    )}
+                                </div>
+                                <div className="pricing-2-row__price">
+                                    <div className="d-flex flex-column">
+                                        <div className="d-flex align-items-baseline gap-1">
+                                            <span className={`pricing-2-row__amount ${plan.priceClass}`} style={{ fontSize: "clamp(26px, 2.5vw, 36px)" }}>
+                                                {planPrice}
+                                            </span>
+                                            <span className="pricing-2-row__period" style={{ fontSize: "14px" }}>
+                                                {planPeriod}
+                                            </span>
+                                        </div>
+                                        {isEssential && (
+                                            <div className="fz-font-sm neutral-500 mt-1" style={{ fontSize: "13px" }}>
+                                                {isAnnual ? "or ₹4,999 / year (2 months free) · + GST" : "· + GST"}
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+                                <ul className="pricing-2-row__features">
+                                    {planFeatures.map((feature, fIdx) => (
+                                        <li key={fIdx}>
+                                            {isEssential && fIdx === 0 ? (
+                                                <>
+                                                    product showcase with images,
+                                                    <br />
+                                                    video and specs
+                                                </>
+                                            ) : (
+                                                feature
+                                            )}
+                                        </li>
+                                    ))}
+                                </ul>
+                                <div className="pricing-2-row__action d-flex flex-column align-items-lg-end">
+                                    <Link className="at-btn pricing-plan-btn px-4" to="/contact-1">
+                                        <span>
+                                            <span className="text-1 text-capitalize">{planBtnText}</span>
+                                            <span className="text-2 text-capitalize">{planBtnText}</span>
+                                        </span>
+                                        <i>
+                                            {ARROW_SVG}
+                                            {ARROW_SVG}
+                                        </i>
+                                    </Link>
+                                    {isEssential && (
+                                        <p
+                                            className="neutral-500 mt-2 mb-0 text-lg-end"
+                                            style={{ fontSize: "13px", lineHeight: "1.4", maxWidth: "230px" }}
+                                        >
+                                            After the trial: continue at ₹499/month, or pause your showroom.
+                                        </p>
+                                    )}
+                                </div>
+                            </article>
+                        );
+                    })}
                 </div>
 
                 {/* Bottom Custom Card / Note */}
@@ -183,9 +280,9 @@ export default function SectionPricingPlans() {
                         {INFO_ICON_SVG}
                     </div>
                     <div className="pricing-2-custom__text">
-                        <h3 className="h6 fw-600 mb-10">One-time fee. No commission.</h3>
+                        <h3 className="h6 fw-600 mb-10">Want more than a clean showcase ?</h3>
                         <p className="neutral-500 mb-0 fz-font-md">
-                            All plans include full platform access, setup support, and zero commissions on your sales.
+                            Add a built-for-you package. Every plan has every feature. Packages change how your products are showcased.
                         </p>
                     </div>
                     <div

@@ -51,8 +51,8 @@ export default function SectionIntroductoryPricing() {
                 <div className="mb-50">
                     <span className="at-btn common-black text-uppercase bg-transparent mb-10 rounded-0 p-0">
                         <span className="text-uppercase">
-                            <span className="text-1">Membership Pricing</span>
-                            <span className="text-2">Membership Pricing</span>
+                            <span className="text-1">Introductory pricing</span>
+                            <span className="text-2">Introductory pricing</span>
                         </span>
                         <i>
                             {ARROW_SVG}
@@ -61,7 +61,7 @@ export default function SectionIntroductoryPricing() {
                     </span>
                     <h2 className="alt-section-title lh-1 pb-30 reveal-text">
                         <RevealText>
-                            Introductory pricing
+                            Marketplace Membership
                         </RevealText>
                     </h2>
                 </div>
@@ -115,7 +115,7 @@ export default function SectionIntroductoryPricing() {
                     </div>
 
                     <div className="pricing-4-board__right">
-                        <h2 className="pricing-4-plan__amount">Marketplace Membership</h2>
+                        <h2 className="pricing-4-plan__amount">Introductory pricing</h2>
                         <p className="pricing-4-plan__desc">
                             All-year B2B listing where buyers search, with RFQs directly to your dashboard and one-click entry to every industry fair.
                         </p>

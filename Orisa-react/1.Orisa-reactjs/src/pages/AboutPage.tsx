@@ -128,22 +128,26 @@ export default function AboutPage() {
         showCta={false}
         col1Members={[
           {
-            name: "Group Chairman",
+            name: "Pradeep CBS",
             surname: "",
-            role: "Chairman & Founder",
+            role: "Co-Founder & CEO",
             img: "/assets/imgs/pages/neoweb/about/Group 1.webp",
-            alt: "Group Chairman",
+            alt: "Pradeep CBS",
             badgeClass: "",
+            link: "https://in.linkedin.com/in/pradeepcbs",
+            isExternal: true,
           },
         ]}
         col2Members={[
           {
-            name: "Group CEO",
+            name: "Dr. Santosh Kumar Talachutla",
             surname: "",
-            role: "Chief Executive Officer",
+            role: "Co-Founder & CTO",
             img: "/assets/imgs/pages/neoweb/about/Group 2.webp",
-            alt: "Group CEO",
+            alt: "Dr. Santosh Kumar Talachutla",
             badgeClass: "",
+            link: "https://www.linkedin.com/in/talachutla/",
+            isExternal: true,
           },
         ]}
       />

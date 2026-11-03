@@ -6,6 +6,7 @@ import SectionFourSteps from "@/shared/sections/index-1/Section4";
 import SectionExhibitors from "@/shared/sections/index-12/Section3";
 import SectionLivingShowroom from "@/shared/sections/index-1/Section7";
 import SectionBuyerAcquisition from "@/shared/sections/services-details/Section3";
+import SectionVideoZoom from "@/shared/sections/index-2/Section11";
 import SectionOurClients from "@/shared/sections/index-2/SectionBrandScroll";
 import SectionImageStrips from "@/shared/sections/index-2/SectionImageStrips";
 import SectionPricedPerFair from "@/shared/sections/index-8/Section9";
@@ -28,6 +29,7 @@ export default function About1Page() {
       <SectionExhibitors />
       <SectionBuyerAcquisition />
       <SectionLivingShowroom />
+      <SectionVideoZoom videoUrl="https://www.youtube.com/watch?v=oSA0lyzJDds" />
       <SectionOurClients logos={VIRTUAL_FAIR_CLIENT_LOGOS} />
       <SectionImageStrips />
       <SectionFaq />

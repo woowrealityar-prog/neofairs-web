@@ -51,6 +51,91 @@ export default function Section9({
 }: Section9Props) {
     return (
         <section className={`sec-9-home-8 ${className ?? ""}`.trim()}>
+            <style>{`
+                .sec-9-home-8 {
+                    background: #11150c !important;
+                }
+                .sec-9-home-8__title,
+                .sec-9-home-8 .alt-section-title,
+                .sec-9-home-8 .alt-section-title * {
+                    color: #ffffff !important;
+                }
+                .sec-9-home-8__lead,
+                .sec-9-home-8__lead * {
+                    color: rgba(255, 255, 255, 0.92) !important;
+                }
+                .sec-9-home-8__card {
+                    background: #111111 !important;
+                }
+                .sec-9-home-8__card-visors {
+                    mix-blend-mode: normal !important;
+                    filter: none !important;
+                    opacity: 1 !important;
+                }
+                .sec-9-home-8__card-media::after {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    background: linear-gradient(180deg, rgba(26, 26, 26, 0) 11.93%, #1A1A1A 100%);
+                    z-index: 1;
+                    pointer-events: none;
+                    transition: background 0.3s ease;
+                }
+                .sec-9-home-8__card:hover .sec-9-home-8__card-media::after {
+                    background: linear-gradient(180deg, rgba(26, 26, 26, 0.1) 11.93%, #1A1A1A 100%);
+                }
+                .sec-9-home-8__card-text {
+                    color: #ffffff !important;
+                    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+                }
+                .sec-9-home-8__card-kicker {
+                    color: #ffffff !important;
+                    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+                }
+                .sec-9-home-8 .at-btn-group.btn-brand-1 .at-btn,
+                .sec-9-home-8 .at-btn-group.btn-brand-1 .at-btn-circle {
+                    background-color: #ace227 !important;
+                    color: #000000 !important;
+                    border-color: #ace227 !important;
+                }
+                .sec-9-home-8 .at-btn-group.btn-brand-1 .at-btn span,
+                .sec-9-home-8 .at-btn-group.btn-brand-1 .at-btn-circle svg {
+                    color: #000000 !important;
+                    fill: #000000 !important;
+                }
+                .sec-9-home-8 a[class*="border-bottom"] {
+                    color: #ffffff !important;
+                    border-bottom-color: #ffffff !important;
+                }
+                .sec-9-home-8 a[class*="border-bottom"] * {
+                    color: #ffffff !important;
+                }
+
+                /* Preserve exact colors and image in dark mode too */
+                [data-bs-theme="dark"] .sec-9-home-8 {
+                    background: #11150c !important;
+                }
+                [data-bs-theme="dark"] .sec-9-home-8 .alt-section-title,
+                [data-bs-theme="dark"] .sec-9-home-8 .alt-section-title * {
+                    color: #ffffff !important;
+                }
+                [data-bs-theme="dark"] .sec-9-home-8__lead,
+                [data-bs-theme="dark"] .sec-9-home-8__lead * {
+                    color: rgba(255, 255, 255, 0.92) !important;
+                }
+                [data-bs-theme="dark"] .sec-9-home-8__card {
+                    background: #111111 !important;
+                }
+                [data-bs-theme="dark"] .sec-9-home-8__card-visors {
+                    mix-blend-mode: normal !important;
+                    filter: none !important;
+                    opacity: 1 !important;
+                }
+                [data-bs-theme="dark"] .sec-9-home-8__card-text,
+                [data-bs-theme="dark"] .sec-9-home-8__card-kicker {
+                    color: #ffffff !important;
+                }
+            `}</style>
             <div className="sec-9-home-8__bg" aria-hidden="true">
                 <img
                     src="/assets/imgs/pages/neoweb/virtual-trade-fairs/Cta bg.webp"

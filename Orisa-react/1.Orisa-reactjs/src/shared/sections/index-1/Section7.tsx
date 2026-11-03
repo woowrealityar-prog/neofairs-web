@@ -114,7 +114,7 @@ export default function Section7() {
                                 <div className="col-lg-7 col-md-8 col-12">
                                     <h6 className="reveal-text neutral-800 mb-60">
                                         <RevealText>
-                                            Choose a Living Showroom stall and it stays live after the fair: your permanent showroom, ready for the next fair with one click.
+                                            Your stall becomes your Living Showroom. Buyers keep visiting all year. You see who came and what they viewed.
                                         </RevealText>
                                     </h6>
                                 </div>
@@ -145,8 +145,8 @@ export default function Section7() {
                                     <div className="hover-unborder">
                                         <div className="bg-neutral-0 rounded-4 px-5 py-3 d-flex justify-content-between align-items-center">
                                             <h4 className="d-flex justify-content-between align-items-center mb-0">
-                                                <span>₹35K</span>
-                                                <span className="fz-font-sm fw-500 neutral-500 ms-1">+</span>
+                                                <span>₹499</span>
+                                                <span className="home-2-pricing-card__price-period ms-1">/month</span>
                                             </h4>
                                             <Link
                                                 to="/contact-1"
@@ -173,7 +173,7 @@ export default function Section7() {
                                                 <p className="fz-font-lg fw-600 mt-3 mb-0">
                                                     This fair + forever
                                                 </p>
-                                                <span className="fz-font-sm neutral-500 d-block mt-1">Never rebuild. Ready for next fair.</span>
+                                                <span className="fz-font-sm neutral-500 d-block mt-1">Free for 3 months after the fair. then ₹499/month. Upgrade to immersive anytime.</span>
                                             </div>
                                         </div>
                                     </div>

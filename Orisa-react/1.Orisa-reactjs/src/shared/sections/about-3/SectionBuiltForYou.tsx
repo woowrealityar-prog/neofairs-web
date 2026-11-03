@@ -43,15 +43,15 @@ const ICON_3 = (
 
 const STEPS = [
     {
-        navTitle: "Send us your products",
-        title: "Send us your products",
-        desc: "Photos, videos, specs, company story. That's all we need.",
+        navTitle: "Start your free trial",
+        title: "Start your free trial",
+        desc: "21 days. Every feature included.",
         img: "/assets/imgs/pages/neoweb/living-showroom/Built 1.webp",
     },
     {
-        navTitle: "We build your showroom",
-        title: "We build your showroom",
-        desc: "Done for you. You review it. You get one QR and one link.",
+        navTitle: "Add your products",
+        title: "Add your products",
+        desc: "Photos, videos, specs, company story. Review it. You get one QR and one link.",
         img: "/assets/imgs/pages/neoweb/living-showroom/Built 2.webp",
     },
     {
@@ -80,7 +80,7 @@ export default function SectionBuiltForYou() {
                         </span>
                         <h2 className="alt-section-title lh-1 mb-0 reveal-text">
                             <RevealText>
-                                Built for you. Live in days.
+                                Built for you. Live in Hours.
                             </RevealText>
                         </h2>
                     </div>
@@ -107,7 +107,7 @@ export default function SectionBuiltForYou() {
                                     {ARROW_CIRCLE}
                                 </Link>
                                 <Link to="/contact-1" className="at-btn z-index-1" style={{ color: "#000" }}>
-                                    Book a Free Demo
+                                    Start Free Trial
                                 </Link>
                                 <Link to="/contact-1" className="at-btn-circle" style={{ color: "#000" }}>
                                     {ARROW_CIRCLE}
